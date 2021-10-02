@@ -28,9 +28,16 @@ elseif(CMAKE_BUILD_TYPE MATCHES Release)
     message(" ")
 endif ()
 
-
+##Ubuntu just need to install libsfml-dev
 if(UNIX AND NOT APPLE)
-    # for Linux, BSD, Solaris, Minix
+    add_executable(game main.cpp src/Game.h src/Game.cpp src/Player.h src/Player.cpp)
+
+    find_package(SFML REQUIRED system window graphics network audio)
+    if(SFML_FOUND)
+        include_directories(${SFML_INCLUDE_DIR})
+        target_link_libraries(game -lsfml-graphics -lsfml-window -lsfml-system)
+    endif()
+
 endif()
 
 if(APPLE)
