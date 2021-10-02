@@ -3,15 +3,28 @@ project(game)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(game WIN32 main.cpp Game.h Game.cpp)
-target_link_options(game PRIVATE -mwindows)
+if(WIN32)
+    set(SMFL_folder c:/SFML)
 
-set(SFML_ROOT c:/SFML/lib/cmake/SFML)
-set(SFML_STATIC_LIBRARIES TRUE)
-find_package(SFML COMPONENTS audio graphics window system REQUIRED)
+    add_executable(game WIN32 main.cpp src/Game.h src/Game.cpp)
+    target_link_options(game PRIVATE -mwindows)
 
-include_directories(c:/SFML/include)
-target_link_libraries(game sfml-audio sfml-graphics sfml-window sfml-system)
+    set(SFML_ROOT ${SMFL_folder}/lib/cmake/SFML)
+    set(SFML_STATIC_LIBRARIES TRUE)
+    find_package(SFML COMPONENTS audio graphics window system REQUIRED)
+
+    include_directories(${SMFL_folder}/include)
+    target_link_libraries(game sfml-audio sfml-graphics sfml-window sfml-system)
+endif()
+
+
+if(UNIX AND NOT APPLE)
+    # for Linux, BSD, Solaris, Minix
+endif()
+
+if(APPLE)
+    # for MacOS X or iOS, watchOS, tvOS (since 3.10.3)
+endif()
 
 ## Copy dlls to build
 #if(WIN32)

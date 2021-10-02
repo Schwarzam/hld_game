@@ -679,4 +679,12 @@ C:/SFML/include/SFML/Window/WindowStyle.hpp
 C:/Users/gusta/CLionProjects/game/main.cpp
 SFML/Graphics.hpp
 -
+src/Game.h
+C:/Users/gusta/CLionProjects/game/src/Game.h
+
+C:/Users/gusta/CLionProjects/game/src/Game.h
+SFML/Graphics/RenderWindow.hpp
+-
+SFML/Graphics/CircleShape.hpp
+-
 

@@ -86,13 +86,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/gusta/CLionProjects/game/Game.cpp">
-			<Option target="game"/>
-		</Unit>
-		<Unit filename="C:/Users/gusta/CLionProjects/game/Game.h">
-			<Option target="game"/>
-		</Unit>
 		<Unit filename="C:/Users/gusta/CLionProjects/game/main.cpp">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="C:/Users/gusta/CLionProjects/game/src/Game.cpp">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="C:/Users/gusta/CLionProjects/game/src/Game.h">
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="C:/Users/gusta/CLionProjects/game/CMakeLists.txt">
