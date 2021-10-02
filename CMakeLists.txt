@@ -18,6 +18,17 @@ if(WIN32)
 endif()
 
 
+if (CMAKE_BUILD_TYPE MATCHES Debug)
+    message(" ")
+    message("CMAKE IN DEBUG MODE")
+    message(" ")
+elseif(CMAKE_BUILD_TYPE MATCHES Release)
+    message(" ")
+    message("CMAKE IN RELEASE MODE")
+    message(" ")
+endif ()
+
+
 if(UNIX AND NOT APPLE)
     # for Linux, BSD, Solaris, Minix
 endif()
