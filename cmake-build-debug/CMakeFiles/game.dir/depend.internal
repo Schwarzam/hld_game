@@ -7,5 +7,7 @@ CMakeFiles/game.dir/main.cpp.o
 CMakeFiles/game.dir/src/Game.cpp.o
  /home/gustavo/hld_game/src/Game.cpp
  /home/gustavo/hld_game/src/Game.h
+ /home/gustavo/hld_game/src/Player.h
 CMakeFiles/game.dir/src/Player.cpp.o
  /home/gustavo/hld_game/src/Player.cpp
+ /home/gustavo/hld_game/src/Player.h

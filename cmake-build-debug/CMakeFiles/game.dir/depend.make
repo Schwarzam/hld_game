@@ -6,6 +6,8 @@ CMakeFiles/game.dir/main.cpp.o: \
  ../src/Game.h
 CMakeFiles/game.dir/src/Game.cpp.o: \
  ../src/Game.cpp \
- ../src/Game.h
+ ../src/Game.h \
+ ../src/Player.h
 CMakeFiles/game.dir/src/Player.cpp.o: \
- ../src/Player.cpp
+ ../src/Player.cpp \
+ ../src/Player.h

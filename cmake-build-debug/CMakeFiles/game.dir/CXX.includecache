@@ -7,4 +7,12 @@
 #IncludeRegexTransform: 
 
 /home/gustavo/hld_game/src/Player.cpp
+Player.h
+/home/gustavo/hld_game/src/Player.h
+
+/home/gustavo/hld_game/src/Player.h
+SFML/Graphics/RectangleShape.hpp
+-
+SFML/System/Time.hpp
+-
 
