@@ -3,7 +3,7 @@ project(game)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(game WIN32 main.cpp)
+add_executable(game WIN32 main.cpp Game.h Game.cpp)
 target_link_options(game PRIVATE -mwindows)
 
 set(SFML_ROOT c:/SFML/lib/cmake/SFML)

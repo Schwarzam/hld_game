@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/game.dir/Game.cpp.obj"
   "CMakeFiles/game.dir/main.cpp.obj"
   "game.exe"
   "game.exe.manifest"
