@@ -1,12 +1,11 @@
 cmake_minimum_required(VERSION 3.20)
 project(game)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
+add_executable(game main.cpp src/Game.h src/Game.cpp src/Player.h src/Player.cpp)
 
 if(WIN32)
     set(SMFL_folder c:/SFML)
-
-    add_executable(game WIN32 main.cpp src/Game.h src/Game.cpp)
     target_link_options(game PRIVATE -mwindows)
 
     set(SFML_ROOT ${SMFL_folder}/lib/cmake/SFML)
@@ -30,7 +29,6 @@ endif ()
 
 ##Ubuntu just need to install libsfml-dev
 if(UNIX AND NOT APPLE)
-    add_executable(game main.cpp src/Game.h src/Game.cpp src/Player.h src/Player.cpp)
 
     find_package(SFML REQUIRED system window graphics network audio)
     if(SFML_FOUND)

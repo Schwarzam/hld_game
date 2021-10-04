@@ -6,8 +6,6 @@
 #include <SFML/Window/Event.hpp>
 #include "Game.h"
 
-#include "Player.h"
-
 Game::Game() : _window(sf::VideoMode(800, 600), "02_Game_Archi"), _player(150){
     _player.setFillColor(sf::Color::Blue);
     _player.setPosition(10,20);
