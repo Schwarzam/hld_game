@@ -6,8 +6,8 @@
 #include <SFML/Window/Event.hpp>
 #include "Game.h"
 
+
 Game::Game() : _window(sf::VideoMode(800, 600), "02_Game_Archi"), _player(150){
-    _player.setFillColor(sf::Color::Blue);
     _player.setPosition(10,20);
 }
 
@@ -27,8 +27,13 @@ void Game::update(sf::Time deltaTime) {
 void Game::processEvents() {
     sf::Event event;
     while(_window.pollEvent(event)) {
-        if ((event.type == sf::Event::Closed) or ((event.type == sf::Event::KeyPressed) and (event.key.code == sf::Keyboard::Escape))){
+        if (event.type == sf::Event::Closed){
             _window.close();
+        }else if (event.type == sf::Event::KeyPressed){
+            if (event.key.code == sf::Keyboard::Escape){
+                _window.close();
+            }
+            _player.processEvents();
         }
     }
 }

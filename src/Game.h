@@ -7,6 +7,7 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/CircleShape.hpp>
+#include "Player.h"
 
 class Game{
 public:
@@ -22,7 +23,7 @@ private:
     void render();
 
     sf::RenderWindow _window;
-    sf::CircleShape _player;
+    Player  _player;
 
     void run(int frame_per_seconds);
 };
