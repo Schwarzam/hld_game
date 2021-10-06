@@ -1,14 +1,13 @@
 #include <SFML/Graphics.hpp>
 #include "src/Game.h"
 
-#include <iostream>
+#include "src/ResourceManager.h"
 
 int main(){
     Game game;
-    game.run();
+    //game.run();
 
-    auto x = __cplusplus;
-    std::cout << x;
+    ResourceManager<int, int> res;
 
     return 0;
 }

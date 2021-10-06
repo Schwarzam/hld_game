@@ -15,8 +15,8 @@ class Player : public sf::Drawable {
 
         template<typename ... Args>
         void setPosition(Args&& ... args) {
-                _shape.setPosition(std::forward<Args>(args) ...);
-            };
+            _shape.setPosition(std::forward<Args>(args) ...);
+        };
 
         void update(sf::Time deltaTime);
         bool isMoving;
