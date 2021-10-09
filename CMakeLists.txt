@@ -8,7 +8,8 @@ add_executable(game main.cpp
         src/ResourceManager.cpp src/ResourceManager.h
         src/Configuration.cpp src/Configuration.h
         src/Action.cpp src/Action.h
-        src/ActionTarget.cpp src/ActionTarget.h)
+        src/ActionTarget.tpl src/ActionTarget.h
+        src/ActionMap.cpp src/ActionMap.h)
 
 if(WIN32)
     set(SMFL_folder c:/SFML)

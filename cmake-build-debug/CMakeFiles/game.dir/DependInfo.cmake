@@ -10,7 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/gustavo/hld_game/main.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/main.cpp.o"
   "/home/gustavo/hld_game/src/Action.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Action.cpp.o"
-  "/home/gustavo/hld_game/src/ActionTarget.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/ActionTarget.cpp.o"
+  "/home/gustavo/hld_game/src/ActionMap.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/ActionMap.cpp.o"
   "/home/gustavo/hld_game/src/Configuration.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Configuration.cpp.o"
   "/home/gustavo/hld_game/src/Game.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Game.cpp.o"
   "/home/gustavo/hld_game/src/Player.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Player.cpp.o"

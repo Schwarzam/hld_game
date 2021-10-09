@@ -3,22 +3,40 @@
 
 CMakeFiles/game.dir/main.cpp.o: \
  ../main.cpp \
+ ../src/Action.h \
+ ../src/ActionMap.h \
+ ../src/ActionTarget.h \
+ ../src/ActionTarget.tpl \
  ../src/Game.h \
  ../src/Player.h
 CMakeFiles/game.dir/src/Action.cpp.o: \
  ../src/Action.cpp \
- ../src/Action.h
-CMakeFiles/game.dir/src/ActionTarget.cpp.o: \
- ../src/ActionTarget.cpp \
- ../src/ActionTarget.h
+ ../src/Action.h \
+ ../src/ActionMap.h \
+ ../src/ActionTarget.h \
+ ../src/ActionTarget.tpl
+CMakeFiles/game.dir/src/ActionMap.cpp.o: \
+ ../src/Action.h \
+ ../src/ActionMap.cpp \
+ ../src/ActionMap.h \
+ ../src/ActionTarget.h \
+ ../src/ActionTarget.tpl
 CMakeFiles/game.dir/src/Configuration.cpp.o: \
  ../src/Configuration.cpp \
  ../src/Configuration.h
 CMakeFiles/game.dir/src/Game.cpp.o: \
+ ../src/Action.h \
+ ../src/ActionMap.h \
+ ../src/ActionTarget.h \
+ ../src/ActionTarget.tpl \
  ../src/Game.cpp \
  ../src/Game.h \
  ../src/Player.h
 CMakeFiles/game.dir/src/Player.cpp.o: \
+ ../src/Action.h \
+ ../src/ActionMap.h \
+ ../src/ActionTarget.h \
+ ../src/ActionTarget.tpl \
  ../src/Player.cpp \
  ../src/Player.h
 CMakeFiles/game.dir/src/ResourceManager.cpp.o: \

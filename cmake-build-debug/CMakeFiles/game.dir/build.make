@@ -144,18 +144,18 @@ CMakeFiles/game.dir/src/Action.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Action.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gustavo/hld_game/src/Action.cpp -o CMakeFiles/game.dir/src/Action.cpp.s
 
-CMakeFiles/game.dir/src/ActionTarget.cpp.o: CMakeFiles/game.dir/flags.make
-CMakeFiles/game.dir/src/ActionTarget.cpp.o: ../src/ActionTarget.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gustavo/hld_game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/game.dir/src/ActionTarget.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/ActionTarget.cpp.o -c /home/gustavo/hld_game/src/ActionTarget.cpp
+CMakeFiles/game.dir/src/ActionMap.cpp.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/src/ActionMap.cpp.o: ../src/ActionMap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gustavo/hld_game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/game.dir/src/ActionMap.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/game.dir/src/ActionMap.cpp.o -c /home/gustavo/hld_game/src/ActionMap.cpp
 
-CMakeFiles/game.dir/src/ActionTarget.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/ActionTarget.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gustavo/hld_game/src/ActionTarget.cpp > CMakeFiles/game.dir/src/ActionTarget.cpp.i
+CMakeFiles/game.dir/src/ActionMap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/ActionMap.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gustavo/hld_game/src/ActionMap.cpp > CMakeFiles/game.dir/src/ActionMap.cpp.i
 
-CMakeFiles/game.dir/src/ActionTarget.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/ActionTarget.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gustavo/hld_game/src/ActionTarget.cpp -o CMakeFiles/game.dir/src/ActionTarget.cpp.s
+CMakeFiles/game.dir/src/ActionMap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/ActionMap.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gustavo/hld_game/src/ActionMap.cpp -o CMakeFiles/game.dir/src/ActionMap.cpp.s
 
 # Object files for target game
 game_OBJECTS = \
@@ -165,7 +165,7 @@ game_OBJECTS = \
 "CMakeFiles/game.dir/src/ResourceManager.cpp.o" \
 "CMakeFiles/game.dir/src/Configuration.cpp.o" \
 "CMakeFiles/game.dir/src/Action.cpp.o" \
-"CMakeFiles/game.dir/src/ActionTarget.cpp.o"
+"CMakeFiles/game.dir/src/ActionMap.cpp.o"
 
 # External object files for target game
 game_EXTERNAL_OBJECTS =
@@ -176,7 +176,7 @@ game: CMakeFiles/game.dir/src/Player.cpp.o
 game: CMakeFiles/game.dir/src/ResourceManager.cpp.o
 game: CMakeFiles/game.dir/src/Configuration.cpp.o
 game: CMakeFiles/game.dir/src/Action.cpp.o
-game: CMakeFiles/game.dir/src/ActionTarget.cpp.o
+game: CMakeFiles/game.dir/src/ActionMap.cpp.o
 game: CMakeFiles/game.dir/build.make
 game: CMakeFiles/game.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gustavo/hld_game/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable game"

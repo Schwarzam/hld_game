@@ -9,6 +9,7 @@
 #include <SFML/Window/Keyboard.hpp>
 #include <SFML/Window/Mouse.hpp>
 #include <SFML/Window/Event.hpp>
+#include "ActionTarget.h"
 
 class Action {
 public:
@@ -26,7 +27,7 @@ public:
     bool operator==(const sf::Event& event)const;
     bool operator==(const Action& other) const;
 private:
-    friend class ActionTarget;
+    template<typename> friend class ActionTarget;
     sf::Event _event;
     int _type;
 };

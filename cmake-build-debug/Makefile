@@ -177,29 +177,29 @@ src/Action.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/Action.cpp.s
 .PHONY : src/Action.cpp.s
 
-src/ActionTarget.o: src/ActionTarget.cpp.o
-.PHONY : src/ActionTarget.o
+src/ActionMap.o: src/ActionMap.cpp.o
+.PHONY : src/ActionMap.o
 
 # target to build an object file
-src/ActionTarget.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/ActionTarget.cpp.o
-.PHONY : src/ActionTarget.cpp.o
+src/ActionMap.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/ActionMap.cpp.o
+.PHONY : src/ActionMap.cpp.o
 
-src/ActionTarget.i: src/ActionTarget.cpp.i
-.PHONY : src/ActionTarget.i
+src/ActionMap.i: src/ActionMap.cpp.i
+.PHONY : src/ActionMap.i
 
 # target to preprocess a source file
-src/ActionTarget.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/ActionTarget.cpp.i
-.PHONY : src/ActionTarget.cpp.i
+src/ActionMap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/ActionMap.cpp.i
+.PHONY : src/ActionMap.cpp.i
 
-src/ActionTarget.s: src/ActionTarget.cpp.s
-.PHONY : src/ActionTarget.s
+src/ActionMap.s: src/ActionMap.cpp.s
+.PHONY : src/ActionMap.s
 
 # target to generate assembly for a file
-src/ActionTarget.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/ActionTarget.cpp.s
-.PHONY : src/ActionTarget.cpp.s
+src/ActionMap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/src/ActionMap.cpp.s
+.PHONY : src/ActionMap.cpp.s
 
 src/Configuration.o: src/Configuration.cpp.o
 .PHONY : src/Configuration.o
@@ -312,9 +312,9 @@ help:
 	@echo "... src/Action.o"
 	@echo "... src/Action.i"
 	@echo "... src/Action.s"
-	@echo "... src/ActionTarget.o"
-	@echo "... src/ActionTarget.i"
-	@echo "... src/ActionTarget.s"
+	@echo "... src/ActionMap.o"
+	@echo "... src/ActionMap.i"
+	@echo "... src/ActionMap.s"
 	@echo "... src/Configuration.o"
 	@echo "... src/Configuration.i"
 	@echo "... src/Configuration.s"

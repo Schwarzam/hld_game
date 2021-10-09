@@ -7,9 +7,26 @@
 #include <SFML/Window/Event.hpp>
 #include <SFML/Window/Keyboard.hpp>
 
-Player::Player() : _shape(sf::Vector2f(32,32)){
+Player::Player() :
+    ActionTarget(_playerInputs),
+    _shape(sf::Vector2f(32,32)),
+    _isMoving(false),
+    _rotation(0){
     _shape.setFillColor(sf::Color::Blue);
     _shape.setOrigin(16,16); //Ancora da imagem
+
+    bind(Action(sf::Keyboard::W), [this](const sf::Event&){
+        _isMoving = true;
+    });
+    bind(Action(sf::Keyboard::S), [this](const sf::Event&){
+        _isMoving = true;
+    });
+    bind(Action(sf::Keyboard::A), [this](const sf::Event&){
+        _isMoving = true;
+    });
+    bind(Action(sf::Keyboard::D), [this](const sf::Event&){
+        _isMoving = true;
+    })
 }
 
 void Player::update(sf::Time deltaTime) {
@@ -31,18 +48,8 @@ void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const {
 }
 
 void Player::processEvents(){
-    rotation = 0;
+    _isMoving = false;
+    _rotation = 0;
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)){
-        isMoving = true;
-    }
-    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){
-        isMoving = true;
-    }
-    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
-        isMoving = true;
-    }
-    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){
-        isMoving = true;
-    }
+    ActionTarget::processEvents();
 }

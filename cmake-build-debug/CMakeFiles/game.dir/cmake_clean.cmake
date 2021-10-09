@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/game.dir/main.cpp.o"
   "CMakeFiles/game.dir/src/Action.cpp.o"
-  "CMakeFiles/game.dir/src/ActionTarget.cpp.o"
+  "CMakeFiles/game.dir/src/ActionMap.cpp.o"
   "CMakeFiles/game.dir/src/Configuration.cpp.o"
   "CMakeFiles/game.dir/src/Game.cpp.o"
   "CMakeFiles/game.dir/src/Player.cpp.o"

@@ -91,10 +91,16 @@
 		<Unit filename="/home/gustavo/hld_game/src/Action.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="/home/gustavo/hld_game/src/ActionTarget.cpp">
+		<Unit filename="/home/gustavo/hld_game/src/ActionMap.cpp">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="/home/gustavo/hld_game/src/ActionMap.h">
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/gustavo/hld_game/src/ActionTarget.h">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="/home/gustavo/hld_game/src/ActionTarget.tpl">
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="/home/gustavo/hld_game/src/Configuration.cpp">

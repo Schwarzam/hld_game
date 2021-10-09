@@ -2,9 +2,9 @@
 // Created by gustavo on 08/10/2021.
 //
 
-#include "ActionTarget.h"
+template<typename T>
+ActionTarget<T>::ActionTarget(const ActionMap<T> &map) : _actionMap(map) {
 
-ActionTarget::ActionTarget() {
 }
 
 bool ActionTarget::processEvent(const sf::Event &event) const {
@@ -28,7 +28,11 @@ void ActionTarget::processEvents() const {
 
 }
 
-void ActionTarget::bind(const Action &action, const ActionTarget::FuncType &callback) {
+
+
+template <typename T>
+void ActionTarget<T>::bind(const T &key, const ActionTarget<T>::FuncType &callback) {
+    const Action& action = _actionMap.get(key);
     if (action._type & Action::Type::RealTime)
         _eventsRealTime.emplace_back(action, callback);
     else
