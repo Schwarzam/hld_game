@@ -2,7 +2,7 @@
 // Created by gusta on 06/10/2021.
 //
 
-#include "Action.h"
+#include "Action.hpp"
 #include <cstring>
 
 //Action::Action(const Action& other)   :  _type(other._type){
@@ -48,6 +48,27 @@ bool Action::operator==(const sf::Event& event) const {
                 res = event.mouseButton.button == _event.mouseButton.button;
         }break;
         default: break;
+    }
+    return res;
+}
+
+bool Action::operator==(const Action& other)const
+{
+    return _type == other._type and other == _event;
+}
+
+bool Action::test()const
+{
+    bool res = false;
+    if(_event.type == sf::Event::EventType::KeyPressed)
+    {
+        if(_type & Type::Pressed)
+            res = sf::Keyboard::isKeyPressed(_event.key.code);
+    }
+    else if (_event.type == sf::Event::EventType::MouseButtonPressed)
+    {
+        if(_type & Type::Pressed)
+            res = sf::Mouse::isButtonPressed(_event.mouseButton.button);
     }
     return res;
 }

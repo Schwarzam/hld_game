@@ -5,7 +5,8 @@
 #ifndef GAME_ACTIONMAP_H
 #define GAME_ACTIONMAP_H
 
-#include "Action.h"
+#include <unordered_map>
+#include "Action.hpp"
 
 template<typename T = int>
 class ActionMap {
@@ -22,5 +23,5 @@ private:
     std::unordered_map<T, Action> _map;
 };
 
-
+#include "ActionMap.tpp"
 #endif //GAME_ACTIONMAP_H

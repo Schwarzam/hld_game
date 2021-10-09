@@ -7,9 +7,11 @@
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/System/Time.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
-#include "Action.h"
+#include "Action.hpp"
 #include "ActionTarget.h"
 #include "ActionMap.h"
+
+#include "Configuration.h"
 
 class Player : public sf::Drawable, public ActionTarget<int> {
     public:
@@ -25,8 +27,6 @@ class Player : public sf::Drawable, public ActionTarget<int> {
 
         void update(sf::Time deltaTime);
 
-        enum PlayerInputs {Up, Left, Right};
-
     private:
         virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
         sf::RectangleShape _shape;
@@ -34,8 +34,6 @@ class Player : public sf::Drawable, public ActionTarget<int> {
 
         bool _isMoving;
         int _rotation;
-
-        static ActionMap<int> _playerInputs;
 };
 
 

@@ -4,39 +4,37 @@
 
 #include <cmath>
 #include "Player.h"
-#include <SFML/Window/Event.hpp>
-#include <SFML/Window/Keyboard.hpp>
 
-Player::Player() :
-    ActionTarget(_playerInputs),
+
+Player::Player() : ActionTarget(Configuration::playerInputs),
     _shape(sf::Vector2f(32,32)),
     _isMoving(false),
     _rotation(0){
+
     _shape.setFillColor(sf::Color::Blue);
     _shape.setOrigin(16,16); //Ancora da imagem
 
-    bind(Action(sf::Keyboard::W), [this](const sf::Event&){
+    bind(Configuration::PlayerInputs::W,[this](const sf::Event&){
         _isMoving = true;
     });
-    bind(Action(sf::Keyboard::S), [this](const sf::Event&){
-        _isMoving = true;
+
+    bind(Configuration::PlayerInputs::A,[this](const sf::Event&){
+        _rotation-= 1;
     });
-    bind(Action(sf::Keyboard::A), [this](const sf::Event&){
-        _isMoving = true;
+
+    bind(Configuration::PlayerInputs::D,[this](const sf::Event&){
+        _rotation+= 1;
     });
-    bind(Action(sf::Keyboard::D), [this](const sf::Event&){
-        _isMoving = true;
-    })
 }
 
 void Player::update(sf::Time deltaTime) {
     float seconds = deltaTime.asSeconds();
-    if (rotation != 0){
-        float angle = rotation*180*seconds;
+    if (_rotation != 0){
+        float angle = _rotation*180*seconds;
         _shape.rotate(angle);
     }
 
-    if(isMoving){
+    if(_isMoving){
         float angle = _shape.getRotation() / 180 * M_PI - M_PI / 2;
         _velocity += sf::Vector2f (std::cos(angle), std::sin(angle)) * 60.f * seconds;
     }

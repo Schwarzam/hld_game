@@ -5,6 +5,7 @@
 #ifndef GAME_CONFIGURATION_H
 #define GAME_CONFIGURATION_H
 
+#include "ActionMap.h"
 
 class Configuration {
 public:
@@ -13,16 +14,14 @@ public:
     Configuration& operator=(const Configuration&) = delete;
 
     enum Textures : int {Player};
-    static ActionMap<int> player_inputs;
+    static void initialize();
 
-    void Configuration::initialize(){
-        initTextures();
-        initPlayerInputs();
-    }
-    void Configuration::initPlayerInputs(){
-        player_inputs.map(PlayerInputs::Up)
-    };
+    enum PlayerInputs  : int {W,A,D};
+    static ActionMap<int> playerInputs;
 
+private:
+    static void initTextures();
+    static void initPlayerInputs();
     //
 };
 

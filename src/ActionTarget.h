@@ -7,9 +7,12 @@
 
 
 #include <SFML/Window/Event.hpp>
-#include <list>
-#include "Action.h"
+
 #include "ActionMap.h"
+
+#include <list>
+#include <functional>
+#include <utility>
 
 template<typename T = int>
 class ActionTarget {
@@ -19,12 +22,13 @@ public:
 
     using FuncType = std::function<void(const sf::Event&)>;
 
-    ActionTarget(const ActionMap<T>& map);
+    explicit ActionTarget(const ActionMap<T>& map);
 
     void processEvents()const;
-    bool processEvent(const sf::Event& event) const;
 
-    void bind(const T& key, const FuncType& callback);
+    [[maybe_unused]] [[nodiscard]] bool processEvent(const sf::Event& event) const;
+
+    void bind(const T& key,const FuncType& callback);
     void unbind(const T& key);
 
 private:
@@ -34,5 +38,5 @@ private:
     const ActionMap<T>& _actionMap;
 };
 
-#include "ActionTarget.tpl"
+#include "ActionTarget.tpp"
 #endif //GAME_ACTIONTARGET_H
