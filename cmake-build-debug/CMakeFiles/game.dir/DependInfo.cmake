@@ -13,7 +13,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/gusta/Documents/hld_game/src/Configuration.cpp" "C:/Users/gusta/Documents/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Configuration.cpp.obj"
   "C:/Users/gusta/Documents/hld_game/src/Game.cpp" "C:/Users/gusta/Documents/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Game.cpp.obj"
   "C:/Users/gusta/Documents/hld_game/src/Player.cpp" "C:/Users/gusta/Documents/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Player.cpp.obj"
-  "C:/Users/gusta/Documents/hld_game/src/ResourceManager.cpp" "C:/Users/gusta/Documents/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/ResourceManager.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -5,49 +5,76 @@
 #include <cmath>
 #include "Player.h"
 
-
-Player::Player() : ActionTarget(Configuration::playerInputs),
-    _shape(sf::Vector2f(32,32)),
-    _isMoving(false),
-    _rotation(0){
-
-    _shape.setFillColor(sf::Color::Blue);
-    _shape.setOrigin(16,16); //Ancora da imagem
+Player::Player() : ActionTarget(Configuration::playerInputs)
+        ,_is_moving(false)
+        ,_rotation(0)
+{
+    _ship.setTexture(Configuration::textures.get(Configuration::Textures::Player));
+    _ship.setOrigin(49.5,37.5);
 
     bind(Configuration::PlayerInputs::W,[this](const sf::Event&){
-        _isMoving = true;
+        moving_up = true;
     });
 
     bind(Configuration::PlayerInputs::A,[this](const sf::Event&){
-        _rotation-= 1;
+        moving_left = true;
+    });
+
+    bind(Configuration::PlayerInputs::S,[this](const sf::Event&){
+        moving_down = true;
     });
 
     bind(Configuration::PlayerInputs::D,[this](const sf::Event&){
-        _rotation+= 1;
+        moving_right = true;
     });
 }
 
-void Player::update(sf::Time deltaTime) {
-    float seconds = deltaTime.asSeconds();
-    if (_rotation != 0){
-        float angle = _rotation*180*seconds;
-        _shape.rotate(angle);
-    }
+void Player::processEvents()
+{
+    _is_moving = false;
 
-    if(_isMoving){
-        float angle = _shape.getRotation() / 180 * M_PI - M_PI / 2;
-        _velocity += sf::Vector2f (std::cos(angle), std::sin(angle)) * 60.f * seconds;
-    }
-    _shape.move(seconds * _velocity);
-}
+    moving_up = false;
+    moving_right = false;
+    moving_down = false;
+    moving_left = false;
 
-void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const {
-    target.draw(_shape, states);
-}
-
-void Player::processEvents(){
-    _isMoving = false;
     _rotation = 0;
-
     ActionTarget::processEvents();
+}
+
+void Player::update(sf::Time deltaTime)
+{
+    float seconds = deltaTime.asSeconds();
+
+    if(_rotation != 0)
+    {
+        float angle = _rotation*180*seconds;
+        _ship.rotate(angle);
+    }
+
+//    if(_is_moving)
+//    {
+//        float angle = _ship.getRotation() / 180 * M_PI - M_PI / 2;
+//        _velocity += sf::Vector2f(std::cos(angle),std::sin(angle)) * 60.f * seconds;
+//    }
+    _velocity =  sf::Vector2f(0, 0);
+    if (moving_up){
+        _velocity = sf::Vector2f(0,-50);
+    }
+    if (moving_down){
+        _velocity = sf::Vector2f(0,50);
+    }
+    if (moving_right){
+        _velocity = sf::Vector2f(50,0);
+    }
+    if (moving_left){
+        _velocity = sf::Vector2f(-50,0);
+    }
+
+    _ship.move(seconds * _velocity * 3.0f);
+}
+
+void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const
+{
+    target.draw(_ship,states);
 }

@@ -248,30 +248,6 @@ src/Player.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/Player.cpp.s
 .PHONY : src/Player.cpp.s
 
-src/ResourceManager.obj: src/ResourceManager.cpp.obj
-.PHONY : src/ResourceManager.obj
-
-# target to build an object file
-src/ResourceManager.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/ResourceManager.cpp.obj
-.PHONY : src/ResourceManager.cpp.obj
-
-src/ResourceManager.i: src/ResourceManager.cpp.i
-.PHONY : src/ResourceManager.i
-
-# target to preprocess a source file
-src/ResourceManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/ResourceManager.cpp.i
-.PHONY : src/ResourceManager.cpp.i
-
-src/ResourceManager.s: src/ResourceManager.cpp.s
-.PHONY : src/ResourceManager.s
-
-# target to generate assembly for a file
-src/ResourceManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/ResourceManager.cpp.s
-.PHONY : src/ResourceManager.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -296,9 +272,6 @@ help:
 	@echo ... src/Player.obj
 	@echo ... src/Player.i
 	@echo ... src/Player.s
-	@echo ... src/ResourceManager.obj
-	@echo ... src/ResourceManager.i
-	@echo ... src/ResourceManager.s
 .PHONY : help
 
 

@@ -2,11 +2,12 @@ cmake_minimum_required(VERSION 3.16)
 project(game)
 
 set(CMAKE_CXX_STANDARD 17)
+file(COPY media DESTINATION ${CMAKE_BINARY_DIR})
 
 add_executable(game main.cpp
         src/Game.h src/Game.cpp
-        src/Player.h src/Player.cpp
-        src/ResourceManager.cpp src/ResourceManager.h
+        src/Player.h src/Player.cpp  src/Player.tpp
+        src/ResourceManager.h src/ResourceManager.tpp
         src/Configuration.cpp src/Configuration.h
         src/Action.cpp src/Action.hpp
         src/ActionTarget.tpp src/ActionTarget.h

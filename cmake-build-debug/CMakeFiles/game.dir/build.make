@@ -107,24 +107,10 @@ CMakeFiles/game.dir/src/Player.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Player.cpp.s"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gusta\Documents\hld_game\src\Player.cpp -o CMakeFiles\game.dir\src\Player.cpp.s
 
-CMakeFiles/game.dir/src/ResourceManager.cpp.obj: CMakeFiles/game.dir/flags.make
-CMakeFiles/game.dir/src/ResourceManager.cpp.obj: CMakeFiles/game.dir/includes_CXX.rsp
-CMakeFiles/game.dir/src/ResourceManager.cpp.obj: ../src/ResourceManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gusta\Documents\hld_game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/game.dir/src/ResourceManager.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\game.dir\src\ResourceManager.cpp.obj -c C:\Users\gusta\Documents\hld_game\src\ResourceManager.cpp
-
-CMakeFiles/game.dir/src/ResourceManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/ResourceManager.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\gusta\Documents\hld_game\src\ResourceManager.cpp > CMakeFiles\game.dir\src\ResourceManager.cpp.i
-
-CMakeFiles/game.dir/src/ResourceManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/ResourceManager.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gusta\Documents\hld_game\src\ResourceManager.cpp -o CMakeFiles\game.dir\src\ResourceManager.cpp.s
-
 CMakeFiles/game.dir/src/Configuration.cpp.obj: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/Configuration.cpp.obj: CMakeFiles/game.dir/includes_CXX.rsp
 CMakeFiles/game.dir/src/Configuration.cpp.obj: ../src/Configuration.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gusta\Documents\hld_game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/game.dir/src/Configuration.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gusta\Documents\hld_game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/game.dir/src/Configuration.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\game.dir\src\Configuration.cpp.obj -c C:\Users\gusta\Documents\hld_game\src\Configuration.cpp
 
 CMakeFiles/game.dir/src/Configuration.cpp.i: cmake_force
@@ -138,7 +124,7 @@ CMakeFiles/game.dir/src/Configuration.cpp.s: cmake_force
 CMakeFiles/game.dir/src/Action.cpp.obj: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/Action.cpp.obj: CMakeFiles/game.dir/includes_CXX.rsp
 CMakeFiles/game.dir/src/Action.cpp.obj: ../src/Action.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gusta\Documents\hld_game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/game.dir/src/Action.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gusta\Documents\hld_game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/game.dir/src/Action.cpp.obj"
 	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\game.dir\src\Action.cpp.obj -c C:\Users\gusta\Documents\hld_game\src\Action.cpp
 
 CMakeFiles/game.dir/src/Action.cpp.i: cmake_force
@@ -154,7 +140,6 @@ game_OBJECTS = \
 "CMakeFiles/game.dir/main.cpp.obj" \
 "CMakeFiles/game.dir/src/Game.cpp.obj" \
 "CMakeFiles/game.dir/src/Player.cpp.obj" \
-"CMakeFiles/game.dir/src/ResourceManager.cpp.obj" \
 "CMakeFiles/game.dir/src/Configuration.cpp.obj" \
 "CMakeFiles/game.dir/src/Action.cpp.obj"
 
@@ -164,7 +149,6 @@ game_EXTERNAL_OBJECTS =
 game.exe: CMakeFiles/game.dir/main.cpp.obj
 game.exe: CMakeFiles/game.dir/src/Game.cpp.obj
 game.exe: CMakeFiles/game.dir/src/Player.cpp.obj
-game.exe: CMakeFiles/game.dir/src/ResourceManager.cpp.obj
 game.exe: CMakeFiles/game.dir/src/Configuration.cpp.obj
 game.exe: CMakeFiles/game.dir/src/Action.cpp.obj
 game.exe: CMakeFiles/game.dir/build.make
@@ -182,7 +166,7 @@ game.exe: C:/SFML/lib/libfreetype.a
 game.exe: CMakeFiles/game.dir/linklibs.rsp
 game.exe: CMakeFiles/game.dir/objects1.rsp
 game.exe: CMakeFiles/game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\gusta\Documents\hld_game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable game.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\gusta\Documents\hld_game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable game.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\game.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

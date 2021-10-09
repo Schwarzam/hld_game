@@ -4,7 +4,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/game.dir/src/Configuration.cpp.obj"
   "CMakeFiles/game.dir/src/Game.cpp.obj"
   "CMakeFiles/game.dir/src/Player.cpp.obj"
-  "CMakeFiles/game.dir/src/ResourceManager.cpp.obj"
   "game.exe"
   "game.exe.manifest"
   "game.pdb"

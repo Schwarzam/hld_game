@@ -12,29 +12,35 @@
 #include "ActionMap.h"
 
 #include "Configuration.h"
+class Player : public sf::Drawable , public ActionTarget<int>
+{
+public:
+    Player(const Player&) = delete;
+    Player& operator=(const Player&) = delete;
 
-class Player : public sf::Drawable, public ActionTarget<int> {
-    public:
-        Player(const Player&) = delete;
-        Player& operator = (const Player&) = delete;
-        Player();
+    Player();
 
-        template<typename ... Args>
-        void setPosition(Args&& ... args) {
-            _shape.setPosition(std::forward<Args>(args) ...);
-        };
-        void processEvents();
+    template<typename ... Args>
+    void setPosition(Args&& ... args);
 
-        void update(sf::Time deltaTime);
+    void processEvents();
 
-    private:
-        virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
-        sf::RectangleShape _shape;
-        sf::Vector2f _velocity;
+    void update(sf::Time deltaTime);
 
-        bool _isMoving;
-        int _rotation;
+private:
+    virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
+
+    sf::Sprite          _ship;
+    sf::Vector2f        _velocity;
+
+    bool _is_moving;
+    int _rotation;
+
+    bool moving_up = false;
+    bool moving_down = false;
+    bool moving_left = false;
+    bool moving_right = false;
 };
 
-
+#include "Player.tpp"
 #endif //GAME_PLAYER_H

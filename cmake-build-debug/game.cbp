@@ -125,10 +125,13 @@
 		<Unit filename="C:/Users/gusta/Documents/hld_game/src/Player.h">
 			<Option target="game"/>
 		</Unit>
-		<Unit filename="C:/Users/gusta/Documents/hld_game/src/ResourceManager.cpp">
+		<Unit filename="C:/Users/gusta/Documents/hld_game/src/Player.tpp">
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="C:/Users/gusta/Documents/hld_game/src/ResourceManager.h">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="C:/Users/gusta/Documents/hld_game/src/ResourceManager.tpp">
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="C:/Users/gusta/Documents/hld_game/CMakeLists.txt">
