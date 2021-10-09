@@ -1,8 +1,14 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.16)
 project(game)
 
 set(CMAKE_CXX_STANDARD 17)
-add_executable(game main.cpp src/Game.h src/Game.cpp src/Player.h src/Player.cpp src/ResourceManager.cpp src/ResourceManager.h src/Configuration.cpp src/Configuration.h src/Action.cpp src/Action.h)
+add_executable(game main.cpp
+        src/Game.h src/Game.cpp
+        src/Player.h src/Player.cpp
+        src/ResourceManager.cpp src/ResourceManager.h
+        src/Configuration.cpp src/Configuration.h
+        src/Action.cpp src/Action.h
+        src/ActionTarget.cpp src/ActionTarget.h)
 
 if(WIN32)
     set(SMFL_folder c:/SFML)

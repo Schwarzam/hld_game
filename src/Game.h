@@ -23,7 +23,7 @@ private:
     void render();
 
     sf::RenderWindow _window;
-    Player  _player;
+    Player _player;
 
     void run(int frame_per_seconds);
 };

@@ -21,7 +21,7 @@ public:
     }
     void Configuration::initPlayerInputs(){
         player_inputs.map(PlayerInputs::Up)
-    }
+    };
 
     //
 };

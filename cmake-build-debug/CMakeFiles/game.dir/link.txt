@@ -1,3 +1,1 @@
-"D:\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\game.dir/objects.a
-C:\mingw64\bin\ar.exe cr CMakeFiles\game.dir/objects.a @CMakeFiles\game.dir\objects1.rsp
-C:\mingw64\bin\g++.exe -g -mwindows -Wl,--whole-archive CMakeFiles\game.dir/objects.a -Wl,--no-whole-archive -o game.exe -Wl,--out-implib,libgame.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\game.dir\linklibs.rsp
+/usr/bin/c++ -g CMakeFiles/game.dir/main.cpp.o CMakeFiles/game.dir/src/Game.cpp.o CMakeFiles/game.dir/src/Player.cpp.o CMakeFiles/game.dir/src/ResourceManager.cpp.o CMakeFiles/game.dir/src/Configuration.cpp.o CMakeFiles/game.dir/src/Action.cpp.o CMakeFiles/game.dir/src/ActionTarget.cpp.o -o game  -lsfml-graphics -lsfml-window -lsfml-system 

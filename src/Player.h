@@ -6,6 +6,7 @@
 
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/System/Time.hpp>
+#include <SFML/Graphics/RenderTarget.hpp>
 
 class Player : public sf::Drawable {
     public:

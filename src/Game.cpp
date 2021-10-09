@@ -7,7 +7,7 @@
 #include "Game.h"
 
 
-Game::Game() : _window(sf::VideoMode(800, 600), "02_Game_Archi"), _player(150){
+Game::Game() : _window(sf::VideoMode(800, 600), "02_Game_Archi"){
     _player.setPosition(10,20);
 }
 

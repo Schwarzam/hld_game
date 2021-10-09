@@ -5,6 +5,7 @@
 #include <cmath>
 #include "Player.h"
 #include <SFML/Window/Event.hpp>
+#include <SFML/Window/Keyboard.hpp>
 
 Player::Player() : _shape(sf::Vector2f(32,32)){
     _shape.setFillColor(sf::Color::Blue);
@@ -29,22 +30,19 @@ void Player::draw(sf::RenderTarget& target, sf::RenderStates states) const {
     target.draw(_shape, states);
 }
 
-void Player::processEvents() {
+void Player::processEvents(){
     rotation = 0;
 
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W){
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::W)){
         isMoving = true;
     }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::S){
-        //
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){
+        isMoving = true;
     }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::D){
-        //
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
+        isMoving = true;
     }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::A){
-        //
+    else if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){
+        isMoving = true;
     }
 }
-
-
-
