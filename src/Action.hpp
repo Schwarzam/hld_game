@@ -19,8 +19,8 @@ public:
         Released=1<<2
     };
 
-    Action(const sf::Keyboard::Key& key,int type=Type::RealTime|Type::Pressed);
-    Action(const sf::Mouse::Button& button,int type=Type::RealTime|Type::Pressed);
+    explicit Action(const sf::Keyboard::Key& key,int type=Type::RealTime|Type::Pressed);
+    explicit Action(const sf::Mouse::Button& button,int type=Type::RealTime|Type::Pressed);
 
     bool test()const;
 

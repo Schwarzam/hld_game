@@ -30,10 +30,6 @@ private:
 
     sf::RenderWindow _window; //< the window use to display the game
     Player _player;
-
 };
-
-
-
 
 #endif //GAME_GAME_H
