@@ -11,7 +11,12 @@ add_executable(game main.cpp
         src/Configuration.cpp src/Configuration.h
         src/Action.cpp src/Action.hpp
         src/ActionTarget.tpp src/ActionTarget.h
-        src/ActionMap.tpp src/ActionMap.h src/map/Geo_square.cpp src/map/Geo_square.h src/map/VLayer.cpp src/map/VLayer.h src/map/Layer.tpp src/map/Layer.h src/map/Tile.cpp src/map/Tile.h)
+        src/ActionMap.tpp src/ActionMap.h
+        src/core/Geo_square.cpp src/core/Geo_square.h
+        src/core/Level.cpp src/core/Level.h
+        src/core/Configuration.cpp src/core/Configuration.h
+        src/core/Entity.cpp src/core/Entity.h
+        )
 
 if(WIN32)
     set(SMFL_folder c:/SFML)
@@ -38,13 +43,15 @@ endif ()
 
 ##Ubuntu just need to install libsfml-dev
 if(UNIX AND NOT APPLE)
+    include_directories("./libs/SFML-utils")
+    include_directories("./libs/SFML-utils/include")
+    include_directories("./libs/SFML-utils/extlibs/cpp-utils/include")
 
     find_package(SFML REQUIRED system window graphics network audio)
     if(SFML_FOUND)
         include_directories(${SFML_INCLUDE_DIR})
         target_link_libraries(game -lsfml-graphics -lsfml-window -lsfml-system)
     endif()
-
 endif()
 
 if(APPLE)

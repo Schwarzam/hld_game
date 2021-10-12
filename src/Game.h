@@ -9,6 +9,8 @@
 #include <SFML/Graphics/CircleShape.hpp>
 #include "Player.h"
 
+#include "core/Level.h"
+
 class Game
 {
 public:
