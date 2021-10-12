@@ -3,7 +3,8 @@
 //
 
 #include <cmath>
-#include "geosquare.h"
+#include "Geo_square.h"
+
 
 Geo_square::Geo_square(float scale) : _scale(scale), _width(1.5), _height(1.5)
 {

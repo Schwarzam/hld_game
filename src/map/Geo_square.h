@@ -5,9 +5,9 @@
 #ifndef GAME_GEO_SQUARE_H
 #define GAME_GEO_SQUARE_H
 
-
 #include <SFML/System/Vector2.hpp>
 #include <SFML/Graphics/ConvexShape.hpp>
+#include <iostream>
 
 class Geo_square {
 public:

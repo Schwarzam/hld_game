@@ -11,7 +11,7 @@ add_executable(game main.cpp
         src/Configuration.cpp src/Configuration.h
         src/Action.cpp src/Action.hpp
         src/ActionTarget.tpp src/ActionTarget.h
-        src/ActionMap.tpp src/ActionMap.h src/map/geosquare.cpp src/map/geosquare.h src/map/VLayer.cpp src/map/VLayer.h)
+        src/ActionMap.tpp src/ActionMap.h src/map/Geo_square.cpp src/map/Geo_square.h src/map/VLayer.cpp src/map/VLayer.h src/map/Layer.tpp src/map/Layer.h src/map/Tile.cpp src/map/Tile.h)
 
 if(WIN32)
     set(SMFL_folder c:/SFML)

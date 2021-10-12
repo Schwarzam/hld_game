@@ -8,18 +8,26 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/gustavo/hld_game/main.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/main.cpp.o"
-  "/home/gustavo/hld_game/src/Action.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Action.cpp.o"
-  "/home/gustavo/hld_game/src/Configuration.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Configuration.cpp.o"
-  "/home/gustavo/hld_game/src/Game.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Game.cpp.o"
-  "/home/gustavo/hld_game/src/Player.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Player.cpp.o"
-  "/home/gustavo/hld_game/src/map/VLayer.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/map/VLayer.cpp.o"
-  "/home/gustavo/hld_game/src/map/geosquare.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/map/geosquare.cpp.o"
+  "C:/Users/gusta/Documents/hld_game/main.cpp" "C:/Users/gusta/Documents/hld_game/cmake-build-debug/CMakeFiles/game.dir/main.cpp.obj"
+  "C:/Users/gusta/Documents/hld_game/src/Action.cpp" "C:/Users/gusta/Documents/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Action.cpp.obj"
+  "C:/Users/gusta/Documents/hld_game/src/Configuration.cpp" "C:/Users/gusta/Documents/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Configuration.cpp.obj"
+  "C:/Users/gusta/Documents/hld_game/src/Game.cpp" "C:/Users/gusta/Documents/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Game.cpp.obj"
+  "C:/Users/gusta/Documents/hld_game/src/Player.cpp" "C:/Users/gusta/Documents/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Player.cpp.obj"
+  "C:/Users/gusta/Documents/hld_game/src/map/Geo_square.cpp" "C:/Users/gusta/Documents/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/map/Geo_square.cpp.obj"
+  "C:/Users/gusta/Documents/hld_game/src/map/Tile.cpp" "C:/Users/gusta/Documents/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/map/Tile.cpp.obj"
+  "C:/Users/gusta/Documents/hld_game/src/map/VLayer.cpp" "C:/Users/gusta/Documents/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/map/VLayer.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "SFML_STATIC"
+  )
+
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "c:/SFML/include"
+  "C:/SFML/include"
   )
 
 # The set of dependency files which are needed:

@@ -18,7 +18,7 @@ public:
     VLayer(const VLayer&) = delete;
     VLayer& operator=(const VLayer&) = delete;
 
-    VLayer(std::string  type,int z,bool isStatic,bool isVisible);
+    VLayer(std::string type,int z,bool isStatic,bool isVisible);
     virtual ~VLayer() = default;
 
     virtual void sort() = 0;
@@ -28,7 +28,7 @@ public:
 
     const std::string& getType()const;
 
-    virtual void remove(void* data,bool del = true) = 0;
+    virtual void remove(void* data,bool del = true);
 
     bool isStatic()const;
     bool isVisible() const;
@@ -51,7 +51,5 @@ private:
     bool _visibility;
     int _z;
 };
-}
-
 
 #endif //GAME_V_LAYER_H
