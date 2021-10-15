@@ -1,15 +1,10 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/game.dir/main.cpp.o"
-  "CMakeFiles/game.dir/src/Action.cpp.o"
-  "CMakeFiles/game.dir/src/Configuration.cpp.o"
-  "CMakeFiles/game.dir/src/Game.cpp.o"
-  "CMakeFiles/game.dir/src/Player.cpp.o"
-  "CMakeFiles/game.dir/src/core/Configuration.cpp.o"
-  "CMakeFiles/game.dir/src/core/Entity.cpp.o"
-  "CMakeFiles/game.dir/src/core/Geo_square.cpp.o"
-  "CMakeFiles/game.dir/src/core/Level.cpp.o"
-  "game"
+  "CMakeFiles/game.dir/main.cpp.obj"
+  "CMakeFiles/game.dir/src/Game.cpp.obj"
+  "game.exe"
+  "game.exe.manifest"
   "game.pdb"
+  "libgame.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

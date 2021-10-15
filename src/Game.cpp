@@ -9,7 +9,7 @@
 
 Game::Game() : _window(sf::VideoMode(800, 600),"02_Game_Archi")
 {
-    _player.setPosition(100,100);
+    //_player.setPosition(100,100);
 }
 
 void Game::runWithFixedTimeSteps(int frame_per_seconds)
@@ -89,13 +89,13 @@ void Game::processEvents()
         }
     }
 
-    _player.processEvents();
+    //_player.processEvents();
 }
 
 
 void Game::update(sf::Time deltaTime)
 {
-    _player.update(deltaTime);
+    //_player.update(deltaTime);
 }
 
 void Game::render()
@@ -104,7 +104,7 @@ void Game::render()
     _window.clear();
 
     //Draw
-    _window.draw(_player);
+    //_window.draw(_player);
 
     //Update the window
     _window.display();

@@ -6,19 +6,11 @@ file(COPY media DESTINATION ${CMAKE_BINARY_DIR})
 
 add_executable(game main.cpp
         src/Game.h src/Game.cpp
-        src/Player.h src/Player.cpp  src/Player.tpp
-        src/ResourceManager.h src/ResourceManager.tpp
-        src/Configuration.cpp src/Configuration.h
-        src/Action.cpp src/Action.hpp
-        src/ActionTarget.tpp src/ActionTarget.h
-        src/ActionMap.tpp src/ActionMap.h
-        src/core/Geo_square.cpp src/core/Geo_square.h
-        src/core/Level.cpp src/core/Level.h
-        src/core/Configuration.cpp src/core/Configuration.h
-        src/core/Entity.cpp src/core/Entity.h
         )
 
 if(WIN32)
+    set(CMAKE_C_COMPILER c:/mingw64/bin/g++)
+
     set(SMFL_folder c:/SFML)
     target_link_options(game PRIVATE -mwindows)
 

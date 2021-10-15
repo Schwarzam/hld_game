@@ -8,23 +8,20 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/gustavo/hld_game/main.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/main.cpp.o"
-  "/home/gustavo/hld_game/src/Action.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Action.cpp.o"
-  "/home/gustavo/hld_game/src/Configuration.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Configuration.cpp.o"
-  "/home/gustavo/hld_game/src/Game.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Game.cpp.o"
-  "/home/gustavo/hld_game/src/Player.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Player.cpp.o"
-  "/home/gustavo/hld_game/src/core/Configuration.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/core/Configuration.cpp.o"
-  "/home/gustavo/hld_game/src/core/Entity.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/core/Entity.cpp.o"
-  "/home/gustavo/hld_game/src/core/Geo_square.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/core/Geo_square.cpp.o"
-  "/home/gustavo/hld_game/src/core/Level.cpp" "/home/gustavo/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/core/Level.cpp.o"
+  "C:/Users/gusta/CLionProjects/game/main.cpp" "C:/Users/gusta/CLionProjects/game/cmake-build-debug/CMakeFiles/game.dir/main.cpp.obj"
+  "C:/Users/gusta/CLionProjects/game/src/Game.cpp" "C:/Users/gusta/CLionProjects/game/cmake-build-debug/CMakeFiles/game.dir/src/Game.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
+# Preprocessor definitions for this target.
+set(CMAKE_TARGET_DEFINITIONS_CXX
+  "SFML_STATIC"
+  )
+
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  ".././libs/SFML-utils"
-  ".././libs/SFML-utils/include"
-  ".././libs/SFML-utils/extlibs/cpp-utils/include"
+  "c:/SFML/include"
+  "C:/SFML/include"
   )
 
 # The set of dependency files which are needed:
