@@ -104,10 +104,22 @@ void Game::render()
     _window.clear();
 
     //Draw
-    //_window.draw(_player);
+    _window.draw(map);
 
     //Update the window
     _window.display();
+}
+
+bool Game::startMap() {
+    int level[] = {
+            0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0
+    };
+
+    if (!map.load("media/bloco_novo2_G.png", sf::Vector2u(160, 160), level, 5, 3))
+        return false;
+    return true;
 }
 
 

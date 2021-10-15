@@ -8,6 +8,8 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/CircleShape.hpp>
 
+#include "TileMap.h"
+
 class Game
 {
 public:
@@ -20,6 +22,11 @@ public:
     void runWithFixedTimeSteps(int frame_per_seconds=60);
     void runWithVariableTimeSteps();
     void runWithMinimumTimeSteps(int minimum_frame_per_seconds=30);
+
+    TileMap map;
+    bool startMap();
+
+
 
 private:
 

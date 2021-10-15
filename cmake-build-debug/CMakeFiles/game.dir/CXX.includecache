@@ -112,6 +112,14 @@ SFML/Graphics/VertexArray.hpp
 SFML/System/Vector2.hpp
 -
 
+C:/SFML/include/SFML/Graphics/Texture.hpp
+SFML/Graphics/Export.hpp
+-
+SFML/Graphics/Image.hpp
+-
+SFML/Window/GlResource.hpp
+-
+
 C:/SFML/include/SFML/Graphics/Transform.hpp
 SFML/Graphics/Export.hpp
 -
@@ -314,7 +322,7 @@ SFML/Config.hpp
 
 C:/SFML/include/SFML/Window/WindowStyle.hpp
 
-C:/Users/gusta/CLionProjects/game/src/Game.cpp
+C:/Users/gusta/Documents/hld_game/src/Game.cpp
 SFML/Window/VideoMode.hpp
 -
 SFML/Graphics/Color.hpp
@@ -322,11 +330,27 @@ SFML/Graphics/Color.hpp
 SFML/Window/Event.hpp
 -
 Game.h
-C:/Users/gusta/CLionProjects/game/src/Game.h
+C:/Users/gusta/Documents/hld_game/src/Game.h
 
-C:/Users/gusta/CLionProjects/game/src/Game.h
+C:/Users/gusta/Documents/hld_game/src/Game.h
 SFML/Graphics/RenderWindow.hpp
 -
 SFML/Graphics/CircleShape.hpp
+-
+TileMap.h
+C:/Users/gusta/Documents/hld_game/src/TileMap.h
+
+C:/Users/gusta/Documents/hld_game/src/TileMap.h
+SFML/Graphics/Transformable.hpp
+-
+SFML/Graphics/Drawable.hpp
+-
+string
+-
+SFML/Graphics/VertexArray.hpp
+-
+SFML/Graphics/Texture.hpp
+-
+SFML/Graphics/RenderTarget.hpp
 -
 

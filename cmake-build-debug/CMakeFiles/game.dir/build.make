@@ -43,19 +43,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "C:\Users\gusta\AppData\Local\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "D:\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "C:\Users\gusta\AppData\Local\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "D:\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\gusta\CLionProjects\game
+CMAKE_SOURCE_DIR = C:\Users\gusta\Documents\hld_game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\gusta\CLionProjects\game\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\gusta\Documents\hld_game\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/game.dir/depend.make
@@ -68,41 +68,57 @@ include CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/main.cpp.obj: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/main.cpp.obj: CMakeFiles/game.dir/includes_CXX.rsp
 CMakeFiles/game.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gusta\CLionProjects\game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/game.dir/main.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\game.dir\main.cpp.obj -c C:\Users\gusta\CLionProjects\game\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gusta\Documents\hld_game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/game.dir/main.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\game.dir\main.cpp.obj -c C:\Users\gusta\Documents\hld_game\main.cpp
 
 CMakeFiles/game.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/main.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\gusta\CLionProjects\game\main.cpp > CMakeFiles\game.dir\main.cpp.i
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\gusta\Documents\hld_game\main.cpp > CMakeFiles\game.dir\main.cpp.i
 
 CMakeFiles/game.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/main.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gusta\CLionProjects\game\main.cpp -o CMakeFiles\game.dir\main.cpp.s
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gusta\Documents\hld_game\main.cpp -o CMakeFiles\game.dir\main.cpp.s
 
 CMakeFiles/game.dir/src/Game.cpp.obj: CMakeFiles/game.dir/flags.make
 CMakeFiles/game.dir/src/Game.cpp.obj: CMakeFiles/game.dir/includes_CXX.rsp
 CMakeFiles/game.dir/src/Game.cpp.obj: ../src/Game.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gusta\CLionProjects\game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/game.dir/src/Game.cpp.obj"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\game.dir\src\Game.cpp.obj -c C:\Users\gusta\CLionProjects\game\src\Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gusta\Documents\hld_game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/game.dir/src/Game.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\game.dir\src\Game.cpp.obj -c C:\Users\gusta\Documents\hld_game\src\Game.cpp
 
 CMakeFiles/game.dir/src/Game.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/Game.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\gusta\CLionProjects\game\src\Game.cpp > CMakeFiles\game.dir\src\Game.cpp.i
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\gusta\Documents\hld_game\src\Game.cpp > CMakeFiles\game.dir\src\Game.cpp.i
 
 CMakeFiles/game.dir/src/Game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/Game.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gusta\CLionProjects\game\src\Game.cpp -o CMakeFiles\game.dir\src\Game.cpp.s
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gusta\Documents\hld_game\src\Game.cpp -o CMakeFiles\game.dir\src\Game.cpp.s
+
+CMakeFiles/game.dir/src/TileMap.cpp.obj: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/src/TileMap.cpp.obj: CMakeFiles/game.dir/includes_CXX.rsp
+CMakeFiles/game.dir/src/TileMap.cpp.obj: ../src/TileMap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\gusta\Documents\hld_game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/game.dir/src/TileMap.cpp.obj"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\game.dir\src\TileMap.cpp.obj -c C:\Users\gusta\Documents\hld_game\src\TileMap.cpp
+
+CMakeFiles/game.dir/src/TileMap.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/src/TileMap.cpp.i"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\gusta\Documents\hld_game\src\TileMap.cpp > CMakeFiles\game.dir\src\TileMap.cpp.i
+
+CMakeFiles/game.dir/src/TileMap.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/src/TileMap.cpp.s"
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\gusta\Documents\hld_game\src\TileMap.cpp -o CMakeFiles\game.dir\src\TileMap.cpp.s
 
 # Object files for target game
 game_OBJECTS = \
 "CMakeFiles/game.dir/main.cpp.obj" \
-"CMakeFiles/game.dir/src/Game.cpp.obj"
+"CMakeFiles/game.dir/src/Game.cpp.obj" \
+"CMakeFiles/game.dir/src/TileMap.cpp.obj"
 
 # External object files for target game
 game_EXTERNAL_OBJECTS =
 
 game.exe: CMakeFiles/game.dir/main.cpp.obj
 game.exe: CMakeFiles/game.dir/src/Game.cpp.obj
+game.exe: CMakeFiles/game.dir/src/TileMap.cpp.obj
 game.exe: CMakeFiles/game.dir/build.make
 game.exe: C:/SFML/lib/libsfml-audio-s-d.a
 game.exe: C:/SFML/lib/libsfml-graphics-s-d.a
@@ -118,7 +134,7 @@ game.exe: C:/SFML/lib/libfreetype.a
 game.exe: CMakeFiles/game.dir/linklibs.rsp
 game.exe: CMakeFiles/game.dir/objects1.rsp
 game.exe: CMakeFiles/game.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\gusta\CLionProjects\game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable game.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\gusta\Documents\hld_game\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable game.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\game.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -130,6 +146,6 @@ CMakeFiles/game.dir/clean:
 .PHONY : CMakeFiles/game.dir/clean
 
 CMakeFiles/game.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\gusta\CLionProjects\game C:\Users\gusta\CLionProjects\game C:\Users\gusta\CLionProjects\game\cmake-build-debug C:\Users\gusta\CLionProjects\game\cmake-build-debug C:\Users\gusta\CLionProjects\game\cmake-build-debug\CMakeFiles\game.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\gusta\Documents\hld_game C:\Users\gusta\Documents\hld_game C:\Users\gusta\Documents\hld_game\cmake-build-debug C:\Users\gusta\Documents\hld_game\cmake-build-debug C:\Users\gusta\Documents\hld_game\cmake-build-debug\CMakeFiles\game.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/game.dir/depend
 

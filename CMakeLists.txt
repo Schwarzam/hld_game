@@ -3,10 +3,12 @@ project(game)
 
 set(CMAKE_CXX_STANDARD 17)
 file(COPY media DESTINATION ${CMAKE_BINARY_DIR})
+file(GLOB MEDIA media/)
+file(COPY MEDIA DESTINATION ${CMAKE_BINARY_DIR})
 
 add_executable(game main.cpp
         src/Game.h src/Game.cpp
-        )
+        src/TileMap.cpp src/TileMap.h)
 
 if(WIN32)
     set(CMAKE_C_COMPILER c:/mingw64/bin/g++)
