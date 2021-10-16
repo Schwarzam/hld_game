@@ -173,10 +173,22 @@ CMakeFiles/game.dir/src/Player.cpp.obj: \
  C:/SFML/include/SFML/Graphics/View.hpp \
  C:/SFML/include/SFML/System/Export.hpp \
  C:/SFML/include/SFML/System/NonCopyable.hpp \
+ C:/SFML/include/SFML/System/String.hpp \
+ C:/SFML/include/SFML/System/String.inl \
+ C:/SFML/include/SFML/System/Time.hpp \
+ C:/SFML/include/SFML/System/Utf.hpp \
+ C:/SFML/include/SFML/System/Utf.inl \
  C:/SFML/include/SFML/System/Vector2.hpp \
  C:/SFML/include/SFML/System/Vector2.inl \
+ C:/SFML/include/SFML/System/Vector3.hpp \
+ C:/SFML/include/SFML/System/Vector3.inl \
+ C:/SFML/include/SFML/Window/Event.hpp \
  C:/SFML/include/SFML/Window/Export.hpp \
  C:/SFML/include/SFML/Window/GlResource.hpp \
+ C:/SFML/include/SFML/Window/Joystick.hpp \
+ C:/SFML/include/SFML/Window/Keyboard.hpp \
+ C:/SFML/include/SFML/Window/Mouse.hpp \
+ C:/SFML/include/SFML/Window/Sensor.hpp \
  ../src/Player.cpp \
  ../src/Player.h
 CMakeFiles/game.dir/src/TileMap.cpp.obj: \

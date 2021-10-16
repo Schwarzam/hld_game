@@ -12,11 +12,10 @@ void Events::processInputs(const sf::Event &event) {
     switch (event.type)
     {
         case sf::Event::KeyPressed:
-            if(event.key.code == sf::Keyboard::W){
-
-            }
-            if(event.key.code == sf::Keyboard::S){
-
-            }
+            inputs.push_back(event.key.code);
     }
+}
+
+std::vector<char> Events::get_inputs() {
+    return inputs;
 }

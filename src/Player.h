@@ -15,7 +15,7 @@
 class Player : public sf::Drawable {
 public:
     Player();
-    void processEvents(const sf::Event& event);
+    void processEvents(const std::vector<char>& inputs);
 
 private:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;

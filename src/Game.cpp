@@ -92,7 +92,7 @@ void Game::processEvents()
         }
     }
 
-    _player.processEvents();
+    _player.processEvents(events.get_inputs());
 }
 
 

@@ -19,6 +19,12 @@ void Player::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(sprite, states);
 }
 
-void Player::processEvents(const sf::Event &event) {
+void Player::processEvents(const std::vector<char>& inputs) {
+    for (char input : inputs){
+        if (input == sf::Keyboard::Key::W){
+            sprite.move(sf::Vector2f(0.1, 0.1));
 
+        }
+    }
 }
+
