@@ -152,6 +152,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Events.obj: src/Events.cpp.obj
+.PHONY : src/Events.obj
+
+# target to build an object file
+src/Events.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/Events.cpp.obj
+.PHONY : src/Events.cpp.obj
+
+src/Events.i: src/Events.cpp.i
+.PHONY : src/Events.i
+
+# target to preprocess a source file
+src/Events.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/Events.cpp.i
+.PHONY : src/Events.cpp.i
+
+src/Events.s: src/Events.cpp.s
+.PHONY : src/Events.s
+
+# target to generate assembly for a file
+src/Events.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/Events.cpp.s
+.PHONY : src/Events.cpp.s
+
 src/Game.obj: src/Game.cpp.obj
 .PHONY : src/Game.obj
 
@@ -236,6 +260,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/Events.obj
+	@echo ... src/Events.i
+	@echo ... src/Events.s
 	@echo ... src/Game.obj
 	@echo ... src/Game.i
 	@echo ... src/Game.s

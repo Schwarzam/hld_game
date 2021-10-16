@@ -18,3 +18,7 @@ Player::Player() {
 void Player::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(sprite, states);
 }
+
+void Player::processEvents(const sf::Event &event) {
+
+}
