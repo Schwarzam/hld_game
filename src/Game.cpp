@@ -5,6 +5,7 @@
 #include <SFML/Graphics/Color.hpp>
 #include <SFML/Window/Event.hpp>
 #include "Game.h"
+#include "Player.h"
 
 
 Game::Game() : _window(sf::VideoMode(800, 600),"02_Game_Archi")
@@ -105,6 +106,7 @@ void Game::render()
 
     //Draw
     _window.draw(map);
+    _window.draw(_player);
 
     //Update the window
     _window.display();
@@ -117,7 +119,7 @@ bool Game::startMap() {
             0, 0, 0, 0, 0
     };
 
-    if (!map.load("media/bloco_novo2_G.png", sf::Vector2u(160, 160), level, 5, 3))
+    if (!map.load("media/bloco_novo2_G.png", sf::Vector2u(160, 160), sf::Vector2u(160, 120), level, 5, 3))
         return false;
     return true;
 }

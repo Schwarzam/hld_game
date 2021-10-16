@@ -78,6 +78,7 @@ CMakeFiles/game.dir/main.cpp.obj: \
  C:/SFML/include/SFML/Window/WindowStyle.hpp \
  ../main.cpp \
  ../src/Game.h \
+ ../src/Player.h \
  ../src/TileMap.h
 CMakeFiles/game.dir/src/Game.cpp.obj: \
  C:/SFML/include/SFML/Config.hpp \
@@ -94,6 +95,7 @@ CMakeFiles/game.dir/src/Game.cpp.obj: \
  C:/SFML/include/SFML/Graphics/RenderTarget.hpp \
  C:/SFML/include/SFML/Graphics/RenderWindow.hpp \
  C:/SFML/include/SFML/Graphics/Shape.hpp \
+ C:/SFML/include/SFML/Graphics/Sprite.hpp \
  C:/SFML/include/SFML/Graphics/Texture.hpp \
  C:/SFML/include/SFML/Graphics/Transform.hpp \
  C:/SFML/include/SFML/Graphics/Transformable.hpp \
@@ -127,7 +129,34 @@ CMakeFiles/game.dir/src/Game.cpp.obj: \
  C:/SFML/include/SFML/Window/WindowStyle.hpp \
  ../src/Game.cpp \
  ../src/Game.h \
+ ../src/Player.h \
  ../src/TileMap.h
+CMakeFiles/game.dir/src/Player.cpp.obj: \
+ C:/SFML/include/SFML/Config.hpp \
+ C:/SFML/include/SFML/Graphics/BlendMode.hpp \
+ C:/SFML/include/SFML/Graphics/Color.hpp \
+ C:/SFML/include/SFML/Graphics/Drawable.hpp \
+ C:/SFML/include/SFML/Graphics/Export.hpp \
+ C:/SFML/include/SFML/Graphics/Image.hpp \
+ C:/SFML/include/SFML/Graphics/PrimitiveType.hpp \
+ C:/SFML/include/SFML/Graphics/Rect.hpp \
+ C:/SFML/include/SFML/Graphics/Rect.inl \
+ C:/SFML/include/SFML/Graphics/RenderStates.hpp \
+ C:/SFML/include/SFML/Graphics/RenderTarget.hpp \
+ C:/SFML/include/SFML/Graphics/Sprite.hpp \
+ C:/SFML/include/SFML/Graphics/Texture.hpp \
+ C:/SFML/include/SFML/Graphics/Transform.hpp \
+ C:/SFML/include/SFML/Graphics/Transformable.hpp \
+ C:/SFML/include/SFML/Graphics/Vertex.hpp \
+ C:/SFML/include/SFML/Graphics/View.hpp \
+ C:/SFML/include/SFML/System/Export.hpp \
+ C:/SFML/include/SFML/System/NonCopyable.hpp \
+ C:/SFML/include/SFML/System/Vector2.hpp \
+ C:/SFML/include/SFML/System/Vector2.inl \
+ C:/SFML/include/SFML/Window/Export.hpp \
+ C:/SFML/include/SFML/Window/GlResource.hpp \
+ ../src/Player.cpp \
+ ../src/Player.h
 CMakeFiles/game.dir/src/TileMap.cpp.obj: \
  C:/SFML/include/SFML/Config.hpp \
  C:/SFML/include/SFML/Graphics/BlendMode.hpp \

@@ -9,6 +9,7 @@
 #include <SFML/Graphics/CircleShape.hpp>
 
 #include "TileMap.h"
+#include "Player.h"
 
 class Game
 {
@@ -26,8 +27,6 @@ public:
     TileMap map;
     bool startMap();
 
-
-
 private:
 
     void processEvents();//< Process events
@@ -35,7 +34,7 @@ private:
     void render();//< draw all the stuff
 
     sf::RenderWindow _window; //< the window use to display the game
-    //Player _player;
+    Player _player;
 };
 
 #endif //GAME_GAME_H
