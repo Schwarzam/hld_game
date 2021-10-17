@@ -13,11 +13,13 @@
 #include <SFML/Window/Event.hpp>
 #include <stack>
 #include <SFML/System/Clock.hpp>
+#include "TileMap.h"
 
 class Player : public sf::Drawable {
 public:
     Player();
-    void processEvents(const sf::Event& event);
+    explicit Player(TileMap* map);
+    void processEvents();
 
 private:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
@@ -27,6 +29,8 @@ private:
     float velocity = 100;
     sf::Vector2f movement = sf::Vector2f(0, 0);
     sf::Clock clock;
+
+    TileMap* map{};
 };
 
 

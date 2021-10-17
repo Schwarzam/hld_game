@@ -31,7 +31,6 @@ public:
     Events events;
 
 private:
-
     void processEvents();//< Process events
     void update(sf::Time deltaTime); //< do some updates
     void render();//< draw all the stuff

@@ -7,7 +7,7 @@
 #include <valarray>
 #include "Player.h"
 
-Player::Player() {
+Player::Player(TileMap* map) : map(map) {
     if (!texture.loadFromFile("media/chapcahpacete.png"))
     {
         //Error
@@ -20,7 +20,7 @@ void Player::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(sprite, states);
 }
 
-void Player::processEvents(const sf::Event& event) {
+void Player::processEvents() {
     movement = sf::Vector2f(0, 0);
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){
         movement.y -= velocity;
@@ -44,4 +44,8 @@ void Player::processEvents(const sf::Event& event) {
 
     sprite.move(movement * deltaTime);
 }
+
+Player::Player() = default;
+
+
 

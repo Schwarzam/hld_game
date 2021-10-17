@@ -170,6 +170,7 @@ CMakeFiles/game.dir/src/Player.cpp.obj: \
  C:/SFML/include/SFML/Graphics/Transform.hpp \
  C:/SFML/include/SFML/Graphics/Transformable.hpp \
  C:/SFML/include/SFML/Graphics/Vertex.hpp \
+ C:/SFML/include/SFML/Graphics/VertexArray.hpp \
  C:/SFML/include/SFML/Graphics/View.hpp \
  C:/SFML/include/SFML/System/Clock.hpp \
  C:/SFML/include/SFML/System/Export.hpp \
@@ -191,7 +192,8 @@ CMakeFiles/game.dir/src/Player.cpp.obj: \
  C:/SFML/include/SFML/Window/Mouse.hpp \
  C:/SFML/include/SFML/Window/Sensor.hpp \
  ../src/Player.cpp \
- ../src/Player.h
+ ../src/Player.h \
+ ../src/TileMap.h
 CMakeFiles/game.dir/src/TileMap.cpp.obj: \
  C:/SFML/include/SFML/Config.hpp \
  C:/SFML/include/SFML/Graphics/BlendMode.hpp \

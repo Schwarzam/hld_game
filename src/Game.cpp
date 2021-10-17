@@ -8,7 +8,8 @@
 #include "Events.h"
 
 
-Game::Game() : _window(sf::VideoMode(800, 600),"02_Game_Archi", sf::Style::Resize)
+Game::Game() : _window(sf::VideoMode(800, 600),"02_Game_Archi", sf::Style::Resize),
+               _player(Player(&map))
 {
     //_player.setPosition(100,100);
 }
@@ -91,8 +92,8 @@ void Game::processEvents()
             if (event.key.code == sf::Keyboard::Escape)
                 _window.close();
         }
+
     }
-    _player.processEvents(event);
 
 
 }
@@ -100,6 +101,7 @@ void Game::processEvents()
 
 void Game::update(sf::Time deltaTime)
 {
+    _player.processEvents();
     //_player.update(deltaTime);
 }
 
