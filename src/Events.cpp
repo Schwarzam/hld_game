@@ -12,10 +12,10 @@ void Events::processInputs(const sf::Event &event) {
     switch (event.type)
     {
         case sf::Event::KeyPressed:
-            inputs.push_back(event.key.code);
+            inputs.push(event.key.code);
     }
 }
 
-std::vector<char> Events::get_inputs() {
+std::stack<char>& Events::get_inputs() {
     return inputs;
 }

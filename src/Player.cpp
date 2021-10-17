@@ -4,6 +4,7 @@
 
 
 #include <iostream>
+#include <valarray>
 #include "Player.h"
 
 Player::Player() {
@@ -19,12 +20,28 @@ void Player::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(sprite, states);
 }
 
-void Player::processEvents(const std::vector<char>& inputs) {
-    for (char input : inputs){
-        if (input == sf::Keyboard::Key::W){
-            sprite.move(sf::Vector2f(0.1, 0.1));
-
-        }
+void Player::processEvents(const sf::Event& event) {
+    movement = sf::Vector2f(0, 0);
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){
+        movement.y -= velocity;
     }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){
+        movement.y += velocity;
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){
+        movement.x -= velocity;
+    }
+    if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
+        movement.x += velocity;
+    }
+
+    float deltaTime = clock.restart().asSeconds();
+
+    if (movement.x != 0 && movement.y != 0){
+        movement.x = movement.x / sqrt(2);
+        movement.y = movement.y / sqrt(2);
+    }
+
+    sprite.move(movement * deltaTime);
 }
 

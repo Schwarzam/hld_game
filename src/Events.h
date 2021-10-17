@@ -8,17 +8,17 @@
 
 #include <SFML/Window/Event.hpp>
 #include <unordered_map>
-#include <vector>
+#include <stack>
 
 class Events {
 public:
     Events();
 
     void processInputs(const sf::Event& event);
-    std::vector<char> get_inputs();
+    std::stack<char>& get_inputs();
 
 private:
-    std::vector<char> inputs;
+    std::stack<char> inputs;
 };
 
 

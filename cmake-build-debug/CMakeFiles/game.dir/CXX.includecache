@@ -134,6 +134,12 @@ SFML/Graphics/Transform.hpp
 SFML/System/Vector2.hpp
 -
 
+C:/SFML/include/SFML/System/Clock.hpp
+SFML/System/Export.hpp
+-
+SFML/System/Time.hpp
+-
+
 C:/SFML/include/SFML/System/Export.hpp
 SFML/Config.hpp
 -
@@ -239,6 +245,8 @@ SFML/System/Time.hpp
 C:/Users/gusta/hld_game/src/Player.cpp
 iostream
 -
+valarray
+-
 Player.h
 C:/Users/gusta/hld_game/src/Player.h
 
@@ -252,5 +260,9 @@ SFML/Graphics/Sprite.hpp
 SFML/Graphics/RenderTarget.hpp
 -
 SFML/Window/Event.hpp
+-
+stack
+-
+SFML/System/Clock.hpp
 -
 

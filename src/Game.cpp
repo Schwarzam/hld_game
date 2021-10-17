@@ -82,6 +82,7 @@ void Game::processEvents()
     while(_window.pollEvent(event))
     {
         events.processInputs(event);
+
         if (event.type == sf::Event::Closed)//Close window
             _window.close();
 
@@ -91,8 +92,9 @@ void Game::processEvents()
                 _window.close();
         }
     }
+    _player.processEvents(event);
 
-    _player.processEvents(events.get_inputs());
+
 }
 
 
