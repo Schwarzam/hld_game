@@ -22,6 +22,12 @@ if(WIN32)
 
     include_directories(${SMFL_folder}/include)
     target_link_libraries(game sfml-audio sfml-graphics sfml-window sfml-system)
+
+    file(GLOB BINARY_DEP_DLLS "${CMAKE_BINARY_DIR}/*.dll")
+    file(COPY ${BINARY_DEP_DLLS} DESTINATION ${CMAKE_BINARY_DIR}/last_version/)
+    file(GLOB BINARY_DEP_EXES "${CMAKE_BINARY_DIR}/*.exe")
+    file(COPY ${BINARY_DEP_EXES} DESTINATION ${CMAKE_BINARY_DIR}/last_version/)
+    file(COPY ${CMAKE_BINARY_DIR}/media DESTINATION ${CMAKE_BINARY_DIR}/last_version)
 endif()
 
 

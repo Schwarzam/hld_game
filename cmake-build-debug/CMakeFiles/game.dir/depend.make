@@ -171,6 +171,7 @@ CMakeFiles/game.dir/src/Player.cpp.obj: \
  C:/SFML/include/SFML/Graphics/Transformable.hpp \
  C:/SFML/include/SFML/Graphics/Vertex.hpp \
  C:/SFML/include/SFML/Graphics/View.hpp \
+ C:/SFML/include/SFML/System/Clock.hpp \
  C:/SFML/include/SFML/System/Export.hpp \
  C:/SFML/include/SFML/System/NonCopyable.hpp \
  C:/SFML/include/SFML/System/String.hpp \
