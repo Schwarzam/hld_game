@@ -42,7 +42,9 @@ void Player::processEvents() {
         movement.y = movement.y / sqrt(2);
     }
 
-    sprite.move(movement * deltaTime);
+    if(map->validatePos(sf::Vector2f(movement.x, movement.y))){
+        sprite.move(movement * deltaTime);
+    };
 }
 
 Player::Player() = default;

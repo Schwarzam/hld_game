@@ -47,19 +47,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = "D:\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe"
+CMAKE_COMMAND = "C:\Users\gusta\AppData\Local\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = "D:\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E rm -f
+RM = "C:\Users\gusta\AppData\Local\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\gusta\Documents\hld_game
+CMAKE_SOURCE_DIR = C:\Users\gusta\hld_game
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\gusta\Documents\hld_game\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\gusta\hld_game\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,7 +67,7 @@ CMAKE_BINARY_DIR = C:\Users\gusta\Documents\hld_game\cmake-build-debug
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"D:\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+	"C:\Users\gusta\AppData\Local\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -77,7 +77,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	"D:\CLion 2021.2.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	"C:\Users\gusta\AppData\Local\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\gusta\Documents\hld_game\cmake-build-debug\CMakeFiles C:\Users\gusta\Documents\hld_game\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\gusta\hld_game\cmake-build-debug\CMakeFiles C:\Users\gusta\hld_game\cmake-build-debug\\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\gusta\Documents\hld_game\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\gusta\hld_game\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -151,30 +151,6 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-src/Events.obj: src/Events.cpp.obj
-.PHONY : src/Events.obj
-
-# target to build an object file
-src/Events.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/Events.cpp.obj
-.PHONY : src/Events.cpp.obj
-
-src/Events.i: src/Events.cpp.i
-.PHONY : src/Events.i
-
-# target to preprocess a source file
-src/Events.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/Events.cpp.i
-.PHONY : src/Events.cpp.i
-
-src/Events.s: src/Events.cpp.s
-.PHONY : src/Events.s
-
-# target to generate assembly for a file
-src/Events.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/Events.cpp.s
-.PHONY : src/Events.cpp.s
 
 src/Game.obj: src/Game.cpp.obj
 .PHONY : src/Game.obj
@@ -260,9 +236,6 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... src/Events.obj
-	@echo ... src/Events.i
-	@echo ... src/Events.s
 	@echo ... src/Game.obj
 	@echo ... src/Game.i
 	@echo ... src/Game.s

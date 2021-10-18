@@ -8,7 +8,7 @@ file(COPY MEDIA DESTINATION ${CMAKE_BINARY_DIR})
 
 add_executable(game main.cpp
         src/Game.h src/Game.cpp
-        src/TileMap.cpp src/TileMap.h src/Player.cpp src/Player.h src/Events.cpp src/Events.h)
+        src/TileMap.cpp src/TileMap.h src/Player.cpp src/Player.h)
 
 if(WIN32)
     set(CMAKE_C_COMPILER c:/mingw64/bin/g++)

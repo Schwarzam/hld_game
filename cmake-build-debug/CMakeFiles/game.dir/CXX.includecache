@@ -160,13 +160,13 @@ SFML/Window/Export.hpp
 SFML/System/NonCopyable.hpp
 -
 
-C:/Users/gusta/Documents/hld_game/src/TileMap.cpp
+C:/Users/gusta/hld_game/src/TileMap.cpp
 cstring
 -
 TileMap.h
-C:/Users/gusta/Documents/hld_game/src/TileMap.h
+C:/Users/gusta/hld_game/src/TileMap.h
 
-C:/Users/gusta/Documents/hld_game/src/TileMap.h
+C:/Users/gusta/hld_game/src/TileMap.h
 SFML/Graphics/Transformable.hpp
 -
 SFML/Graphics/Drawable.hpp

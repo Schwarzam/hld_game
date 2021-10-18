@@ -77,30 +77,9 @@ CMakeFiles/game.dir/main.cpp.obj: \
  C:/SFML/include/SFML/Window/WindowHandle.hpp \
  C:/SFML/include/SFML/Window/WindowStyle.hpp \
  ../main.cpp \
- ../src/Events.h \
  ../src/Game.h \
  ../src/Player.h \
  ../src/TileMap.h
-CMakeFiles/game.dir/src/Events.cpp.obj: \
- C:/SFML/include/SFML/Config.hpp \
- C:/SFML/include/SFML/System/Export.hpp \
- C:/SFML/include/SFML/System/String.hpp \
- C:/SFML/include/SFML/System/String.inl \
- C:/SFML/include/SFML/System/Time.hpp \
- C:/SFML/include/SFML/System/Utf.hpp \
- C:/SFML/include/SFML/System/Utf.inl \
- C:/SFML/include/SFML/System/Vector2.hpp \
- C:/SFML/include/SFML/System/Vector2.inl \
- C:/SFML/include/SFML/System/Vector3.hpp \
- C:/SFML/include/SFML/System/Vector3.inl \
- C:/SFML/include/SFML/Window/Event.hpp \
- C:/SFML/include/SFML/Window/Export.hpp \
- C:/SFML/include/SFML/Window/Joystick.hpp \
- C:/SFML/include/SFML/Window/Keyboard.hpp \
- C:/SFML/include/SFML/Window/Mouse.hpp \
- C:/SFML/include/SFML/Window/Sensor.hpp \
- ../src/Events.cpp \
- ../src/Events.h
 CMakeFiles/game.dir/src/Game.cpp.obj: \
  C:/SFML/include/SFML/Config.hpp \
  C:/SFML/include/SFML/Graphics/BlendMode.hpp \
@@ -148,7 +127,6 @@ CMakeFiles/game.dir/src/Game.cpp.obj: \
  C:/SFML/include/SFML/Window/Window.hpp \
  C:/SFML/include/SFML/Window/WindowHandle.hpp \
  C:/SFML/include/SFML/Window/WindowStyle.hpp \
- ../src/Events.h \
  ../src/Game.cpp \
  ../src/Game.h \
  ../src/Player.h \

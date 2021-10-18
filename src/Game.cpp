@@ -5,7 +5,6 @@
 #include <SFML/Graphics/Color.hpp>
 #include <SFML/Window/Event.hpp>
 #include "Game.h"
-#include "Events.h"
 
 
 Game::Game() : _window(sf::VideoMode(800, 600),"02_Game_Archi", sf::Style::Resize),
@@ -82,8 +81,6 @@ void Game::processEvents()
     //events loop
     while(_window.pollEvent(event))
     {
-        events.processInputs(event);
-
         if (event.type == sf::Event::Closed)//Close window
             _window.close();
 

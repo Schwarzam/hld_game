@@ -10,7 +10,6 @@
 
 #include "TileMap.h"
 #include "Player.h"
-#include "Events.h"
 
 class Game
 {
@@ -27,8 +26,6 @@ public:
 
     TileMap map;
     bool startMap();
-
-    Events events;
 
 private:
     void processEvents();//< Process events
