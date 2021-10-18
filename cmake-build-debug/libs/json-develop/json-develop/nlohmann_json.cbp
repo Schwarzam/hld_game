@@ -5,47 +5,50 @@
 		<Option title="nlohmann_json"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\lib\;CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\;CMake Files\libs\;CMake Files\libs\json-develop\;CMake Files\libs\json-develop\json-develop\;CMake Files\libs\json-develop\json-develop\cmake\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\SFML\;CMake Files\..\..\..\SFML\lib\;CMake Files\..\..\..\SFML\lib\cmake\;CMake Files\..\..\..\SFML\lib\cmake\SFML\;CMake Files\libs\;CMake Files\libs\json-develop\;CMake Files\libs\json-develop\json-develop\;CMake Files\libs\json-develop\json-develop\cmake\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/gustavo/hld_game/cmake-build-debug/libs/json-develop/json-develop"/>
+				<Option working_dir="C:/Users/gusta/hld_game/cmake-build-debug/libs/json-develop/json-develop"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/gustavo/hld_game/cmake-build-debug/libs/json-develop/json-develop/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/gustavo/hld_game/cmake-build-debug/libs/json-develop/json-develop/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/gustavo/hld_game/cmake-build-debug/libs/json-develop/json-develop/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/gustavo/hld_game/cmake-build-debug/libs/json-develop/json-develop/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/gusta/hld_game/cmake-build-debug/libs/json-develop/json-develop/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/gusta/hld_game/cmake-build-debug/libs/json-develop/json-develop/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/gusta/hld_game/cmake-build-debug/libs/json-develop/json-develop/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/gusta/hld_game/cmake-build-debug/libs/json-develop/json-develop/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/gustavo/hld_game/CMakeLists.txt">
+		<Unit filename="C:/Users/gusta/hld_game/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/gustavo/hld_game/../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		<Unit filename="C:/Users/gusta/hld_game/../../../SFML/lib/cmake/SFML/SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\SFML\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/gustavo/hld_game/../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		<Unit filename="C:/Users/gusta/hld_game/../../../SFML/lib/cmake/SFML/SFMLConfigDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\SFML\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/gustavo/hld_game/../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		<Unit filename="C:/Users/gusta/hld_game/../../../SFML/lib/cmake/SFML/SFMLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\SFML\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/gustavo/hld_game/../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets-none.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		<Unit filename="C:/Users/gusta/hld_game/../../../SFML/lib/cmake/SFML/SFMLStaticTargets-debug.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\SFML\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/gustavo/hld_game/../../../usr/lib/x86_64-linux-gnu/cmake/SFML/SFMLSharedTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\usr\lib\x86_64-linux-gnu\cmake\SFML\"/>
+		<Unit filename="C:/Users/gusta/hld_game/../../../SFML/lib/cmake/SFML/SFMLStaticTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\SFML\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/home/gustavo/hld_game/libs/json-develop/json-develop/CMakeLists.txt">
+		<Unit filename="C:/Users/gusta/hld_game/../../../SFML/lib/cmake/SFML/SFMLStaticTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\SFML\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="C:/Users/gusta/hld_game/libs/json-develop/json-develop/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\libs\json-develop\json-develop\"/>
 		</Unit>
-		<Unit filename="/home/gustavo/hld_game/libs/json-develop/json-develop/cmake/config.cmake.in">
+		<Unit filename="C:/Users/gusta/hld_game/libs/json-develop/json-develop/cmake/config.cmake.in">
 			<Option virtualFolder="CMake Files\libs\json-develop\json-develop\cmake\"/>
 		</Unit>
-		<Unit filename="/home/gustavo/hld_game/libs/json-develop/json-develop/cmake/nlohmann_jsonConfigVersion.cmake.in">
+		<Unit filename="C:/Users/gusta/hld_game/libs/json-develop/json-develop/cmake/nlohmann_jsonConfigVersion.cmake.in">
 			<Option virtualFolder="CMake Files\libs\json-develop\json-develop\cmake\"/>
 		</Unit>
-		<Unit filename="/home/gustavo/hld_game/libs/json-develop/json-develop/cmake/pkg-config.pc.in">
+		<Unit filename="C:/Users/gusta/hld_game/libs/json-develop/json-develop/cmake/pkg-config.pc.in">
 			<Option virtualFolder="CMake Files\libs\json-develop\json-develop\cmake\"/>
 		</Unit>
 	</Project>

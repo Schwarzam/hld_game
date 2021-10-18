@@ -2,8 +2,13 @@ cmake_minimum_required(VERSION 3.16)
 project(game)
 
 set(CMAKE_CXX_STANDARD 17)
+
+
+
 file(COPY media DESTINATION ${CMAKE_BINARY_DIR})
-file(GLOB MEDIA media/)
+file(GLOB MEDIA media maps)
+file(COPY ${MEDIA} DESTINATION ${CMAKE_BINARY_DIR})
+file(REMOVE_RECURSE  ${CMAKE_BINARY_DIR}/maps)
 file(COPY ${MEDIA} DESTINATION ${CMAKE_BINARY_DIR})
 
 add_executable(game main.cpp
@@ -11,7 +16,7 @@ add_executable(game main.cpp
         src/TileMap.cpp src/TileMap.h src/Player.cpp src/Player.h)
 
 add_subdirectory(libs/json-develop/json-develop)
-target_link_libraries(game nlohmann_json)
+set(LINK_LIBS nlohmann_json::nlohmann_json)
 
 if(WIN32)
     set(CMAKE_C_COMPILER c:/mingw64/bin/g++)
@@ -24,13 +29,18 @@ if(WIN32)
     find_package(SFML COMPONENTS audio graphics window system REQUIRED)
 
     include_directories(${SMFL_folder}/include)
-    target_link_libraries(game sfml-audio sfml-graphics sfml-window sfml-system)
+    target_link_libraries(game sfml-audio sfml-graphics sfml-window sfml-system ${LINK_LIBS})
+
+    set(NEEDED_FOLDERS ${CMAKE_BINARY_DIR}/media ${CMAKE_BINARY_DIR}/maps)
+    set(TO_UPDATE_FOLDERS ${CMAKE_BINARY_DIR}/last_version/media ${CMAKE_BINARY_DIR}/last_version/maps)
 
     file(GLOB BINARY_DEP_DLLS "${CMAKE_BINARY_DIR}/*.dll")
     file(COPY ${BINARY_DEP_DLLS} DESTINATION ${CMAKE_BINARY_DIR}/last_version/)
     file(GLOB BINARY_DEP_EXES "${CMAKE_BINARY_DIR}/*.exe")
     file(COPY ${BINARY_DEP_EXES} DESTINATION ${CMAKE_BINARY_DIR}/last_version/)
-    file(COPY ${CMAKE_BINARY_DIR}/media DESTINATION ${CMAKE_BINARY_DIR}/last_version)
+
+    file(REMOVE_RECURSE ${TO_UPDATE_FOLDERS})
+    file(COPY ${NEEDED_FOLDERS} DESTINATION ${CMAKE_BINARY_DIR}/last_version)
 endif()
 
 
@@ -53,7 +63,7 @@ if(UNIX AND NOT APPLE)
     find_package(SFML REQUIRED system window graphics network audio)
     if(SFML_FOUND)
         include_directories(${SFML_INCLUDE_DIR})
-        target_link_libraries(game -lsfml-graphics -lsfml-window -lsfml-system)
+        target_link_libraries(game -lsfml-graphics -lsfml-window -lsfml-system ${LINK_LIBS})
     endif()
 endif()
 

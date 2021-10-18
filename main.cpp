@@ -3,9 +3,14 @@
 
 #include <iostream>
 #include <nlohmann/json.hpp>
+#include <fstream>
 
 int main(int argc,char* argv[])
 {
+    std::ifstream i("maps/init.json");
+    nlohmann::json j;
+    i >> j;
+
     Game game;
     bool x = game.startMap();
     std::cout << x << std::endl;
