@@ -7,10 +7,13 @@
 #include "Game.h"
 
 
-Game::Game() : _window(sf::VideoMode(800, 600),"02_Game_Archi", sf::Style::Resize),
+Game::Game() : _window(sf::VideoMode(1200, 720),"Game hld", sf::Style::Resize),
                _player(Player(&map))
 {
     //_player.setPosition(100,100);
+    view.setSize(_window.getSize().x, _window.getSize().y);
+    view.setCenter(_player.get_position().x, _player.get_position().y);
+    _window.setView(view);
 }
 
 void Game::runWithFixedTimeSteps(int frame_per_seconds)
@@ -78,7 +81,11 @@ void Game::processEvents()
 {
     //to store the events
     sf::Event event;
+
     //events loop
+    view.setCenter(_player.get_position().x, _player.get_position().y);
+    _window.setView(view);
+
     while(_window.pollEvent(event))
     {
         if (event.type == sf::Event::Closed)//Close window
@@ -88,6 +95,12 @@ void Game::processEvents()
         {
             if (event.key.code == sf::Keyboard::Escape)
                 _window.close();
+        }
+
+        else if (event.type == sf::Event::Resized) //keyboard input
+        {
+            view.setSize(_window.getSize().x, _window.getSize().y);
+            _window.setView(view);
         }
 
     }

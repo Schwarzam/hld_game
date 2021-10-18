@@ -47,6 +47,10 @@ void Player::processEvents() {
     };
 }
 
+sf::Vector2f Player::get_position() {
+    return sprite.getPosition();
+}
+
 Player::Player() = default;
 
 
