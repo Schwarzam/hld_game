@@ -1,9 +1,9 @@
-"C:\Users\gusta\AppData\Local\JetBrains\CLion 2021.2\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" C:\Users\gusta\hld_game
--- Using the single-header code from C:/Users/gusta/hld_game/libs/json-develop/json-develop/single_include/
--- Found SFML 2.5.1 in C:/SFML/lib/cmake/SFML
+/snap/clion/169/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" /home/gustavo/hld_game
+-- Using the single-header code from /home/gustavo/hld_game/libs/json-develop/json-develop/single_include/
  
 CMAKE IN DEBUG MODE
  
+-- Found SFML 2.5.1 in /usr/lib/x86_64-linux-gnu/cmake/SFML
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/gusta/hld_game/cmake-build-debug
+-- Build files have been written to: /home/gustavo/hld_game/cmake-build-debug
