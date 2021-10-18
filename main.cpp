@@ -11,6 +11,8 @@ int main(int argc,char* argv[])
     nlohmann::json j;
     i >> j;
 
+    auto z = j["map"]["tiles"][0]["width"].get<int>();
+
     Game game;
     bool x = game.startMap();
     std::cout << x << std::endl;

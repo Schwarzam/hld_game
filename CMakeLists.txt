@@ -3,12 +3,9 @@ project(game)
 
 set(CMAKE_CXX_STANDARD 17)
 
-
-
 file(COPY media DESTINATION ${CMAKE_BINARY_DIR})
 file(GLOB MEDIA media maps)
-file(COPY ${MEDIA} DESTINATION ${CMAKE_BINARY_DIR})
-file(REMOVE_RECURSE  ${CMAKE_BINARY_DIR}/maps)
+file(REMOVE  ${CMAKE_BINARY_DIR}/maps ${CMAKE_BINARY_DIR}/media)
 file(COPY ${MEDIA} DESTINATION ${CMAKE_BINARY_DIR})
 
 add_executable(game main.cpp

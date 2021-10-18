@@ -1,14 +1,39 @@
 {
-  "pi": 3.141,
-  "happy": true,
-  "name": "Niels",
-  "nothing": null,
-  "answer": {
-    "everything": 42
-  },
-  "list": [1, 0, 2],
-  "object": {
-    "currency": "USD",
-    "value": 42.99
+  "map": {
+    "tei": 2,
+    "size": {
+      "height": 2,
+      "width": 2
+    },
+    "tiles": [
+      {
+        "width": 160,
+        "height": 160,
+        "utilx": 160,
+        "utily": 120,
+        "src": "media/bloco_novo2_G.png"
+      },
+      {
+        "width": 160,
+        "height": 160,
+        "utilx": 160,
+        "utily": 120,
+        "src": "media/bloco_novo2_G.png"
+      },
+      {
+        "width": 160,
+        "height": 160,
+        "utilx": 160,
+        "utily": 120,
+        "src": "media/bloco_novo2_G.png"
+      },
+      {
+        "width": 160,
+        "height": 160,
+        "utilx": 160,
+        "utily": 120,
+        "src": "media/bloco_novo2_G.png"
+      }
+    ]
   }
 }
