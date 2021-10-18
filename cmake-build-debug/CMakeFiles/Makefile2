@@ -63,15 +63,32 @@ CMAKE_BINARY_DIR = C:\Users\gusta\hld_game\cmake-build-debug
 
 # The main recursive "all" target.
 all: CMakeFiles/game.dir/all
+all: libs/json-develop/json-develop/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: libs/json-develop/json-develop/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/game.dir/clean
+clean: libs/json-develop/json-develop/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory libs/json-develop/json-develop
+
+# Recursive "all" directory target.
+libs/json-develop/json-develop/all:
+.PHONY : libs/json-develop/json-develop/all
+
+# Recursive "preinstall" directory target.
+libs/json-develop/json-develop/preinstall:
+.PHONY : libs/json-develop/json-develop/preinstall
+
+# Recursive "clean" directory target.
+libs/json-develop/json-develop/clean:
+.PHONY : libs/json-develop/json-develop/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/game.dir

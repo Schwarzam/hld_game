@@ -13,6 +13,9 @@ add_executable(game main.cpp
 if(WIN32)
     set(CMAKE_C_COMPILER c:/mingw64/bin/g++)
 
+    add_subdirectory(libs/json-develop/json-develop)
+    target_link_libraries(game nlohmann_json)
+
     set(SMFL_folder c:/SFML)
     target_link_options(game PRIVATE -mwindows)
 
