@@ -7,14 +7,14 @@
 
 int main(int argc,char* argv[])
 {
-    std::ifstream i("maps/init.json");
-    nlohmann::json j;
-    i >> j;
 
-    auto z = j["map"]["tiles"][0]["width"].get<int>();
+
 
     Game game;
     bool x = game.startMap();
+
+    game.startEntity("media/fantasma.png");
+
     std::cout << x << std::endl;
     game.runWithMinimumTimeSteps();
 

@@ -95,6 +95,12 @@
 		<Unit filename="C:/Users/gusta/hld_game/main.cpp">
 			<Option target="game"/>
 		</Unit>
+		<Unit filename="C:/Users/gusta/hld_game/src/Entity.cpp">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="C:/Users/gusta/hld_game/src/Entity.h">
+			<Option target="game"/>
+		</Unit>
 		<Unit filename="C:/Users/gusta/hld_game/src/Game.cpp">
 			<Option target="game"/>
 		</Unit>

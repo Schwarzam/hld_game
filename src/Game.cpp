@@ -10,10 +10,11 @@
 Game::Game() : _window(sf::VideoMode(1200, 720),"Game hld", sf::Style::Resize),
                _player(Player(&map))
 {
-    //_player.setPosition(100,100);
     view.setSize(_window.getSize().x, _window.getSize().y);
     view.setCenter(_player.get_position().x, _player.get_position().y);
     _window.setView(view);
+
+    entities.emplace_back(std::pair(0, &_player));
 }
 
 void Game::runWithFixedTimeSteps(int frame_per_seconds)
@@ -117,12 +118,17 @@ void Game::update(sf::Time deltaTime)
 
 void Game::render()
 {
+    updatePairRender();
+    sortRender();
     //Clear screen
     _window.clear();
 
     //Draw
     _window.draw(map);
-    _window.draw(_player);
+
+    for (auto& entity : entities){
+        _window.draw(*entity.second);
+    }
 
     //Update the window
     _window.display();
@@ -135,9 +141,26 @@ bool Game::startMap() {
             0, 0, 0, 0, 0
     };
 
-    if (!map.load("media/bloco_novo2_G.png", sf::Vector2u(160, 160), sf::Vector2u(160, 120), level, 5, 3))
-        return false;
-    return true;
+//    if (!map.load("media/bloco_novo2_G.png", sf::Vector2u(160, 160), sf::Vector2u(160, 120), level, 5, 3))
+//        return false;
+//    return true;
+
+    map.load("maps/init.json");
+}
+
+
+void Game::startEntity(std::string name) {
+    entities.emplace_back(std::pair(0.0, new Entity(name)));
+}
+
+void Game::sortRender() {
+    std::sort(entities.begin(), entities.end());
+}
+
+void Game::updatePairRender() {
+    for (auto& i : entities){
+        i.first = i.second->getPosY();
+    }
 }
 
 

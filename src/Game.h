@@ -10,6 +10,7 @@
 
 #include "TileMap.h"
 #include "Player.h"
+#include "Entity.h"
 
 class Game
 {
@@ -24,8 +25,12 @@ public:
     void runWithVariableTimeSteps();
     void runWithMinimumTimeSteps(int minimum_frame_per_seconds=30);
 
-    TileMap map;
+    void updatePairRender();
+    void sortRender();
+
+    void startEntity(std::string name);
     bool startMap();
+    TileMap map;
 
 private:
     void processEvents();//< Process events
@@ -36,6 +41,8 @@ private:
     Player _player;
 
     sf::View view;
+
+    std::vector<std::pair<float, Entity*>> entities;
 };
 
 #endif //GAME_GAME_H

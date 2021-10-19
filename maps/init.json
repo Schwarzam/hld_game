@@ -1,11 +1,45 @@
 {
   "map": {
-    "tei": 2,
     "size": {
-      "height": 2,
-      "width": 2
+      "height": 3,
+      "width": 3
     },
     "tiles": [
+      {
+        "width": 160,
+        "height": 160,
+        "utilx": 160,
+        "utily": 120,
+        "src": "media/bloco_novo2_G.png"
+      },
+      {
+        "width": 160,
+        "height": 160,
+        "utilx": 160,
+        "utily": 120,
+        "src": "media/bloco_novo2_G.png"
+      },
+      {
+        "width": 160,
+        "height": 160,
+        "utilx": 160,
+        "utily": 120,
+        "src": "media/bloco_novo2_G.png"
+      },
+      {
+        "width": 160,
+        "height": 160,
+        "utilx": 160,
+        "utily": 120,
+        "src": "media/bloco_novo2_G.png"
+      },
+      {
+        "width": 160,
+        "height": 160,
+        "utilx": 160,
+        "utily": 120,
+        "src": "media/bloco_novo2_G.png"
+      },
       {
         "width": 160,
         "height": 160,

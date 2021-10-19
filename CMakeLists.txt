@@ -8,9 +8,10 @@ file(GLOB MEDIA media maps)
 file(REMOVE  ${CMAKE_BINARY_DIR}/maps ${CMAKE_BINARY_DIR}/media)
 file(COPY ${MEDIA} DESTINATION ${CMAKE_BINARY_DIR})
 
+
 add_executable(game main.cpp
         src/Game.h src/Game.cpp
-        src/TileMap.cpp src/TileMap.h src/Player.cpp src/Player.h)
+        src/TileMap.cpp src/TileMap.h src/Player.cpp src/Player.h src/Entity.cpp src/Entity.h)
 
 add_subdirectory(libs/json-develop/json-develop)
 set(LINK_LIBS nlohmann_json::nlohmann_json)
@@ -36,6 +37,7 @@ if(WIN32)
     file(GLOB BINARY_DEP_EXES "${CMAKE_BINARY_DIR}/*.exe")
     file(COPY ${BINARY_DEP_EXES} DESTINATION ${CMAKE_BINARY_DIR}/last_version/)
 
+    #
     file(REMOVE_RECURSE ${TO_UPDATE_FOLDERS})
     file(COPY ${NEEDED_FOLDERS} DESTINATION ${CMAKE_BINARY_DIR}/last_version)
 endif()

@@ -8,16 +8,16 @@
 #include "Player.h"
 
 Player::Player(TileMap* map) : map(map) {
-    if (!texture.loadFromFile("media/chapcahpacete.png"))
+    if (!_texture.loadFromFile("media/chapcahpacete.png"))
     {
         //Error
     }
-    sprite.setTexture(texture);
-    sprite.setOrigin(sf::Vector2f(-200.f, -100.f));
+    _sprite.setTexture(_texture);
+    _sprite.setOrigin(sf::Vector2f(-200.f, -100.f));
 }
 
 void Player::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-    target.draw(sprite, states);
+    target.draw(_sprite, states);
 }
 
 void Player::processEvents() {
@@ -43,12 +43,12 @@ void Player::processEvents() {
     }
 
     if(map->validatePos(sf::Vector2f(movement.x, movement.y))){
-        sprite.move(movement * deltaTime);
+        _sprite.move(movement * deltaTime);
     };
 }
 
 sf::Vector2f Player::get_position() {
-    return sprite.getPosition();
+    return _sprite.getPosition();
 }
 
 Player::Player() = default;

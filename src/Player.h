@@ -14,8 +14,9 @@
 #include <stack>
 #include <SFML/System/Clock.hpp>
 #include "TileMap.h"
+#include "Entity.h"
 
-class Player : public sf::Drawable {
+class Player : public Entity {
 public:
     Player();
     explicit Player(TileMap* map);
@@ -24,8 +25,6 @@ public:
 
 private:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
-    sf::Texture texture;
-    sf::Sprite sprite;
 
     float velocity = 100;
     sf::Vector2f movement = sf::Vector2f(0, 0);
