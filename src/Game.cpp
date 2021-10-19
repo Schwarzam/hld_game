@@ -15,46 +15,9 @@ Game::Game() : _window(sf::VideoMode(1200, 720),"Game hld", sf::Style::Resize),
     _window.setView(view);
 
     entities.emplace_back(std::pair(0, &_player));
+    _assets.load_all();
 }
 
-void Game::runWithFixedTimeSteps(int frame_per_seconds)
-{
-    sf::Clock clock;
-    sf::Time timeSinceLastUpdate = sf::Time::Zero;
-
-    sf::Time TimePerFrame = sf::seconds(1.f/frame_per_seconds);
-
-    while (_window.isOpen())
-    {
-        processEvents();
-
-        bool repaint = false;
-
-        //fix time delta between frames
-        timeSinceLastUpdate += clock.restart();
-        while (timeSinceLastUpdate > TimePerFrame)
-        {
-            timeSinceLastUpdate -= TimePerFrame;
-            repaint = true;
-            update(TimePerFrame);
-        }
-
-        if(repaint)
-            render();
-    }
-}
-
-void Game::runWithVariableTimeSteps()
-{
-    sf::Clock clock;
-
-    while (_window.isOpen())
-    {
-        processEvents();
-        update(clock.restart());
-        render();
-    }
-}
 
 void Game::runWithMinimumTimeSteps(int minimum_frame_per_seconds)
 {
@@ -162,27 +125,3 @@ void Game::updatePairRender() {
         i.first = i.second->getPosY();
     }
 }
-
-
-
-//void Game::run(int frame_per_seconds) {
-//    /*Time since last game update to perform multiple updates if need. This control the updates per frame rate*/
-//
-//    sf::Clock clock;
-//    sf::Time timeSinceLastUpdate = sf::Time::Zero;
-//    sf::Time TimePerFrame = sf::seconds(1.f/frame_per_seconds);
-//
-//    while (_window.isOpen()){
-//        processEvents();
-//        bool repaint = false;
-//
-//        timeSinceLastUpdate += clock.restart();
-//
-//        while (timeSinceLastUpdate > TimePerFrame){
-//            timeSinceLastUpdate -= TimePerFrame;
-//            repaint = true;
-//            update(TimePerFrame);
-//        }
-//        if(repaint) render();
-//    }
-//}

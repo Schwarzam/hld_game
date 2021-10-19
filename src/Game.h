@@ -11,6 +11,7 @@
 #include "TileMap.h"
 #include "Player.h"
 #include "Entity.h"
+#include "Assets.h"
 
 class Game
 {
@@ -36,12 +37,11 @@ private:
     void processEvents();//< Process events
     void update(sf::Time deltaTime); //< do some updates
     void render();//< draw all the stuff
+    Assets _assets;
 
     sf::RenderWindow _window; //< the window use to display the game
     Player _player;
-
     sf::View view;
-
     std::vector<std::pair<float, Entity*>> entities;
 };
 

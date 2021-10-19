@@ -8,6 +8,7 @@
 #include <string>
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Texture.hpp>
+#include "Assets.h"
 
 class Entity : public sf::Drawable, public sf::Transform {
 public:
@@ -22,6 +23,8 @@ private:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
 protected:
+    Assets* assets;
+
     sf::Texture _texture;
     sf::Sprite _sprite;
 };

@@ -152,6 +152,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Assets.obj: src/Assets.cpp.obj
+.PHONY : src/Assets.obj
+
+# target to build an object file
+src/Assets.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/Assets.cpp.obj
+.PHONY : src/Assets.cpp.obj
+
+src/Assets.i: src/Assets.cpp.i
+.PHONY : src/Assets.i
+
+# target to preprocess a source file
+src/Assets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/Assets.cpp.i
+.PHONY : src/Assets.cpp.i
+
+src/Assets.s: src/Assets.cpp.s
+.PHONY : src/Assets.s
+
+# target to generate assembly for a file
+src/Assets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/Assets.cpp.s
+.PHONY : src/Assets.cpp.s
+
 src/Entity.obj: src/Entity.cpp.obj
 .PHONY : src/Entity.obj
 
@@ -260,6 +284,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/Assets.obj
+	@echo ... src/Assets.i
+	@echo ... src/Assets.s
 	@echo ... src/Entity.obj
 	@echo ... src/Entity.i
 	@echo ... src/Entity.s

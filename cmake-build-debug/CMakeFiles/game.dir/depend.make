@@ -78,10 +78,27 @@ CMakeFiles/game.dir/main.cpp.obj: \
  C:/SFML/include/SFML/Window/WindowHandle.hpp \
  C:/SFML/include/SFML/Window/WindowStyle.hpp \
  ../main.cpp \
+ ../src/Assets.h \
  ../src/Entity.h \
  ../src/Game.h \
  ../src/Player.h \
  ../src/TileMap.h
+CMakeFiles/game.dir/src/Assets.cpp.obj: \
+ C:/SFML/include/SFML/Config.hpp \
+ C:/SFML/include/SFML/Graphics/Color.hpp \
+ C:/SFML/include/SFML/Graphics/Export.hpp \
+ C:/SFML/include/SFML/Graphics/Image.hpp \
+ C:/SFML/include/SFML/Graphics/Rect.hpp \
+ C:/SFML/include/SFML/Graphics/Rect.inl \
+ C:/SFML/include/SFML/Graphics/Texture.hpp \
+ C:/SFML/include/SFML/System/Export.hpp \
+ C:/SFML/include/SFML/System/NonCopyable.hpp \
+ C:/SFML/include/SFML/System/Vector2.hpp \
+ C:/SFML/include/SFML/System/Vector2.inl \
+ C:/SFML/include/SFML/Window/Export.hpp \
+ C:/SFML/include/SFML/Window/GlResource.hpp \
+ ../src/Assets.cpp \
+ ../src/Assets.h
 CMakeFiles/game.dir/src/Entity.cpp.obj: \
  C:/SFML/include/SFML/Config.hpp \
  C:/SFML/include/SFML/Graphics/BlendMode.hpp \
@@ -156,6 +173,7 @@ CMakeFiles/game.dir/src/Game.cpp.obj: \
  C:/SFML/include/SFML/Window/Window.hpp \
  C:/SFML/include/SFML/Window/WindowHandle.hpp \
  C:/SFML/include/SFML/Window/WindowStyle.hpp \
+ ../src/Assets.h \
  ../src/Entity.h \
  ../src/Game.cpp \
  ../src/Game.h \

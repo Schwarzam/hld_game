@@ -1044,10 +1044,18 @@ nlohmann/json.hpp
 fstream
 -
 
-C:/Users/gusta/hld_game/src/Entity.cpp
-Entity.h
-C:/Users/gusta/hld_game/src/Entity.h
-SFML/Graphics/RenderTarget.hpp
+C:/Users/gusta/hld_game/src/Assets.cpp
+Assets.h
+C:/Users/gusta/hld_game/src/Assets.h
+iostream
+-
+
+C:/Users/gusta/hld_game/src/Assets.h
+string
+-
+unordered_map
+-
+SFML/Graphics/Texture.hpp
 -
 
 C:/Users/gusta/hld_game/src/Entity.h
@@ -1079,14 +1087,8 @@ Player.h
 C:/Users/gusta/hld_game/src/Player.h
 Entity.h
 C:/Users/gusta/hld_game/src/Entity.h
-
-C:/Users/gusta/hld_game/src/Player.cpp
-iostream
--
-valarray
--
-Player.h
-C:/Users/gusta/hld_game/src/Player.h
+Assets.h
+C:/Users/gusta/hld_game/src/Assets.h
 
 C:/Users/gusta/hld_game/src/Player.h
 SFML/Graphics/Drawable.hpp
