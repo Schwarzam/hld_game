@@ -12,10 +12,10 @@ Game::Game() : _window(sf::VideoMode(1200, 720),"Game hld", sf::Style::Resize),
 {
     view.setSize(_window.getSize().x, _window.getSize().y);
     view.setCenter(_player.get_position().x, _player.get_position().y);
+    view.zoom(0.3);
     _window.setView(view);
 
     entities.emplace_back(std::pair(0, &_player));
-    _assets.load_all();
 }
 
 
@@ -112,7 +112,7 @@ bool Game::startMap() {
 }
 
 
-void Game::startEntity(std::string name) {
+void Game::startEntity(const std::string& name) {
     entities.emplace_back(std::pair(0.0, new Entity(name)));
 }
 

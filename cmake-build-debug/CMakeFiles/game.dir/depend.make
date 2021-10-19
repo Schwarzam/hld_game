@@ -123,6 +123,7 @@ CMakeFiles/game.dir/src/Entity.cpp.obj: \
  C:/SFML/include/SFML/System/Vector2.inl \
  C:/SFML/include/SFML/Window/Export.hpp \
  C:/SFML/include/SFML/Window/GlResource.hpp \
+ ../src/Assets.h \
  ../src/Entity.cpp \
  ../src/Entity.h
 CMakeFiles/game.dir/src/Game.cpp.obj: \
@@ -218,6 +219,7 @@ CMakeFiles/game.dir/src/Player.cpp.obj: \
  C:/SFML/include/SFML/Window/Keyboard.hpp \
  C:/SFML/include/SFML/Window/Mouse.hpp \
  C:/SFML/include/SFML/Window/Sensor.hpp \
+ ../src/Assets.h \
  ../src/Entity.h \
  ../src/Player.cpp \
  ../src/Player.h \
@@ -247,5 +249,6 @@ CMakeFiles/game.dir/src/TileMap.cpp.obj: \
  C:/SFML/include/SFML/System/Vector2.inl \
  C:/SFML/include/SFML/Window/Export.hpp \
  C:/SFML/include/SFML/Window/GlResource.hpp \
+ ../src/Assets.h \
  ../src/TileMap.cpp \
  ../src/TileMap.h

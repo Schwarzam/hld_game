@@ -7,13 +7,10 @@
 
 int main(int argc,char* argv[])
 {
-
-
-
     Game game;
     bool x = game.startMap();
 
-    game.startEntity("media/fantasma.png");
+//    game.startEntity("fantasma");
 
     std::cout << x << std::endl;
     game.runWithMinimumTimeSteps();

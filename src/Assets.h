@@ -9,19 +9,17 @@
 #include <string>
 #include <unordered_map>
 #include <SFML/Graphics/Texture.hpp>
+#include <memory>
 
 
 class Assets {
 public:
-    Assets();
-
-    void load_all();
-    static std::string get_path(std::string name);
+    static std::shared_ptr<sf::Texture> Acquire(const std::string& name );
 
 private:
-    std::vector<std::string> filenames;
-    std::unordered_map<std::string, sf::Texture*> assets;
+    static std::unordered_map<std::string, std::shared_ptr<sf::Texture>> textures;
 };
+
 
 
 #endif //GAME_ASSETS_H

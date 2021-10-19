@@ -5,21 +5,17 @@
 #include "Assets.h"
 #include <iostream>
 
-Assets::Assets(){
-    filenames.emplace_back("blocos");
-    filenames.emplace_back("fantasma");
-    filenames.emplace_back("chapcahpacete");
-    filenames.emplace_back("sofa");
-};
+std::unordered_map<std::string, std::shared_ptr<sf::Texture>> Assets::textures;
 
-void Assets::load_all() {
-    std::string name;
-    for (std::string& file : filenames){
-        assets[file] = new sf::Texture;
-        assets[file]->loadFromFile(get_path(file));
+std::shared_ptr<sf::Texture> Assets::Acquire(const std::string &name) {
+    const auto i = textures.find( name );
+    if( i != textures.end() ){
+        return i->second;
     }
-}
-
-std::string Assets::get_path(std::string name) {
-    return "media/" + name + ".png";
+    else{
+        auto pTex = std::make_shared<sf::Texture>();
+        pTex->loadFromFile( "media/" + name + ".png");
+        textures.insert({name, pTex});
+        return pTex;
+    }
 }

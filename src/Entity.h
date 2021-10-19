@@ -25,7 +25,7 @@ private:
 protected:
     Assets* assets;
 
-    sf::Texture _texture;
+    std::shared_ptr<sf::Texture> _ptexture;
     sf::Sprite _sprite;
 };
 

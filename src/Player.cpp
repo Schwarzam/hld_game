@@ -8,12 +8,15 @@
 #include "Player.h"
 
 Player::Player(TileMap* map) : map(map) {
-    if (!_texture.loadFromFile("media/chapcahpacete.png"))
-    {
-        //Error
-    }
-    _sprite.setTexture(_texture);
-    _sprite.setOrigin(sf::Vector2f(-200.f, -100.f));
+//    if (!_texture.loadFromFile("media/chapcahpacete.png"))
+//    {
+//        //Error
+//    }
+
+    _ptexture = Assets::Acquire("personagem");
+
+    _sprite.setTexture(*_ptexture);
+    _sprite.setOrigin(sf::Vector2f(0.f, 0.f));
 }
 
 void Player::draw(sf::RenderTarget &target, sf::RenderStates states) const {

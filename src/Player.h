@@ -11,8 +11,8 @@
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Window/Event.hpp>
-#include <stack>
 #include <SFML/System/Clock.hpp>
+
 #include "TileMap.h"
 #include "Entity.h"
 
@@ -23,6 +23,7 @@ public:
     void processEvents();
     sf::Vector2f get_position();
 
+
 private:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
@@ -30,6 +31,7 @@ private:
     sf::Vector2f movement = sf::Vector2f(0, 0);
     sf::Clock clock;
 
+    std::shared_ptr<sf::Texture> pTex;
     TileMap* map{};
 };
 

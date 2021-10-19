@@ -29,7 +29,7 @@ public:
     void updatePairRender();
     void sortRender();
 
-    void startEntity(std::string name);
+    void startEntity(const std::string& name);
     bool startMap();
     TileMap map;
 

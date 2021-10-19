@@ -123,6 +123,7 @@ CMakeFiles/game.dir/src/Entity.cpp.obj
  C:/SFML/include/SFML/System/Vector2.inl
  C:/SFML/include/SFML/Window/Export.hpp
  C:/SFML/include/SFML/Window/GlResource.hpp
+ C:/Users/gusta/hld_game/src/Assets.h
  C:/Users/gusta/hld_game/src/Entity.cpp
  C:/Users/gusta/hld_game/src/Entity.h
 CMakeFiles/game.dir/src/Game.cpp.obj
@@ -218,6 +219,7 @@ CMakeFiles/game.dir/src/Player.cpp.obj
  C:/SFML/include/SFML/Window/Keyboard.hpp
  C:/SFML/include/SFML/Window/Mouse.hpp
  C:/SFML/include/SFML/Window/Sensor.hpp
+ C:/Users/gusta/hld_game/src/Assets.h
  C:/Users/gusta/hld_game/src/Entity.h
  C:/Users/gusta/hld_game/src/Player.cpp
  C:/Users/gusta/hld_game/src/Player.h
@@ -247,5 +249,6 @@ CMakeFiles/game.dir/src/TileMap.cpp.obj
  C:/SFML/include/SFML/System/Vector2.inl
  C:/SFML/include/SFML/Window/Export.hpp
  C:/SFML/include/SFML/Window/GlResource.hpp
+ C:/Users/gusta/hld_game/src/Assets.h
  C:/Users/gusta/hld_game/src/TileMap.cpp
  C:/Users/gusta/hld_game/src/TileMap.h

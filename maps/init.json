@@ -6,67 +6,67 @@
     },
     "tiles": [
       {
-        "width": 160,
-        "height": 160,
-        "utilx": 160,
-        "utily": 120,
-        "src": "media/bloco_novo2_G.png"
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
       },
       {
-        "width": 160,
-        "height": 160,
-        "utilx": 160,
-        "utily": 120,
-        "src": "media/bloco_novo2_G.png"
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
       },
       {
-        "width": 160,
-        "height": 160,
-        "utilx": 160,
-        "utily": 120,
-        "src": "media/bloco_novo2_G.png"
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
       },
       {
-        "width": 160,
-        "height": 160,
-        "utilx": 160,
-        "utily": 120,
-        "src": "media/bloco_novo2_G.png"
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
       },
       {
-        "width": 160,
-        "height": 160,
-        "utilx": 160,
-        "utily": 120,
-        "src": "media/bloco_novo2_G.png"
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
       },
       {
-        "width": 160,
-        "height": 160,
-        "utilx": 160,
-        "utily": 120,
-        "src": "media/bloco_novo2_G.png"
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
       },
       {
-        "width": 160,
-        "height": 160,
-        "utilx": 160,
-        "utily": 120,
-        "src": "media/bloco_novo2_G.png"
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
       },
       {
-        "width": 160,
-        "height": 160,
-        "utilx": 160,
-        "utily": 120,
-        "src": "media/bloco_novo2_G.png"
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
       },
       {
-        "width": 160,
-        "height": 160,
-        "utilx": 160,
-        "utily": 120,
-        "src": "media/bloco_novo2_G.png"
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
       }
     ]
   }

@@ -6,8 +6,8 @@
 #include <SFML/Graphics/RenderTarget.hpp>
 
 Entity::Entity(std::string name){
-    _texture.loadFromFile(name);
-    _sprite.setTexture(_texture);
+    _ptexture = Assets::Acquire(name);
+    _sprite.setTexture(*_ptexture);
 }
 
 void Entity::draw(sf::RenderTarget &target, sf::RenderStates states) const {
