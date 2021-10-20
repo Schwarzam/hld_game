@@ -7,7 +7,7 @@
 #include <valarray>
 #include "Player.h"
 
-Player::Player(TileMap* map) : map(map) {
+Player::Player(){
 //    if (!_texture.loadFromFile("media/chapcahpacete.png"))
 //    {
 //        //Error
@@ -39,14 +39,15 @@ void Player::processEvents() {
         movement.x += velocity;
     }
 
-    float deltaTime = clock.restart().asSeconds();
-
     if (movement.x != 0 && movement.y != 0){
         movement.x = movement.x / sqrt(2);
         movement.y = movement.y / sqrt(2);
     }
 
-    if(TileMap::validatePos(sf::Vector2f(movement.x, movement.y))){
+    float deltaTime = clock.restart().asSeconds();
+
+    sf::Vector2f pos = get_position() + movement * deltaTime;
+    if(TileMap::validatePos(sf::Vector2f(pos.x, pos.y))){
         _sprite.move(movement * deltaTime);
     };
 }
@@ -54,8 +55,5 @@ void Player::processEvents() {
 sf::Vector2f Player::get_position() {
     return _sprite.getPosition();
 }
-
-Player::Player() = default;
-
 
 

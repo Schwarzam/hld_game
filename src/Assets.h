@@ -15,6 +15,7 @@
 class Assets {
 public:
     static std::shared_ptr<sf::Texture> Acquire(const std::string& name );
+    static void Murder();
 
 private:
     static std::unordered_map<std::string, std::shared_ptr<sf::Texture>> textures;

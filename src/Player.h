@@ -19,7 +19,6 @@
 class Player : public Entity {
 public:
     Player();
-    explicit Player(TileMap* map);
     void processEvents();
     sf::Vector2f get_position();
 
@@ -32,7 +31,6 @@ private:
     sf::Clock clock;
 
     std::shared_ptr<sf::Texture> pTex;
-    TileMap* map{};
 };
 
 

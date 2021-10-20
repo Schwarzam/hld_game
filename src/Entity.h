@@ -14,6 +14,7 @@ class Entity : public sf::Drawable, public sf::Transform {
 public:
     Entity() = default;
     explicit Entity(const std::string& name);
+    explicit Entity(const std::string& name, sf::Vector2u imageCount, float switchTime);
 
     float getPosY();
     void setPosition();
@@ -22,9 +23,18 @@ public:
 private:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
-protected:
-    Assets* assets;
 
+public:
+    sf::IntRect uvRect;
+
+private:
+    sf::Vector2u imageCount;
+    sf::Vector2u currentImage;
+
+    float totalTime;
+    float switchTime;
+
+protected:
     std::shared_ptr<sf::Texture> _ptexture;
     sf::Sprite _sprite;
 };

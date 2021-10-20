@@ -8,7 +8,7 @@
 
 
 Game::Game() : _window(sf::VideoMode(1200, 720),"Game hld", sf::Style::Resize),
-               _player(Player(&map))
+               _player(Player())
 {
     view.setSize(_window.getSize().x, _window.getSize().y);
     view.setCenter(_player.get_position().x, _player.get_position().y);
@@ -84,7 +84,7 @@ void Game::render()
     updatePairRender();
     sortRender();
     //Clear screen
-    _window.clear();
+    _window.clear(sf::Color(150, 150, 150));
 
     //Draw
     _window.draw(map);

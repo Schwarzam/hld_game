@@ -19,3 +19,11 @@ std::shared_ptr<sf::Texture> Assets::Acquire(const std::string &name) {
         return pTex;
     }
 }
+
+void Assets::Murder() {
+    for (auto i = textures.begin(); i != textures.end();){
+        if (i->second.unique()){
+            i = textures.erase(i);
+        }
+    }
+}

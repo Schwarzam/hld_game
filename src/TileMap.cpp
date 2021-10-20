@@ -19,9 +19,13 @@ void TileMap::draw(sf::RenderTarget &target, sf::RenderStates states) const {
     target.draw(m_vertices, states);
 }
 
-bool TileMap::validatePos(sf::Vector2f pos) {
+bool TileMap::validatePos(const sf::Vector2f& pos) {
+    int arrPos = int(pos.x/j1["tilewidth"].get<int>()) + ( int(pos.y/j1["tileheight"].get<int>()) * j1["width"].get<int>());
 
-    return true;
+    if (j1["layers"][0]["data"][arrPos] != 0){
+        return true;
+    }
+    return false;
 }
 
 
@@ -63,7 +67,7 @@ bool TileMap::load_file(const std::string &name) {
                 quad[3].texCoords = sf::Vector2f(tu * tileSize.x, (tv + 1) * tileSize.y);
             };
 
-            tileNumber = tileNumber + height;
+            tileNumber = tileNumber + width;
         }
     }
 
