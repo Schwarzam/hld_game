@@ -13,7 +13,7 @@
 class Entity : public sf::Drawable, public sf::Transform {
 public:
     Entity() = default;
-    explicit Entity(std::string name);
+    explicit Entity(const std::string& name);
 
     float getPosY();
     void setPosition();

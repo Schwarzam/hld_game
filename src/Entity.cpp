@@ -5,7 +5,7 @@
 #include "Entity.h"
 #include <SFML/Graphics/RenderTarget.hpp>
 
-Entity::Entity(std::string name){
+Entity::Entity(const std::string& name){
     _ptexture = Assets::Acquire(name);
     _sprite.setTexture(*_ptexture);
     _sprite.setOrigin(_ptexture->getSize().x/2, _ptexture->getSize().y);

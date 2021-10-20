@@ -19,7 +19,7 @@ class TileMap : public sf::Drawable, public sf::Transformable {
 public:
     bool load(std::string);
     bool load_file(const std::string& name);
-    bool validatePos(sf::Vector2f pos);
+    static bool validatePos(sf::Vector2f pos);
 private:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 
@@ -27,7 +27,7 @@ private:
     sf::Vector2f offset;
     std::shared_ptr<sf::Texture> m_tileset;
 
-    nlohmann::json j1;
+    static nlohmann::json j1;
 };
 
 #endif //GAME_TILEMAP_H

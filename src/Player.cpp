@@ -46,7 +46,7 @@ void Player::processEvents() {
         movement.y = movement.y / sqrt(2);
     }
 
-    if(map->validatePos(sf::Vector2f(movement.x, movement.y))){
+    if(TileMap::validatePos(sf::Vector2f(movement.x, movement.y))){
         _sprite.move(movement * deltaTime);
     };
 }
