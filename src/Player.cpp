@@ -16,7 +16,8 @@ Player::Player(TileMap* map) : map(map) {
     _ptexture = Assets::Acquire("personagem");
 
     _sprite.setTexture(*_ptexture);
-    _sprite.setOrigin(sf::Vector2f(0.f, 0.f));
+    _sprite.setOrigin(sf::Vector2f(_ptexture->getSize().x/2, _ptexture->getSize().y));
+    _sprite.setPosition(216, 174);
 }
 
 void Player::draw(sf::RenderTarget &target, sf::RenderStates states) const {

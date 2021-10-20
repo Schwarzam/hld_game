@@ -18,8 +18,8 @@
 class TileMap : public sf::Drawable, public sf::Transformable {
 public:
     bool load(std::string);
+    bool load_file(const std::string& name);
     bool validatePos(sf::Vector2f pos);
-
 private:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 

@@ -93,6 +93,10 @@ void Game::render()
         _window.draw(*entity.second);
     }
 
+    sf::Vertex point(sf::Vector2f(3, 3), sf::Color::Red);
+    point.position = _player.get_position();
+    _window.draw(&point, 1, sf::Points);
+
     //Update the window
     _window.display();
 }
@@ -108,7 +112,7 @@ bool Game::startMap() {
 //        return false;
 //    return true;
 
-    map.load("maps/init.json");
+    map.load_file("maps/editor1.json");
 }
 
 
