@@ -34,11 +34,13 @@ public:
     TileMap map;
 
 private:
+    void setZoom(float z);
     void processEvents();//< Process events
     void update(sf::Time deltaTime); //< do some updates
     void render();//< draw all the stuff
     Assets _assets;
 
+    float zoom = 1;
     sf::RenderWindow _window; //< the window use to display the game
     Player _player;
     sf::View view;

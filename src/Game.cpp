@@ -12,7 +12,8 @@ Game::Game() : _window(sf::VideoMode(1200, 720),"Game hld", sf::Style::Resize),
 {
     view.setSize(_window.getSize().x, _window.getSize().y);
     view.setCenter(_player.get_position().x, _player.get_position().y);
-    view.zoom(0.3);
+
+    setZoom(0.3);
     _window.setView(view);
 
     entities.emplace_back(std::pair(0, &_player));
@@ -49,6 +50,7 @@ void Game::processEvents()
     //events loop
     view.setCenter(_player.get_position().x, _player.get_position().y);
     _window.setView(view);
+    setZoom(0.3);
 
     while(_window.pollEvent(event))
     {
@@ -59,6 +61,14 @@ void Game::processEvents()
         {
             if (event.key.code == sf::Keyboard::Escape)
                 _window.close();
+            if (event.key.code == sf::Keyboard::O){
+                setZoom(0.95f);
+                _window.setView(view);
+            }
+            if (event.key.code == sf::Keyboard::L) {
+                setZoom(1.05f);
+                _window.setView(view);
+            }
         }
 
         else if (event.type == sf::Event::Resized) //keyboard input
@@ -102,16 +112,6 @@ void Game::render()
 }
 
 bool Game::startMap() {
-    int level[] = {
-            0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0,
-            0, 0, 0, 0, 0
-    };
-
-//    if (!map.load("media/bloco_novo2_G.png", sf::Vector2u(160, 160), sf::Vector2u(160, 120), level, 5, 3))
-//        return false;
-//    return true;
-
     map.load_file("maps/editor1.json");
 }
 
@@ -128,4 +128,11 @@ void Game::updatePairRender() {
     for (auto& i : entities){
         i.first = i.second->getPosY();
     }
+}
+
+void Game::setZoom(float z) {
+    if (int(_window.getSize().x) == int(view.getSize().x)){
+        view.setSize(z * view.getSize());
+    }
+    _window.setView(view);
 }

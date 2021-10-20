@@ -8,11 +8,9 @@
 int main(int argc,char* argv[])
 {
     Game game;
-    bool x = game.startMap();
+    game.startMap();
 
 //    game.startEntity("fantasma");
-
-    std::cout << x << std::endl;
     game.runWithMinimumTimeSteps();
 
     return 0;
