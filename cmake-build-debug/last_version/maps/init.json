@@ -1,0 +1,73 @@
+{
+  "map": {
+    "size": {
+      "height": 3,
+      "width": 3
+    },
+    "tiles": [
+      {
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
+      },
+      {
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
+      },
+      {
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
+      },
+      {
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
+      },
+      {
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
+      },
+      {
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
+      },
+      {
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
+      },
+      {
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
+      },
+      {
+        "width": 16,
+        "height": 16,
+        "utilx": 16,
+        "utily": 12,
+        "src": "blocos"
+      }
+    ]
+  }
+}
