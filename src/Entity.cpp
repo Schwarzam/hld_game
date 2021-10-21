@@ -4,8 +4,9 @@
 
 #include "Entity.h"
 #include <SFML/Graphics/RenderTarget.hpp>
+#include <fstream>
 
-Entity::Entity(const std::string& name){
+Entity::Entity(const std::string& name) : entityName(name){
     _ptexture = Assets::Acquire(name);
     _sprite.setTexture(*_ptexture);
     _sprite.setOrigin(_ptexture->getSize().x/2, _ptexture->getSize().y);
@@ -20,7 +21,7 @@ float Entity::getPosY() {
 }
 
 
-Entity::Entity(const std::string &name, sf::Vector2u imageCount, float switchTime) {
+Entity::Entity(const std::string &name, sf::Vector2u imageCount, float switchTime) : entityName(name) {
     _ptexture = Assets::Acquire(name);
 
     this->imageCount = imageCount;
@@ -33,9 +34,12 @@ Entity::Entity(const std::string &name, sf::Vector2u imageCount, float switchTim
     uvRect.height = _ptexture->getSize().y / float(imageCount.y);
 }
 
-void Entity::animation(sf::Vector2u imageCount, float switchTime) {
-    this->imageCount = imageCount;
-    this->switchTime = switchTime;
+void Entity::animation() {
+    std::ifstream file(entityName);
+    file >> animation_json;
+
+    this->imageCount = sf::Vector2u(animation_json["GRID"]["x"].get<int>(), animation_json["GRID"]["y"].get<int>());
+    this->switchTime = 1.0f/animation_json["FPS"].get<float>();
 
     totalTime = 0.0f;
     currentImage.x = 0;

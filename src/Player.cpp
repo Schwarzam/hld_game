@@ -31,18 +31,22 @@ void Player::processEvents() {
     movement = sf::Vector2f(0, 0);
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){
         movement.y -= velocity;
+        direction = UP;
         updateAnimation(2);
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){
         movement.y += velocity;
+        direction = DOWN;
         updateAnimation(1);
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){
         movement.x -= velocity;
+        direction = LEFT;
         updateAnimation(4);
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
         movement.x += velocity;
+        direction = RIGHT;
         updateAnimation(3);
     }
 
@@ -50,8 +54,10 @@ void Player::processEvents() {
         movement.x = movement.x / sqrt(2);
         movement.y = movement.y / sqrt(2);
     }else if(movement.x == 0 && movement.y == 0){
-        updateAnimation(0, true);
+        direction = STILL;
     }
+
+    updateAnimation(true);
 
     float deltaTime = clock.restart().asSeconds();
 

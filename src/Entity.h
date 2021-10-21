@@ -9,7 +9,9 @@
 #include <SFML/Graphics/Sprite.hpp>
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/System/Clock.hpp>
+#include <map>
 #include "Assets.h"
+#include <nlohmann/json.hpp>
 
 class Entity : public sf::Drawable, public sf::Transform {
 public:
@@ -17,7 +19,7 @@ public:
     explicit Entity(const std::string& name);
     explicit Entity(const std::string& name, sf::Vector2u imageCount, float switchTime);
 
-    void animation(sf::Vector2u imageCount, float switchTime);
+    void animation();
     void updateAnimation(const int& row, const bool& stopped = false);
 
     float getPosY();
@@ -27,10 +29,8 @@ public:
 private:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
-public:
-    sf::IntRect uvRect;
+    std::string entityName;
 
-private:
     sf::Vector2u imageCount;
     sf::Vector2u currentImage;
     sf::Clock clock;
@@ -39,9 +39,35 @@ private:
     float switchTime;
     float animationTime;
 
+    nlohmann::json animation_json;
+
 protected:
+    sf::IntRect uvRect;
     std::shared_ptr<sf::Texture> _ptexture;
     sf::Sprite _sprite;
+
+    int direction = UP;
+
+    enum actions : int {
+        STILL = 1,
+        UP = 2,
+        DOWN = 4,
+        RIGHT = 6,
+        LEFT = 8,
+    };
+
+    std::unordered_map<int, std::string> actionsMap{
+        {UP, "UP"},
+        {DOWN, "DOWN"},
+        {RIGHT, "RIGHT"},
+        {LEFT, "LEFT"},
+        {STILL, "STILL"},
+        {STILL + UP, "STOP_UP"},
+        {STILL + DOWN, "STOP_DOWN"},
+        {STILL + LEFT, "STOP_LEFT"},
+        {STILL + RIGHT, "STOP_RIGHT"},
+    };
+
 };
 
 

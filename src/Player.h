@@ -22,7 +22,6 @@ public:
     void processEvents();
     sf::Vector2f get_position();
 
-
 private:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
