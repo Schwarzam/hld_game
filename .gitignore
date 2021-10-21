@@ -5,3 +5,7 @@ cmake-build-debug/coverage
 build
 launch.json
 .vscode
+cmake-build-debug/CMakeCache.txt
+cmake-build-debug/game.cbp
+cmake-build-debug/Makefile
+cmake-build-debug/cmake_install.cmake
