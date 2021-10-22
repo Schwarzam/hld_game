@@ -14,7 +14,7 @@
 
 class Assets {
 public:
-    static std::shared_ptr<sf::Texture> Acquire(const std::string& name );
+    static std::shared_ptr<sf::Texture> Acquire(const std::string& name);
     static void Murder();
 
 private:

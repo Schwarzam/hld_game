@@ -14,13 +14,13 @@ Player::Player(){
 //    }
 
     _ptexture = Assets::Acquire("chapacete_sheet");
-
+    entityName = "chapacete_sheet";
 
     _sprite.setTexture(*_ptexture);
     //_sprite.setOrigin(sf::Vector2f(_ptexture->getSize().x/2, _ptexture->getSize().y));
     _sprite.setPosition(216, 174);
 
-    animation(sf::Vector2u(12, 5), 0.08f);
+    animation();
 }
 
 void Player::draw(sf::RenderTarget &target, sf::RenderStates states) const {
@@ -32,29 +32,33 @@ void Player::processEvents() {
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::W)){
         movement.y -= velocity;
         direction = UP;
-        updateAnimation(2);
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::S)){
         movement.y += velocity;
         direction = DOWN;
-        updateAnimation(1);
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::A)){
         movement.x -= velocity;
         direction = LEFT;
-        updateAnimation(4);
     }
     if(sf::Keyboard::isKeyPressed(sf::Keyboard::D)){
         movement.x += velocity;
         direction = RIGHT;
-        updateAnimation(3);
+    }
+
+    if (movement.y < 0){
+        direction = UP;
+    }else if (movement.y > 0){
+        direction = DOWN;
     }
 
     if (movement.x != 0 && movement.y != 0){
         movement.x = movement.x / sqrt(2);
         movement.y = movement.y / sqrt(2);
     }else if(movement.x == 0 && movement.y == 0){
-        direction = STILL;
+        if (direction % 2 == 0){
+            direction += STOP;
+        }
     }
 
     updateAnimation(true);

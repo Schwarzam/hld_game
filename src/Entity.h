@@ -29,8 +29,6 @@ public:
 private:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
-    std::string entityName;
-
     sf::Vector2u imageCount;
     sf::Vector2u currentImage;
     sf::Clock clock;
@@ -42,6 +40,8 @@ private:
     nlohmann::json animation_json;
 
 protected:
+    std::string entityName;
+    
     sf::IntRect uvRect;
     std::shared_ptr<sf::Texture> _ptexture;
     sf::Sprite _sprite;
@@ -49,7 +49,7 @@ protected:
     int direction = UP;
 
     enum actions : int {
-        STILL = 1,
+        STOP = 1,
         UP = 2,
         DOWN = 4,
         RIGHT = 6,
@@ -61,11 +61,11 @@ protected:
         {DOWN, "DOWN"},
         {RIGHT, "RIGHT"},
         {LEFT, "LEFT"},
-        {STILL, "STILL"},
-        {STILL + UP, "STOP_UP"},
-        {STILL + DOWN, "STOP_DOWN"},
-        {STILL + LEFT, "STOP_LEFT"},
-        {STILL + RIGHT, "STOP_RIGHT"},
+        {STOP, "STILL"},
+        {STOP + UP, "STOP_UP"},
+        {STOP + DOWN, "STOP_DOWN"},
+        {STOP + LEFT, "STOP_LEFT"},
+        {STOP + RIGHT, "STOP_RIGHT"},
     };
 
 };

@@ -35,7 +35,8 @@ Entity::Entity(const std::string &name, sf::Vector2u imageCount, float switchTim
 }
 
 void Entity::animation() {
-    std::ifstream file(entityName);
+    std::string o = "media/" + entityName + ".json";
+    std::ifstream file("media/" + entityName + ".json");
     file >> animation_json;
 
     this->imageCount = sf::Vector2u(animation_json["GRID"]["x"].get<int>(), animation_json["GRID"]["y"].get<int>());
@@ -44,15 +45,16 @@ void Entity::animation() {
     totalTime = 0.0f;
     currentImage.x = 0;
 
-    uvRect.width = _ptexture->getSize().x / float(imageCount.x);
-    uvRect.height = _ptexture->getSize().y / float(imageCount.y);
+    uvRect.width = _ptexture->getSize().x / float(animation_json["GRID"]["x"].get<int>());
+    uvRect.height = _ptexture->getSize().y / float(animation_json["GRID"]["y"].get<int>());
 
     _sprite.setTextureRect(uvRect);
     _sprite.setOrigin(uvRect.width/2, uvRect.height);
 }
 
 void Entity::updateAnimation(const int& row, const bool& stopped) {
-    currentImage.y = row;
+    std::string action = actionsMap.at(direction);
+    currentImage.y = animation_json[action]["LINHA"]; //ROW
 
     animationTime = clock.restart().asSeconds();
     if (animationTime > 1){
@@ -63,13 +65,12 @@ void Entity::updateAnimation(const int& row, const bool& stopped) {
 
     if (totalTime >= switchTime){
         totalTime -= switchTime;
-        if (!stopped){
-            currentImage.x ++;
+
+        currentImage.x ++;
+        if (currentImage.x >= animation_json[action]["FRAMES"]){
+            currentImage.x = animation_json[action]["COLUNA_INICIAL"];
         }
 
-        if (currentImage.x >= imageCount.x){
-            currentImage.x = 0;
-        }
         uvRect.left = currentImage.x * uvRect.width;
         uvRect.top = currentImage.y * uvRect.height;
 

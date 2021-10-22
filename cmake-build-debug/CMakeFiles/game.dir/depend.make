@@ -100,6 +100,7 @@ CMakeFiles/game.dir/src/Assets.cpp.obj: \
  ../src/Assets.cpp \
  ../src/Assets.h
 CMakeFiles/game.dir/src/Entity.cpp.obj: \
+ ../libs/json-develop/json-develop/single_include/nlohmann/json.hpp \
  C:/SFML/include/SFML/Config.hpp \
  C:/SFML/include/SFML/Graphics/BlendMode.hpp \
  C:/SFML/include/SFML/Graphics/Color.hpp \
