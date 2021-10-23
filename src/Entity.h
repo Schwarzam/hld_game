@@ -23,7 +23,7 @@ public:
     void updateAnimation(const int& row, const bool& stopped = false);
 
     float getPosY();
-    void setPosition();
+    const sf::Sprite& getSprite();
     void update();
 
 private:
@@ -38,6 +38,7 @@ private:
     float animationTime;
 
     nlohmann::json animation_json;
+
 
 protected:
     std::string entityName;

@@ -4,8 +4,8 @@
 #include <SFML/Window/VideoMode.hpp>
 #include <SFML/Graphics/Color.hpp>
 #include <SFML/Window/Event.hpp>
+#include <SFML/Graphics/Text.hpp>
 #include "Game.h"
-
 
 Game::Game() : _window(sf::VideoMode(1200, 720),"Game hld", sf::Style::Resize),
                _player(Player())
@@ -23,6 +23,7 @@ Game::Game() : _window(sf::VideoMode(1200, 720),"Game hld", sf::Style::Resize),
 void Game::runWithMinimumTimeSteps(int minimum_frame_per_seconds)
 {
     sf::Clock clock;
+
     sf::Time timeSinceLastUpdate;
     sf::Time TimePerFrame = sf::seconds(1.f/minimum_frame_per_seconds);
 
@@ -77,6 +78,7 @@ void Game::processEvents()
             _window.setView(view);
         }
 
+
     }
 
 
@@ -91,7 +93,6 @@ void Game::update(sf::Time deltaTime)
 
 void Game::render()
 {
-    updatePairRender();
     sortRender();
     //Clear screen
     _window.clear(sf::Color(150, 150, 150));
@@ -103,9 +104,12 @@ void Game::render()
         _window.draw(*entity.second);
     }
 
-    sf::Vertex point(sf::Vector2f(3, 3), sf::Color::Red);
-    point.position = _player.get_position();
-    _window.draw(&point, 1, sf::Points);
+//    sf::Vertex point(sf::Vector2f(3, 3), sf::Color::Red);
+//    point.position = _player.get_position();
+//    _window.draw(&point, 1, sf::Points);
+
+    //Count FPS
+    _window.setTitle(fps.getFPS());
 
     //Update the window
     _window.display();
@@ -113,21 +117,7 @@ void Game::render()
 
 bool Game::startMap() {
     map.load_file("maps/editor1.json");
-}
-
-
-void Game::startEntity(const std::string& name) {
-    entities.emplace_back(std::pair(0.0, new Entity(name)));
-}
-
-void Game::sortRender() {
-    std::sort(entities.begin(), entities.end());
-}
-
-void Game::updatePairRender() {
-    for (auto& i : entities){
-        i.first = i.second->getPosY();
-    }
+    return true;
 }
 
 void Game::setZoom(float z) {
@@ -136,3 +126,4 @@ void Game::setZoom(float z) {
     }
     _window.setView(view);
 }
+

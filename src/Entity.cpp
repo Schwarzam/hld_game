@@ -78,3 +78,7 @@ void Entity::updateAnimation(const int& row, const bool& stopped) {
     }
 }
 
+const sf::Sprite &Entity::getSprite() {
+    return _sprite;
+}
+

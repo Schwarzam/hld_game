@@ -101,6 +101,12 @@
 		<Unit filename="C:/Users/gusta/Documents/hld_game/src/Assets.h">
 			<Option target="game"/>
 		</Unit>
+		<Unit filename="C:/Users/gusta/Documents/hld_game/src/Collision.cpp">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="C:/Users/gusta/Documents/hld_game/src/Collision.h">
+			<Option target="game"/>
+		</Unit>
 		<Unit filename="C:/Users/gusta/Documents/hld_game/src/Entity.cpp">
 			<Option target="game"/>
 		</Unit>
@@ -113,6 +119,12 @@
 		<Unit filename="C:/Users/gusta/Documents/hld_game/src/Game.h">
 			<Option target="game"/>
 		</Unit>
+		<Unit filename="C:/Users/gusta/Documents/hld_game/src/GameManager.cpp">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="C:/Users/gusta/Documents/hld_game/src/GameManager.h">
+			<Option target="game"/>
+		</Unit>
 		<Unit filename="C:/Users/gusta/Documents/hld_game/src/Player.cpp">
 			<Option target="game"/>
 		</Unit>
@@ -123,6 +135,9 @@
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="C:/Users/gusta/Documents/hld_game/src/TileMap.h">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="C:/Users/gusta/Documents/hld_game/src/helper/Fps.h">
 			<Option target="game"/>
 		</Unit>
 		<Unit filename="C:/Users/gusta/Documents/hld_game/CMakeLists.txt">

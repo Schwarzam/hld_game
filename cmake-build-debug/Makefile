@@ -176,6 +176,30 @@ src/Assets.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/Assets.cpp.s
 .PHONY : src/Assets.cpp.s
 
+src/Collision.obj: src/Collision.cpp.obj
+.PHONY : src/Collision.obj
+
+# target to build an object file
+src/Collision.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/Collision.cpp.obj
+.PHONY : src/Collision.cpp.obj
+
+src/Collision.i: src/Collision.cpp.i
+.PHONY : src/Collision.i
+
+# target to preprocess a source file
+src/Collision.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/Collision.cpp.i
+.PHONY : src/Collision.cpp.i
+
+src/Collision.s: src/Collision.cpp.s
+.PHONY : src/Collision.s
+
+# target to generate assembly for a file
+src/Collision.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/Collision.cpp.s
+.PHONY : src/Collision.cpp.s
+
 src/Entity.obj: src/Entity.cpp.obj
 .PHONY : src/Entity.obj
 
@@ -223,6 +247,30 @@ src/Game.s: src/Game.cpp.s
 src/Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
+
+src/GameManager.obj: src/GameManager.cpp.obj
+.PHONY : src/GameManager.obj
+
+# target to build an object file
+src/GameManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/GameManager.cpp.obj
+.PHONY : src/GameManager.cpp.obj
+
+src/GameManager.i: src/GameManager.cpp.i
+.PHONY : src/GameManager.i
+
+# target to preprocess a source file
+src/GameManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/GameManager.cpp.i
+.PHONY : src/GameManager.cpp.i
+
+src/GameManager.s: src/GameManager.cpp.s
+.PHONY : src/GameManager.s
+
+# target to generate assembly for a file
+src/GameManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/GameManager.cpp.s
+.PHONY : src/GameManager.cpp.s
 
 src/Player.obj: src/Player.cpp.obj
 .PHONY : src/Player.obj
@@ -287,12 +335,18 @@ help:
 	@echo ... src/Assets.obj
 	@echo ... src/Assets.i
 	@echo ... src/Assets.s
+	@echo ... src/Collision.obj
+	@echo ... src/Collision.i
+	@echo ... src/Collision.s
 	@echo ... src/Entity.obj
 	@echo ... src/Entity.i
 	@echo ... src/Entity.s
 	@echo ... src/Game.obj
 	@echo ... src/Game.i
 	@echo ... src/Game.s
+	@echo ... src/GameManager.obj
+	@echo ... src/GameManager.i
+	@echo ... src/GameManager.s
 	@echo ... src/Player.obj
 	@echo ... src/Player.i
 	@echo ... src/Player.s

@@ -12,8 +12,10 @@
 #include "Player.h"
 #include "Entity.h"
 #include "Assets.h"
+#include "helper/Fps.h"
+#include "GameManager.h"
 
-class Game
+class Game : public GameManager
 {
 public:
     //non copyable class
@@ -22,16 +24,10 @@ public:
 
     Game(); //< constructor
 
-    void runWithFixedTimeSteps(int frame_per_seconds=60);
-    void runWithVariableTimeSteps();
     void runWithMinimumTimeSteps(int minimum_frame_per_seconds=30);
-
-    void updatePairRender();
-    void sortRender();
-
-    void startEntity(const std::string& name);
     bool startMap();
     TileMap map;
+
 
 private:
     void setZoom(float z);
@@ -44,7 +40,9 @@ private:
     sf::RenderWindow _window; //< the window use to display the game
     Player _player;
     sf::View view;
-    std::vector<std::pair<float, Entity*>> entities;
+
+    FPS fps;
+
 };
 
 #endif //GAME_GAME_H

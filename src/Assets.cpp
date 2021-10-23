@@ -4,6 +4,7 @@
 
 #include "Assets.h"
 #include <iostream>
+#include "Collision.h"
 
 std::unordered_map<std::string, std::shared_ptr<sf::Texture>> Assets::textures;
 
@@ -14,7 +15,7 @@ std::shared_ptr<sf::Texture> Assets::Acquire(const std::string &name) {
     }
     else{
         auto pTex = std::make_shared<sf::Texture>();
-        pTex->loadFromFile( "media/" + name + ".png");
+        Collision::CreateTextureAndBitmask(*pTex, "media/" + name + ".png");
         textures.insert({name, pTex});
         return pTex;
     }
