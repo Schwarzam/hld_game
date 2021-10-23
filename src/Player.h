@@ -25,7 +25,7 @@ public:
 private:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
-    float velocity = 100;
+    float velocity = 120;
     sf::Vector2f movement = sf::Vector2f(0, 0);
     sf::Clock clock;
 

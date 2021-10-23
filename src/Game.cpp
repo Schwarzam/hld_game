@@ -13,7 +13,7 @@ Game::Game() : _window(sf::VideoMode(1200, 720),"Game hld", sf::Style::Resize),
     view.setSize(_window.getSize().x, _window.getSize().y);
     view.setCenter(_player.get_position().x, _player.get_position().y);
 
-    setZoom(0.3);
+    setZoom(0.4);
     _window.setView(view);
 
     entities.emplace_back(std::pair(0, &_player));
@@ -50,7 +50,7 @@ void Game::processEvents()
     //events loop
     view.setCenter(_player.get_position().x, _player.get_position().y);
     _window.setView(view);
-    setZoom(0.3);
+    setZoom(0.4);
 
     while(_window.pollEvent(event))
     {

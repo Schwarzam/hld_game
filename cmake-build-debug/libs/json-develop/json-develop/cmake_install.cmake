@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/gusta/hld_game/libs/json-develop/json-develop
+# Install script for directory: C:/Users/gusta/Documents/hld_game/libs/json-develop/json-develop
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

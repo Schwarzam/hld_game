@@ -1,6 +1,7 @@
 cmake-build-debug/CMakeFiles
 cmake-build-debug/Testing
 cmake-build-debug/coverage
+cmake-build-debug
 .idea
 build
 launch.json
