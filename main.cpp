@@ -10,7 +10,6 @@ int main(int argc,char* argv[])
     Game game;
     game.startMap();
 
-//    game.startEntity("fantasma");
     game.runWithMinimumTimeSteps();
 
     return 0;

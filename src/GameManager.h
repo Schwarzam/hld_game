@@ -13,15 +13,16 @@ class GameManager {
 public:
     GameManager() = default;
 
-    void startEntity(const std::string& name);
-    void updatePairRender();
-    void sortRender();
+    static Entity *startEntity(const std::string& name);
+    static void sortRender();
+
+    static bool validatePos(sf::Sprite _sprite, const sf::Vector2f &movement);
+
 private:
 
 
 protected:
-    std::vector<std::pair<float, Entity*>> entities;
-
+    static std::vector<std::pair<float, Entity*>> entities;
 };
 
 

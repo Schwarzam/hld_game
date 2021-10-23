@@ -27,6 +27,9 @@ void Game::runWithMinimumTimeSteps(int minimum_frame_per_seconds)
     sf::Time timeSinceLastUpdate;
     sf::Time TimePerFrame = sf::seconds(1.f/minimum_frame_per_seconds);
 
+    Entity *e = Game::startEntity("aranha");
+    e->setPosition(sf::Vector2f(250, 280));
+
     while (_window.isOpen())
     {
         processEvents();

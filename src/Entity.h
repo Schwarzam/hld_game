@@ -20,10 +20,12 @@ public:
     explicit Entity(const std::string& name, sf::Vector2u imageCount, float switchTime);
 
     void animation();
-    void updateAnimation(const int& row, const bool& stopped = false);
+    void updateAnimation();
 
     float getPosY();
     const sf::Sprite& getSprite();
+
+    void setPosition(const sf::Vector2f& pos);
     void update();
 
 private:
@@ -48,6 +50,7 @@ protected:
     sf::Sprite _sprite;
 
     int direction = UP;
+    int lastDirection = UP;
 
     enum actions : int {
         STOP = 1,

@@ -1032,18 +1032,6 @@ SFML/Config.hpp
 
 C:/SFML/include/SFML/Window/WindowStyle.hpp
 
-C:/Users/gusta/Documents/hld_game/main.cpp
-SFML/Graphics.hpp
--
-src/Game.h
-C:/Users/gusta/Documents/hld_game/src/Game.h
-iostream
--
-nlohmann/json.hpp
--
-fstream
--
-
 C:/Users/gusta/Documents/hld_game/src/Assets.h
 string
 -
@@ -1052,6 +1040,10 @@ unordered_map
 SFML/Graphics/Texture.hpp
 -
 memory
+-
+
+C:/Users/gusta/Documents/hld_game/src/Collision.h
+SFML/Graphics.hpp
 -
 
 C:/Users/gusta/Documents/hld_game/src/Entity.h
@@ -1070,61 +1062,17 @@ C:/Users/gusta/Documents/hld_game/src/Assets.h
 nlohmann/json.hpp
 -
 
-C:/Users/gusta/Documents/hld_game/src/Game.cpp
-SFML/Window/VideoMode.hpp
--
-SFML/Graphics/Color.hpp
--
-SFML/Window/Event.hpp
--
-SFML/Graphics/Text.hpp
--
-Game.h
-C:/Users/gusta/Documents/hld_game/src/Game.h
-
-C:/Users/gusta/Documents/hld_game/src/Game.h
-SFML/Graphics/RenderWindow.hpp
--
-SFML/Graphics/CircleShape.hpp
--
-TileMap.h
-C:/Users/gusta/Documents/hld_game/src/TileMap.h
-Player.h
-C:/Users/gusta/Documents/hld_game/src/Player.h
-Entity.h
-C:/Users/gusta/Documents/hld_game/src/Entity.h
-Assets.h
-C:/Users/gusta/Documents/hld_game/src/Assets.h
-helper/Fps.h
-C:/Users/gusta/Documents/hld_game/src/helper/Fps.h
-GameManager.h
-C:/Users/gusta/Documents/hld_game/src/GameManager.h
-
 C:/Users/gusta/Documents/hld_game/src/GameManager.cpp
 GameManager.h
 C:/Users/gusta/Documents/hld_game/src/GameManager.h
+TileMap.h
+C:/Users/gusta/Documents/hld_game/src/TileMap.h
+Collision.h
+C:/Users/gusta/Documents/hld_game/src/Collision.h
 
 C:/Users/gusta/Documents/hld_game/src/GameManager.h
 vector
 -
-Entity.h
-C:/Users/gusta/Documents/hld_game/src/Entity.h
-
-C:/Users/gusta/Documents/hld_game/src/Player.h
-SFML/Graphics/Drawable.hpp
--
-SFML/Graphics/Texture.hpp
--
-SFML/Graphics/Sprite.hpp
--
-SFML/Graphics/RenderTarget.hpp
--
-SFML/Window/Event.hpp
--
-SFML/System/Clock.hpp
--
-TileMap.h
-C:/Users/gusta/Documents/hld_game/src/TileMap.h
 Entity.h
 C:/Users/gusta/Documents/hld_game/src/Entity.h
 
@@ -1145,12 +1093,4 @@ nlohmann/json.hpp
 -
 Assets.h
 C:/Users/gusta/Documents/hld_game/src/Assets.h
-
-C:/Users/gusta/Documents/hld_game/src/helper/Fps.h
-SFML/System/Clock.hpp
--
-string
--
-sstream
--
 

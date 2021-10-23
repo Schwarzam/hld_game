@@ -6,6 +6,7 @@
 #include <iostream>
 #include <valarray>
 #include "Player.h"
+#include "GameManager.h"
 
 Player::Player(){
 //    if (!_texture.loadFromFile("media/chapcahpacete.png"))
@@ -46,9 +47,9 @@ void Player::processEvents() {
         direction = RIGHT;
     }
 
-    if (movement.y < 0){
+    if (lastDirection == UP && movement.y < 0 && movement.x != 0){
         direction = UP;
-    }else if (movement.y > 0){
+    }else if (lastDirection == DOWN && movement.y > 0 && movement.x != 0){
         direction = DOWN;
     }
 
@@ -61,12 +62,13 @@ void Player::processEvents() {
         }
     }
 
-    updateAnimation(true);
+    lastDirection = direction;
+    updateAnimation();
 
     float deltaTime = clock.restart().asSeconds();
 
     sf::Vector2f pos = get_position() + movement * deltaTime;
-    if(TileMap::validatePos(sf::Vector2f(pos.x, pos.y))){
+    if (GameManager::validatePos(_sprite, movement * deltaTime)){
         _sprite.move(movement * deltaTime);
     };
 }

@@ -5,6 +5,7 @@
 #include "Entity.h"
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <fstream>
+#include "GameManager.h"
 
 Entity::Entity(const std::string& name) : entityName(name){
     _ptexture = Assets::Acquire(name);
@@ -52,7 +53,7 @@ void Entity::animation() {
     _sprite.setOrigin(uvRect.width/2, uvRect.height);
 }
 
-void Entity::updateAnimation(const int& row, const bool& stopped) {
+void Entity::updateAnimation() {
     std::string action = actionsMap.at(direction);
     currentImage.y = animation_json[action]["LINHA"]; //ROW
 
@@ -80,5 +81,11 @@ void Entity::updateAnimation(const int& row, const bool& stopped) {
 
 const sf::Sprite &Entity::getSprite() {
     return _sprite;
+}
+
+void Entity::setPosition(const sf::Vector2f& pos) {
+    if (GameManager::validatePos(_sprite, pos)){
+        _sprite.setPosition(pos);
+    };
 }
 
