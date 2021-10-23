@@ -28,7 +28,7 @@ void Game::runWithMinimumTimeSteps(int minimum_frame_per_seconds)
     sf::Time TimePerFrame = sf::seconds(1.f/minimum_frame_per_seconds);
 
     Entity *e = Game::startEntity("aranha");
-    e->setPosition(sf::Vector2f(250, 280));
+    e->setPosition(sf::Vector2f(280, 220));
 
     while (_window.isOpen())
     {
@@ -107,9 +107,9 @@ void Game::render()
         _window.draw(*entity.second);
     }
 
-//    sf::Vertex point(sf::Vector2f(3, 3), sf::Color::Red);
-//    point.position = _player.get_position();
-//    _window.draw(&point, 1, sf::Points);
+    sf::Vertex point(sf::Vector2f(3, 3), sf::Color::Red);
+    point.position = _player.get_position();
+    _window.draw(&point, 1, sf::Points);
 
     //Count FPS
     _window.setTitle(fps.getFPS());

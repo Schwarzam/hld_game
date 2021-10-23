@@ -89,7 +89,8 @@ void Entity::setPosition(const sf::Vector2f& pos) {
     };
 }
 
-sf::Vector2f Entity::getCenterPos() {
-    return _sprite.getPosition() - sf::Vector2f(0.0f, float(_sprite.getTexture()->getSize().y));
+sf::Vector2f Entity::getPosition() {
+    return _sprite.getPosition();
 }
+
 

@@ -1065,6 +1065,8 @@ nlohmann/json.hpp
 C:/Users/gusta/Documents/hld_game/src/GameManager.cpp
 GameManager.h
 C:/Users/gusta/Documents/hld_game/src/GameManager.h
+cmath
+-
 TileMap.h
 C:/Users/gusta/Documents/hld_game/src/TileMap.h
 Collision.h

@@ -23,7 +23,7 @@ public:
     void updateAnimation();
 
     float getPosY();
-    sf::Vector2f getCenterPos();
+    sf::Vector2f getPosition();
     const sf::Sprite& getSprite();
 
     void setPosition(const sf::Vector2f& pos);
