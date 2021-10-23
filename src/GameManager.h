@@ -16,8 +16,7 @@ public:
     static Entity *startEntity(const std::string& name);
     static void sortRender();
 
-    static bool validatePos(sf::Sprite _sprite, const sf::Vector2f &movement);
-
+    static bool validatePos(Entity *ent, sf::Sprite& _sprite, const sf::Vector2f &movement);
 private:
 
 

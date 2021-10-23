@@ -3,6 +3,8 @@
 //
 
 #include "GameManager.h"
+
+#include <cmath>
 #include "TileMap.h"
 #include "Collision.h"
 
@@ -22,15 +24,37 @@ void GameManager::sortRender() {
     }
 }
 
-bool GameManager::validatePos(sf::Sprite _sprite, const sf::Vector2f &movement) {
+bool GameManager::validatePos(Entity *ent, sf::Sprite& _sprite, const sf::Vector2f &movement) {
     sf::Vector2f pos = _sprite.getPosition() + movement;
+
+    sf::Sprite spriteCopy = _sprite;
     if(TileMap::validatePos(sf::Vector2f(pos.x, pos.y))){
         int colliding = false;
 
-        _sprite.move(movement * 10.0f);
-        for (std::pair<float, Entity *> entity : entities){
-            colliding = !Collision::PixelPerfectTest(entity.second->getSprite(), _sprite) | colliding;
+        spriteCopy.move(movement);
+
+        while(!colliding){
+            for (std::pair<float, Entity *> entity : entities) {
+                Entity *e = entity.second;
+                if (entity.second != ent) {
+                    colliding = Collision::PixelPerfectTest(entity.second->getSprite(), spriteCopy) | colliding;
+                    if (colliding){
+                        float _ang = std::atan2(
+                                entity.second->getCenterPos().y - ent->getCenterPos().y,
+                                entity.second->getCenterPos().x - ent->getCenterPos().x) *
+                                        (180 / 3.1428f);
+
+                        _sprite.move(sf::Vector2f(0.1f * std::sin(_ang), 0.1f * std::cos(_ang)));
+                    }
+                }
+            }
+            if (!colliding){
+                return true;
+            }else{
+
+            }
         }
+
         return colliding;
     }else{
         return false;

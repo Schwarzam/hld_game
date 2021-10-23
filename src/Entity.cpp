@@ -84,8 +84,12 @@ const sf::Sprite &Entity::getSprite() {
 }
 
 void Entity::setPosition(const sf::Vector2f& pos) {
-    if (GameManager::validatePos(_sprite, pos)){
+    if (GameManager::validatePos(this, _sprite, pos)){
         _sprite.setPosition(pos);
     };
+}
+
+sf::Vector2f Entity::getCenterPos() {
+    return _sprite.getPosition() - sf::Vector2f(0.0f, float(_sprite.getTexture()->getSize().y));
 }
 

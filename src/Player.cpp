@@ -68,7 +68,7 @@ void Player::processEvents() {
     float deltaTime = clock.restart().asSeconds();
 
     sf::Vector2f pos = get_position() + movement * deltaTime;
-    if (GameManager::validatePos(_sprite, movement * deltaTime)){
+    if (GameManager::validatePos(this, _sprite, movement * deltaTime)){
         _sprite.move(movement * deltaTime);
     };
 }
