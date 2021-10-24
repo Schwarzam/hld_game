@@ -27,12 +27,11 @@ public:
     const sf::Sprite& getSprite();
 
     void setPosition(const sf::Vector2f& pos);
-    void update();
+    virtual void processEvents();
 
 private:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
-    sf::Vector2u imageCount;
     sf::Vector2u currentImage;
     sf::Clock clock;
 
@@ -41,7 +40,6 @@ private:
     float animationTime;
 
     nlohmann::json animation_json;
-
 
 protected:
     std::string entityName;
@@ -72,7 +70,6 @@ protected:
         {STOP + LEFT, "STOP_LEFT"},
         {STOP + RIGHT, "STOP_RIGHT"},
     };
-
 };
 
 

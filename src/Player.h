@@ -19,7 +19,7 @@
 class Player : public Entity {
 public:
     Player();
-    void processEvents();
+    void processEvents() override;
     sf::Vector2f get_position();
 
 private:

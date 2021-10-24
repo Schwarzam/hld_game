@@ -1,0 +1,47 @@
+{
+  "FPS": 10,
+  "GRID": {
+    "x": 3,
+    "y": 7
+  },
+  "UP": {
+    "LINHA": 2,
+    "COLUNA_INICIAL": 0,
+    "FRAMES": 3
+  },
+  "DOWN": {
+    "LINHA": 0,
+    "COLUNA_INICIAL": 0,
+    "FRAMES": 3
+  },
+  "LEFT": {
+    "LINHA": 2,
+    "COLUNA_INICIAL": 0,
+    "FRAMES": 3
+  },
+  "RIGHT": {
+    "LINHA": 0,
+    "COLUNA_INICIAL": 0,
+    "FRAMES": 3
+  },
+  "STOP_UP": {
+    "LINHA": 2,
+    "COLUNA_INICIAL": 0,
+    "FRAMES": 1
+  },
+  "STOP_DOWN": {
+    "LINHA": 1,
+    "COLUNA_INICIAL": 0,
+    "FRAMES": 1
+  },
+  "STOP_RIGHT": {
+    "LINHA": 0,
+    "COLUNA_INICIAL": 0,
+    "FRAMES": 1
+  },
+  "STOP_LEFT": {
+    "LINHA": 1,
+    "COLUNA_INICIAL": 0,
+    "FRAMES": 1
+  }
+}

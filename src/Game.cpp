@@ -29,6 +29,7 @@ void Game::runWithMinimumTimeSteps(int minimum_frame_per_seconds)
 
     Entity *e = Game::startEntity("aranha");
     e->setPosition(sf::Vector2f(280, 220));
+    e->animation();
 
     while (_window.isOpen())
     {
@@ -83,14 +84,15 @@ void Game::processEvents()
 
 
     }
-
-
 }
 
 
 void Game::update(sf::Time deltaTime)
 {
-    _player.processEvents();
+    for (auto& entity : entities){
+        entity.second->processEvents();
+    }
+    //_player.processEvents();
     //_player.update(deltaTime);
 }
 

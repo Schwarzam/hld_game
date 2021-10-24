@@ -52,6 +52,7 @@ bool GameManager::validatePos(Entity *ent, sf::Sprite& _sprite, const sf::Vector
             sf::Vector2f p = _sprite.getPosition() + correction;
             if (TileMap::validatePos(p))
                 _sprite.move(correction);
+            return false;
         }
 
         return colliding;

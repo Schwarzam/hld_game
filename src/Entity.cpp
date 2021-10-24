@@ -6,6 +6,7 @@
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <fstream>
 #include "GameManager.h"
+#include <random>
 
 Entity::Entity(const std::string& name) : entityName(name){
     _ptexture = Assets::Acquire(name);
@@ -21,26 +22,11 @@ float Entity::getPosY() {
     return _sprite.getPosition().y;
 }
 
-
-Entity::Entity(const std::string &name, sf::Vector2u imageCount, float switchTime) : entityName(name) {
-    _ptexture = Assets::Acquire(name);
-
-    this->imageCount = imageCount;
-    this->switchTime = switchTime;
-
-    totalTime = 0.0f;
-    currentImage.x = 0;
-
-    uvRect.width = _ptexture->getSize().x / float(imageCount.x);
-    uvRect.height = _ptexture->getSize().y / float(imageCount.y);
-}
-
 void Entity::animation() {
     std::string o = "media/" + entityName + ".json";
     std::ifstream file("media/" + entityName + ".json");
     file >> animation_json;
 
-    this->imageCount = sf::Vector2u(animation_json["GRID"]["x"].get<int>(), animation_json["GRID"]["y"].get<int>());
     this->switchTime = 1.0f/animation_json["FPS"].get<float>();
 
     totalTime = 0.0f;
@@ -92,5 +78,19 @@ void Entity::setPosition(const sf::Vector2f& pos) {
 sf::Vector2f Entity::getPosition() {
     return _sprite.getPosition();
 }
+
+void Entity::processEvents() {
+    int k = rand() % 100 + 1;
+
+    if (k < 10){
+        if (GameManager::validatePos(this, _sprite, sf::Vector2f(0, .1))){
+            _sprite.move(sf::Vector2f(0, 0.1));
+        }
+        direction = DOWN;
+    }
+
+    updateAnimation();
+}
+
 
 
