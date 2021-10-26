@@ -17,7 +17,6 @@ class Entity : public sf::Drawable, public sf::Transform {
 public:
     Entity() = default;
     explicit Entity(const std::string& name);
-    explicit Entity(const std::string& name, sf::Vector2u imageCount, float switchTime);
 
     void animation();
     void updateAnimation();
@@ -43,10 +42,14 @@ private:
 
 protected:
     std::string entityName;
-    
-    sf::IntRect uvRect;
+
     std::shared_ptr<sf::Texture> _ptexture;
+
+    sf::IntRect uvRect;
     sf::Sprite _sprite;
+
+    sf::IntRect uvRectFeet;
+    sf::Sprite _feetSprite;
 
     int direction = UP;
     int lastDirection = UP;

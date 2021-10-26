@@ -4,6 +4,7 @@
     "x": 12,
     "y": 5
   },
+  "FEET_AREA": 12,
   "UP": {
     "LINHA": 2,
     "COLUNA_INICIAL": 0,

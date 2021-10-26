@@ -37,6 +37,13 @@ void Entity::animation() {
 
     _sprite.setTextureRect(uvRect);
     _sprite.setOrigin(uvRect.width/2, uvRect.height);
+
+    //Feet only area to do collisions
+    uvRectFeet.width = _ptexture->getSize().x / float(animation_json["GRID"]["x"].get<int>());
+    uvRectFeet.height = animation_json["FEET_AREA"].get<int>();
+
+    _feetSprite.setTextureRect(uvRectFeet);
+    _feetSprite.setOrigin(uvRectFeet.width/2, uvRectFeet.height);
 }
 
 void Entity::updateAnimation() {
@@ -60,8 +67,13 @@ void Entity::updateAnimation() {
 
         uvRect.left = currentImage.x * uvRect.width;
         uvRect.top = currentImage.y * uvRect.height;
-
         _sprite.setTextureRect(uvRect);
+
+
+        uvRectFeet.left = currentImage.x * uvRect.width;
+        uvRectFeet.top = (currentImage.y + 1) * uvRect.height - uvRectFeet.height;
+
+        _feetSprite.setTextureRect(uvRectFeet);
     }
 }
 
