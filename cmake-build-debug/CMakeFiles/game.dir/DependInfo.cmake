@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/gusta/hld_game/src/Assets.cpp" "C:/Users/gusta/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Assets.cpp.obj"
   "C:/Users/gusta/hld_game/src/Collision.cpp" "C:/Users/gusta/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Collision.cpp.obj"
   "C:/Users/gusta/hld_game/src/Entity.cpp" "C:/Users/gusta/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Entity.cpp.obj"
+  "C:/Users/gusta/hld_game/src/EntityBehavior.cpp" "C:/Users/gusta/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/EntityBehavior.cpp.obj"
   "C:/Users/gusta/hld_game/src/Game.cpp" "C:/Users/gusta/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Game.cpp.obj"
   "C:/Users/gusta/hld_game/src/GameManager.cpp" "C:/Users/gusta/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/GameManager.cpp.obj"
   "C:/Users/gusta/hld_game/src/Player.cpp" "C:/Users/gusta/hld_game/cmake-build-debug/CMakeFiles/game.dir/src/Player.cpp.obj"

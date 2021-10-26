@@ -113,6 +113,12 @@
 		<Unit filename="C:/Users/gusta/hld_game/src/Entity.h">
 			<Option target="game"/>
 		</Unit>
+		<Unit filename="C:/Users/gusta/hld_game/src/EntityBehavior.cpp">
+			<Option target="game"/>
+		</Unit>
+		<Unit filename="C:/Users/gusta/hld_game/src/EntityBehavior.h">
+			<Option target="game"/>
+		</Unit>
 		<Unit filename="C:/Users/gusta/hld_game/src/Game.cpp">
 			<Option target="game"/>
 		</Unit>

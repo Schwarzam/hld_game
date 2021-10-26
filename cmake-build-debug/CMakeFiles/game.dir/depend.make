@@ -80,6 +80,7 @@ CMakeFiles/game.dir/main.cpp.obj: \
  ../main.cpp \
  ../src/Assets.h \
  ../src/Entity.h \
+ ../src/EntityBehavior.h \
  ../src/Game.h \
  ../src/GameManager.h \
  ../src/Player.h \
@@ -270,7 +271,34 @@ CMakeFiles/game.dir/src/Entity.cpp.obj: \
  ../src/Assets.h \
  ../src/Entity.cpp \
  ../src/Entity.h \
+ ../src/EntityBehavior.h \
  ../src/GameManager.h
+CMakeFiles/game.dir/src/EntityBehavior.cpp.obj: \
+ ../libs/json-develop/json-develop/single_include/nlohmann/json.hpp \
+ C:/SFML/include/SFML/Config.hpp \
+ C:/SFML/include/SFML/Graphics/BlendMode.hpp \
+ C:/SFML/include/SFML/Graphics/Color.hpp \
+ C:/SFML/include/SFML/Graphics/Drawable.hpp \
+ C:/SFML/include/SFML/Graphics/Export.hpp \
+ C:/SFML/include/SFML/Graphics/Image.hpp \
+ C:/SFML/include/SFML/Graphics/Rect.hpp \
+ C:/SFML/include/SFML/Graphics/Rect.inl \
+ C:/SFML/include/SFML/Graphics/RenderStates.hpp \
+ C:/SFML/include/SFML/Graphics/Sprite.hpp \
+ C:/SFML/include/SFML/Graphics/Texture.hpp \
+ C:/SFML/include/SFML/Graphics/Transform.hpp \
+ C:/SFML/include/SFML/Graphics/Transformable.hpp \
+ C:/SFML/include/SFML/Graphics/Vertex.hpp \
+ C:/SFML/include/SFML/System/Clock.hpp \
+ C:/SFML/include/SFML/System/Export.hpp \
+ C:/SFML/include/SFML/System/NonCopyable.hpp \
+ C:/SFML/include/SFML/System/Time.hpp \
+ C:/SFML/include/SFML/System/Vector2.hpp \
+ C:/SFML/include/SFML/System/Vector2.inl \
+ C:/SFML/include/SFML/Window/Export.hpp \
+ C:/SFML/include/SFML/Window/GlResource.hpp \
+ ../src/EntityBehavior.cpp \
+ ../src/EntityBehavior.h
 CMakeFiles/game.dir/src/Game.cpp.obj: \
  ../libs/json-develop/json-develop/single_include/nlohmann/json.hpp \
  C:/SFML/include/SFML/Config.hpp \
@@ -324,6 +352,7 @@ CMakeFiles/game.dir/src/Game.cpp.obj: \
  C:/SFML/include/SFML/Window/WindowStyle.hpp \
  ../src/Assets.h \
  ../src/Entity.h \
+ ../src/EntityBehavior.h \
  ../src/Game.cpp \
  ../src/Game.h \
  ../src/GameManager.h \
@@ -409,6 +438,7 @@ CMakeFiles/game.dir/src/GameManager.cpp.obj: \
  ../src/Assets.h \
  ../src/Collision.h \
  ../src/Entity.h \
+ ../src/EntityBehavior.h \
  ../src/GameManager.cpp \
  ../src/GameManager.h \
  ../src/TileMap.h
@@ -453,6 +483,7 @@ CMakeFiles/game.dir/src/Player.cpp.obj: \
  C:/SFML/include/SFML/Window/Sensor.hpp \
  ../src/Assets.h \
  ../src/Entity.h \
+ ../src/EntityBehavior.h \
  ../src/GameManager.h \
  ../src/Player.cpp \
  ../src/Player.h \

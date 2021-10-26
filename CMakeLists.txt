@@ -10,7 +10,7 @@ file(COPY ${MEDIA} DESTINATION ${CMAKE_BINARY_DIR})
 
 add_executable(game main.cpp
         src/Game.h src/Game.cpp
-        src/TileMap.cpp src/TileMap.h src/Player.cpp src/Player.h src/Entity.cpp src/Entity.h src/Assets.cpp src/Assets.h src/Collision.cpp src/Collision.h src/helper/Fps.h src/GameManager.cpp src/GameManager.h)
+        src/TileMap.cpp src/TileMap.h src/Player.cpp src/Player.h src/Entity.cpp src/Entity.h src/Assets.cpp src/Assets.h src/Collision.cpp src/Collision.h src/helper/Fps.h src/GameManager.cpp src/GameManager.h src/EntityBehavior.cpp src/EntityBehavior.h)
 
 add_subdirectory(libs/json-develop/json-develop)
 set(LINK_LIBS nlohmann_json::nlohmann_json)

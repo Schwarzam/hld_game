@@ -224,6 +224,30 @@ src/Entity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/Entity.cpp.s
 .PHONY : src/Entity.cpp.s
 
+src/EntityBehavior.obj: src/EntityBehavior.cpp.obj
+.PHONY : src/EntityBehavior.obj
+
+# target to build an object file
+src/EntityBehavior.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/EntityBehavior.cpp.obj
+.PHONY : src/EntityBehavior.cpp.obj
+
+src/EntityBehavior.i: src/EntityBehavior.cpp.i
+.PHONY : src/EntityBehavior.i
+
+# target to preprocess a source file
+src/EntityBehavior.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/EntityBehavior.cpp.i
+.PHONY : src/EntityBehavior.cpp.i
+
+src/EntityBehavior.s: src/EntityBehavior.cpp.s
+.PHONY : src/EntityBehavior.s
+
+# target to generate assembly for a file
+src/EntityBehavior.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\game.dir\build.make CMakeFiles/game.dir/src/EntityBehavior.cpp.s
+.PHONY : src/EntityBehavior.cpp.s
+
 src/Game.obj: src/Game.cpp.obj
 .PHONY : src/Game.obj
 
@@ -341,6 +365,9 @@ help:
 	@echo ... src/Entity.obj
 	@echo ... src/Entity.i
 	@echo ... src/Entity.s
+	@echo ... src/EntityBehavior.obj
+	@echo ... src/EntityBehavior.i
+	@echo ... src/EntityBehavior.s
 	@echo ... src/Game.obj
 	@echo ... src/Game.i
 	@echo ... src/Game.s

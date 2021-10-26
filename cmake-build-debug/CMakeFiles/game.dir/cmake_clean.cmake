@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/game.dir/src/Assets.cpp.obj"
   "CMakeFiles/game.dir/src/Collision.cpp.obj"
   "CMakeFiles/game.dir/src/Entity.cpp.obj"
+  "CMakeFiles/game.dir/src/EntityBehavior.cpp.obj"
   "CMakeFiles/game.dir/src/Game.cpp.obj"
   "CMakeFiles/game.dir/src/GameManager.cpp.obj"
   "CMakeFiles/game.dir/src/Player.cpp.obj"
