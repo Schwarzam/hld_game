@@ -65,12 +65,43 @@ void Player::processEvents() {
     lastDirection = direction;
     updateAnimation();
 
-    float deltaTime = clock.restart().asSeconds();
+    float deltaTime = MovementClock.restart().asSeconds();
 
     sf::Vector2f pos = get_position() + movement * deltaTime;
     if (GameManager::validatePos(this, _sprite, movement * deltaTime)){
         _sprite.move(movement * deltaTime);
     };
+}
+
+void Player::updateAnimation() {
+    std::string action = actionsMap.at(direction);
+    currentImage.y = animation_json[action]["LINHA"]; //ROW
+
+    animationTime = animation_clock.restart().asSeconds();
+    if (animationTime > 1){
+        animationTime = 1;
+    }
+
+    totalTime += animationTime;
+
+    if (totalTime >= switchTime){
+        totalTime -= switchTime;
+
+        currentImage.x ++;
+        if (currentImage.x >= animation_json[action]["FRAMES"]){
+            currentImage.x = animation_json[action]["COLUNA_INICIAL"];
+        }
+
+        uvRect.left = currentImage.x * uvRect.width;
+        uvRect.top = currentImage.y * uvRect.height;
+        _sprite.setTextureRect(uvRect);
+
+
+        uvRectFeet.left = currentImage.x * uvRect.width;
+        uvRectFeet.top = (currentImage.y + 1) * uvRect.height - uvRectFeet.height;
+
+        _feetSprite.setTextureRect(uvRectFeet);
+    }
 }
 
 sf::Vector2f Player::get_position() {

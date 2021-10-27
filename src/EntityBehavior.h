@@ -17,19 +17,22 @@
 class EntityBehavior {
 public:
     void animation();
-    void updateAnimation();
+    virtual void updateAnimation();
 
     void chooseBehavior();
 
 private:
+
+
+protected:
     sf::Vector2u currentImage;
-    sf::Clock clock;
+    sf::Clock animation_clock;
 
     float totalTime;
     float switchTime;
     float animationTime;
+    float moveDuration = 0;
 
-protected:
     std::string entityName;
 
     nlohmann::json animation_json;
@@ -42,28 +45,13 @@ protected:
     sf::IntRect uvRectFeet;
     sf::Sprite _feetSprite;
 
-    int direction = UP;
-    int lastDirection = UP;
 
-    enum actions : int {
-        STOP = 1,
-        UP = 2,
-        DOWN = 4,
-        RIGHT = 6,
-        LEFT = 8,
-        };
+    nlohmann::json actualMove;
+    int frameNum = 0;
 
-    std::unordered_map<int, std::string> actionsMap{
-        {UP, "UP"},
-        {DOWN, "DOWN"},
-        {RIGHT, "RIGHT"},
-        {LEFT, "LEFT"},
-        {STOP, "STILL"},
-        {STOP + UP, "STOP_UP"},
-        {STOP + DOWN, "STOP_DOWN"},
-        {STOP + LEFT, "STOP_LEFT"},
-        {STOP + RIGHT, "STOP_RIGHT"},
-        };
+    int moveProbabilites = 0;
+
+
 };
 
 

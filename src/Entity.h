@@ -19,8 +19,6 @@ public:
     Entity() = default;
     explicit Entity(const std::string& name);
 
-
-
     float getPosY();
     sf::Vector2f getPosition();
     const sf::Sprite& getSprite();
@@ -32,7 +30,7 @@ private:
     void draw(sf::RenderTarget &target, sf::RenderStates states) const override;
 
 protected:
-
+    sf::Clock MovementClock;
 };
 
 

@@ -30,10 +30,18 @@ void EntityBehavior::animation() {
 }
 
 void EntityBehavior::updateAnimation() {
-    std::string action = actionsMap.at(direction);
-    currentImage.y = animation_json[action]["LINHA"]; //ROW
+    if (actualMove.empty()){
+        return;
+    }
 
-    animationTime = clock.restart().asSeconds();
+    animationTime = animation_clock.restart().asSeconds();
+    moveDuration += animationTime;
+
+    if (moveDuration > actualMove["duration"].get<float>()){
+        chooseBehavior();
+        moveDuration = 0;
+    }
+
     if (animationTime > 1){
         animationTime = 1;
     }
@@ -43,24 +51,51 @@ void EntityBehavior::updateAnimation() {
     if (totalTime >= switchTime){
         totalTime -= switchTime;
 
-        currentImage.x ++;
-        if (currentImage.x >= animation_json[action]["FRAMES"]){
-            currentImage.x = animation_json[action]["COLUNA_INICIAL"];
+        if (actualMove["frames"].is_number()){
+            currentImage.y = actualMove["linha"].get<int>(); //ROW
+            currentImage.x ++;
+            if (currentImage.x >= actualMove["frames"].get<int>()){
+                currentImage.x = actualMove["coluna"].get<int>();
+            }
+        }else{
+            if (frameNum >= actualMove["frames"].size()){
+                frameNum = 0;
+            }
+
+            currentImage.x = actualMove["frames"][frameNum][1].get<int>();
+            currentImage.y = actualMove["frames"][frameNum][0].get<int>();
+            frameNum ++;
         }
 
         uvRect.left = currentImage.x * uvRect.width;
         uvRect.top = currentImage.y * uvRect.height;
         _sprite.setTextureRect(uvRect);
 
-
         uvRectFeet.left = currentImage.x * uvRect.width;
         uvRectFeet.top = (currentImage.y + 1) * uvRect.height - uvRectFeet.height;
-
         _feetSprite.setTextureRect(uvRectFeet);
     }
 }
 
 void EntityBehavior::chooseBehavior() {
+    if (moveProbabilites == 0){
+        for (auto& [key, value] : animation_json["movements"].items()) {
+            if (value.contains("probabilitie"))
+                moveProbabilites += value["probabilitie"].get<int>();
+        }
+    }
 
-//    animation_json["movements"];
+    //Random move
+    int k = rand() % moveProbabilites;
+
+    int prob = 0;
+    for (auto [key, value] : animation_json["movements"].items()) {
+        if (value.contains("probabilitie"))
+            prob += value["probabilitie"].get<int>();
+
+        if (k >= prob - value["probabilitie"].get<int>() && k < prob){
+            actualMove = value;
+            break;
+        }
+    }
 }

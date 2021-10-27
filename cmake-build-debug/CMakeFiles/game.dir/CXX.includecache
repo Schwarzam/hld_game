@@ -396,8 +396,6 @@ string
 vector
 -
 
-C:/SFML/include/SFML/Graphics/PrimitiveType.hpp
-
 C:/SFML/include/SFML/Graphics/Rect.hpp
 SFML/System/Vector2.hpp
 -
@@ -414,28 +412,6 @@ SFML/Graphics/Export.hpp
 SFML/Graphics/BlendMode.hpp
 -
 SFML/Graphics/Transform.hpp
--
-
-C:/SFML/include/SFML/Graphics/RenderTarget.hpp
-SFML/Graphics/Export.hpp
--
-SFML/Graphics/Color.hpp
--
-SFML/Graphics/Rect.hpp
--
-SFML/Graphics/View.hpp
--
-SFML/Graphics/Transform.hpp
--
-SFML/Graphics/BlendMode.hpp
--
-SFML/Graphics/RenderStates.hpp
--
-SFML/Graphics/PrimitiveType.hpp
--
-SFML/Graphics/Vertex.hpp
--
-SFML/System/NonCopyable.hpp
 -
 
 C:/SFML/include/SFML/Graphics/Sprite.hpp
@@ -480,16 +456,6 @@ SFML/Graphics/Color.hpp
 SFML/System/Vector2.hpp
 -
 
-C:/SFML/include/SFML/Graphics/View.hpp
-SFML/Graphics/Export.hpp
--
-SFML/Graphics/Rect.hpp
--
-SFML/Graphics/Transform.hpp
--
-SFML/System/Vector2.hpp
--
-
 C:/SFML/include/SFML/System/Clock.hpp
 SFML/System/Export.hpp
 -
@@ -524,45 +490,11 @@ SFML/Window/Export.hpp
 SFML/System/NonCopyable.hpp
 -
 
-C:/Users/gusta/hld_game/src/Assets.h
-string
--
-unordered_map
--
-SFML/Graphics/Texture.hpp
--
-memory
--
-
-C:/Users/gusta/hld_game/src/Entity.cpp
-Entity.h
-C:/Users/gusta/hld_game/src/Entity.h
-SFML/Graphics/RenderTarget.hpp
--
+C:/Users/gusta/hld_game/src/EntityBehavior.cpp
 fstream
 -
-GameManager.h
-C:/Users/gusta/hld_game/src/GameManager.h
-random
--
-
-C:/Users/gusta/hld_game/src/Entity.h
-string
--
-SFML/Graphics/Sprite.hpp
--
-SFML/Graphics/Texture.hpp
--
-SFML/System/Clock.hpp
--
-map
--
-Assets.h
-C:/Users/gusta/hld_game/src/Assets.h
 EntityBehavior.h
 C:/Users/gusta/hld_game/src/EntityBehavior.h
-nlohmann/json.hpp
--
 
 C:/Users/gusta/hld_game/src/EntityBehavior.h
 SFML/Graphics/Rect.hpp
@@ -579,10 +511,4 @@ nlohmann/json.hpp
 -
 SFML/System/Clock.hpp
 -
-
-C:/Users/gusta/hld_game/src/GameManager.h
-vector
--
-Entity.h
-C:/Users/gusta/hld_game/src/Entity.h
 

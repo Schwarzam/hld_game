@@ -39,16 +39,17 @@ sf::Vector2f Entity::getPosition() {
 }
 
 void Entity::processEvents() {
-    int k = rand() % 100 + 1;
-
-    if (k < 10){
-        if (GameManager::validatePos(this, _sprite, sf::Vector2f(0, .1))){
-            _sprite.move(sf::Vector2f(0, 0.1));
-        }
-        direction = DOWN;
+    if(actualMove.empty()){
+        chooseBehavior();
     }
 
-    chooseBehavior();
+    float deltaTime = MovementClock.restart().asSeconds();
+
+    sf::Vector2f movement = sf::Vector2f(10 * actualMove["moveX"].get<float>(), 10 * actualMove["moveY"].get<float>());
+    if (GameManager::validatePos(this, _sprite, movement * deltaTime)){
+        _sprite.move(movement * deltaTime);
+    };
+
     updateAnimation();
 }
 
