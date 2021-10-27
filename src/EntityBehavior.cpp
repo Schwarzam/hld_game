@@ -85,17 +85,28 @@ void EntityBehavior::chooseBehavior() {
         }
     }
 
-    //Random move
-    int k = rand() % moveProbabilites;
+    bool decided = false;
+    while (!decided){
+        //Random move
+        int k = rand() % moveProbabilites;
 
-    int prob = 0;
-    for (auto [key, value] : animation_json["movements"].items()) {
-        if (value.contains("probabilitie"))
-            prob += value["probabilitie"].get<int>();
+        if (!actualMove.empty())
+            std::string tei = actualMove["moveAfter"][0];
 
-        if (k >= prob - value["probabilitie"].get<int>() && k < prob){
-            actualMove = value;
-            break;
+        int prob = 0;
+        for (auto [key, value] : animation_json["movements"].items()) {
+            if (value.contains("probabilitie"))
+                prob += value["probabilitie"].get<int>();
+
+            if (k >= prob - value["probabilitie"].get<int>() && k < prob){
+                if (!actualMove.empty() && (actualMove["moveAfter"].contains(key) || actualMove["moveAfter"][0] == "all")){
+                    actualMove = value;
+                    decided = true;
+                }else if(actualMove.empty()){
+                    actualMove = value;
+                }
+                break;
+            }
         }
     }
 }
