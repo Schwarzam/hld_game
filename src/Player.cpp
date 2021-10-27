@@ -9,11 +9,6 @@
 #include "GameManager.h"
 
 Player::Player() {
-//    if (!_texture.loadFromFile("media/chapcahpacete.png"))
-//    {
-//        //Error
-//    }
-
     _ptexture = Assets::Acquire("chapacete_sheet");
     entityName = "chapacete_sheet";
     entityType = "player";
@@ -21,6 +16,7 @@ Player::Player() {
     _sprite.setTexture(*_ptexture);
     //_sprite.setOrigin(sf::Vector2f(_ptexture->getSize().x/2, _ptexture->getSize().y));
     _sprite.setPosition(216, 174);
+    _feetSprite.setTexture(*_ptexture);
 
     animation();
 }
@@ -69,8 +65,8 @@ void Player::processEvents() {
     float deltaTime = MovementClock.restart().asSeconds();
 
     sf::Vector2f pos = get_position() + movement * deltaTime;
-    if (GameManager::validatePos(this, _sprite, movement * deltaTime)){
-        _sprite.move(movement * deltaTime);
+    if (GameManager::validatePos(this, _feetSprite, movement * deltaTime)){
+        move(movement * deltaTime);
     };
 }
 

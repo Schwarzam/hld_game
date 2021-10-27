@@ -263,6 +263,8 @@ CMakeFiles/game.dir/src/Entity.cpp.obj: \
  C:/SFML/include/SFML/System/Clock.hpp \
  C:/SFML/include/SFML/System/Export.hpp \
  C:/SFML/include/SFML/System/NonCopyable.hpp \
+ C:/SFML/include/SFML/System/Thread.hpp \
+ C:/SFML/include/SFML/System/Thread.inl \
  C:/SFML/include/SFML/System/Time.hpp \
  C:/SFML/include/SFML/System/Vector2.hpp \
  C:/SFML/include/SFML/System/Vector2.inl \
@@ -469,6 +471,8 @@ CMakeFiles/game.dir/src/Player.cpp.obj: \
  C:/SFML/include/SFML/System/NonCopyable.hpp \
  C:/SFML/include/SFML/System/String.hpp \
  C:/SFML/include/SFML/System/String.inl \
+ C:/SFML/include/SFML/System/Thread.hpp \
+ C:/SFML/include/SFML/System/Thread.inl \
  C:/SFML/include/SFML/System/Time.hpp \
  C:/SFML/include/SFML/System/Utf.hpp \
  C:/SFML/include/SFML/System/Utf.inl \

@@ -43,7 +43,6 @@ private:
     sf::View view;
 
     FPS fps;
-    sf::Thread m_thread;
 };
 
 #endif //GAME_GAME_H

@@ -45,7 +45,6 @@ protected:
     sf::IntRect uvRectFeet;
     sf::Sprite _feetSprite;
 
-
     nlohmann::json actualMove;
     int frameNum = 0;
     int moveProbabilites = 0;

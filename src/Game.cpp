@@ -8,7 +8,7 @@
 #include "Game.h"
 
 Game::Game() : _window(sf::VideoMode(1200, 720),"Game hld", sf::Style::Resize),
-            _player(Player()), m_thread(&Game::update, this)
+            _player(Player())
 {
     view.setSize(_window.getSize().x, _window.getSize().y);
     view.setCenter(_player.get_position().x, _player.get_position().y);
@@ -109,9 +109,12 @@ void Game::render()
         _window.draw(*entity.second);
     }
 
-    sf::Vertex point(sf::Vector2f(3, 3), sf::Color::Red);
-    point.position = _player.get_position();
-    _window.draw(&point, 1, sf::Points);
+    for (auto& entity : entities){
+        sf::Vertex point(sf::Vector2f(3, 3), sf::Color::Red);
+        point.position = entity.second->getFeetPosition();
+        _window.draw(&point, 1, sf::Points);
+    }
+
 
     //Count FPS
     _window.setTitle(fps.getFPS());

@@ -29,6 +29,7 @@ void EntityBehavior::animation() {
     uvRectFeet.height = animation_json["FEET_AREA"].get<int>();
 
     _feetSprite.setTextureRect(uvRectFeet);
+    _feetSprite.setPosition(_sprite.getPosition());
     _feetSprite.setOrigin(uvRectFeet.width/2, uvRectFeet.height);
 }
 
@@ -36,7 +37,6 @@ void EntityBehavior::updateAnimation() {
     if (actualMove.empty()){
         return;
     }
-
     animationTime = animation_clock.restart().asSeconds();
     moveDuration += animationTime;
 
@@ -75,7 +75,8 @@ void EntityBehavior::updateAnimation() {
         _sprite.setTextureRect(uvRect);
 
         uvRectFeet.left = currentImage.x * uvRect.width;
-        uvRectFeet.top = (currentImage.y + 1) * uvRect.height - uvRectFeet.height;
+        uvRectFeet.top = (currentImage.y) * uvRect.height - uvRectFeet.height;
+
         _feetSprite.setTextureRect(uvRectFeet);
     }
 }

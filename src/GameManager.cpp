@@ -35,7 +35,7 @@ bool GameManager::validatePos(Entity *ent, sf::Sprite& _sprite, const sf::Vector
         for (std::pair<float, Entity *> entity : entities) {
             Entity *e = entity.second;
             if (entity.second != ent) {
-                colliding = Collision::PixelPerfectTest(entity.second->getSprite(), spriteCopy) | colliding;
+                colliding = Collision::PixelPerfectTest(entity.second->getHitBoxSprite(), spriteCopy) | colliding;
                 if (colliding){
                     _ang = std::atan2(
                             entity.second->getPosition().y - ent->getPosition().y,
@@ -50,7 +50,7 @@ bool GameManager::validatePos(Entity *ent, sf::Sprite& _sprite, const sf::Vector
             sf::Vector2f correction = sf::Vector2f(0.1f * std::sin(_ang), 0.1f * std::cos(_ang));
             sf::Vector2f p = _sprite.getPosition() + correction;
             if (TileMap::validatePos(p))
-                _sprite.move(correction);
+                ent->move(correction);
             return false;
         }
         return colliding;

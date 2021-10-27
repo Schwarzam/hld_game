@@ -21,7 +21,12 @@ public:
 
     float getPosY();
     sf::Vector2f getPosition();
+    sf::Vector2f getFeetPosition();
+
+    void move(sf::Vector2f correction);
+
     const sf::Sprite& getSprite();
+    const sf::Sprite& getHitBoxSprite();
 
     void setPosition(const sf::Vector2f& pos);
     virtual void processEvents();

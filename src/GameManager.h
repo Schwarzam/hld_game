@@ -7,6 +7,7 @@
 
 
 #include <vector>
+#include <SFML/System/Thread.hpp>
 #include "Entity.h"
 
 class GameManager {
@@ -19,7 +20,7 @@ public:
 
     static bool validatePos(Entity *ent, sf::Sprite& _sprite, const sf::Vector2f &movement);
 private:
-
+    static sf::Thread m_thread;
 
 protected:
     static std::vector<std::pair<float, Entity*>> entities;
