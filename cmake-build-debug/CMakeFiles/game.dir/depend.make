@@ -330,6 +330,8 @@ CMakeFiles/game.dir/src/Game.cpp.obj: \
  C:/SFML/include/SFML/System/NonCopyable.hpp \
  C:/SFML/include/SFML/System/String.hpp \
  C:/SFML/include/SFML/System/String.inl \
+ C:/SFML/include/SFML/System/Thread.hpp \
+ C:/SFML/include/SFML/System/Thread.inl \
  C:/SFML/include/SFML/System/Time.hpp \
  C:/SFML/include/SFML/System/Utf.hpp \
  C:/SFML/include/SFML/System/Utf.inl \

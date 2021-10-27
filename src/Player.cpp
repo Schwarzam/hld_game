@@ -8,7 +8,7 @@
 #include "Player.h"
 #include "GameManager.h"
 
-Player::Player(){
+Player::Player() {
 //    if (!_texture.loadFromFile("media/chapcahpacete.png"))
 //    {
 //        //Error
@@ -16,6 +16,7 @@ Player::Player(){
 
     _ptexture = Assets::Acquire("chapacete_sheet");
     entityName = "chapacete_sheet";
+    entityType = "player";
 
     _sprite.setTexture(*_ptexture);
     //_sprite.setOrigin(sf::Vector2f(_ptexture->getSize().x/2, _ptexture->getSize().y));

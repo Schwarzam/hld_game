@@ -18,7 +18,6 @@ Entity *GameManager::startEntity(const std::string& name) {
 
 void GameManager::sortRender() {
     std::sort(entities.begin(), entities.end());
-
     for (auto& i : entities){
         i.first = i.second->getPosY();
     }
@@ -54,11 +53,21 @@ bool GameManager::validatePos(Entity *ent, sf::Sprite& _sprite, const sf::Vector
                 _sprite.move(correction);
             return false;
         }
-
         return colliding;
     }else{
         return false;
     };
+}
+
+void GameManager::gameEvents() {
+    for (auto& entity : entities){
+        sf::Vector2f position = entity.second->getPosition();
+
+        for (auto& entity : entities){
+            sf::Vector2f position = entity.second->getPosition();
+
+        }
+    }
 }
 
 

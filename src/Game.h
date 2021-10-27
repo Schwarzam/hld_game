@@ -7,6 +7,7 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/CircleShape.hpp>
+#include <SFML/System/Thread.hpp>
 
 #include "TileMap.h"
 #include "Player.h"
@@ -32,7 +33,7 @@ public:
 private:
     void setZoom(float z);
     void processEvents();//< Process events
-    void update(sf::Time deltaTime); //< do some updates
+    void update(); //< do some updates
     void render();//< draw all the stuff
     Assets _assets;
 
@@ -42,7 +43,7 @@ private:
     sf::View view;
 
     FPS fps;
-
+    sf::Thread m_thread;
 };
 
 #endif //GAME_GAME_H

@@ -8,7 +8,7 @@
 #include "Game.h"
 
 Game::Game() : _window(sf::VideoMode(1200, 720),"Game hld", sf::Style::Resize),
-               _player(Player())
+            _player(Player()), m_thread(&Game::update, this)
 {
     view.setSize(_window.getSize().x, _window.getSize().y);
     view.setCenter(_player.get_position().x, _player.get_position().y);
@@ -39,10 +39,10 @@ void Game::runWithMinimumTimeSteps(int minimum_frame_per_seconds)
         while (timeSinceLastUpdate > TimePerFrame)
         {
             timeSinceLastUpdate -= TimePerFrame;
-            update(TimePerFrame);
+            update();
         }
 
-        update(timeSinceLastUpdate);
+        update();
         render();
     }
 }
@@ -87,7 +87,7 @@ void Game::processEvents()
 }
 
 
-void Game::update(sf::Time deltaTime)
+void Game::update()
 {
     for (auto& entity : entities){
         entity.second->processEvents();

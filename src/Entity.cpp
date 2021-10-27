@@ -8,7 +8,7 @@
 #include "GameManager.h"
 #include <random>
 
-Entity::Entity(const std::string& name) {
+Entity::Entity(const std::string& name){
     this->entityName = name;
     _ptexture = Assets::Acquire(name);
     _sprite.setTexture(*_ptexture);
@@ -52,6 +52,8 @@ void Entity::processEvents() {
 
     updateAnimation();
 }
+
+
 
 
 

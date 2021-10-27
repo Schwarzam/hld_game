@@ -20,7 +20,7 @@ public:
     virtual void updateAnimation();
 
     void chooseBehavior();
-
+    std::string entityType;
 private:
 
 
@@ -48,10 +48,7 @@ protected:
 
     nlohmann::json actualMove;
     int frameNum = 0;
-
     int moveProbabilites = 0;
-
-
 };
 
 

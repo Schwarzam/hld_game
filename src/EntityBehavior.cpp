@@ -11,6 +11,9 @@ void EntityBehavior::animation() {
     file >> animation_json;
 
     this->switchTime = 1.0f/animation_json["FPS"].get<float>();
+    if (animation_json.contains("TYPE")){
+        this->entityType = animation_json["TYPE"].get<std::string>();
+    }
 
     totalTime = 0.0f;
     currentImage.x = 0;
