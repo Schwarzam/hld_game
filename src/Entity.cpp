@@ -18,7 +18,7 @@ Entity::Entity(const std::string& name){
 }
 
 void Entity::draw(sf::RenderTarget &target, sf::RenderStates states) const {
-    target.draw(_sprite, states);
+    target.draw(_feetSprite, states);
 }
 
 float Entity::getPosY() {

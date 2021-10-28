@@ -8,6 +8,7 @@
 #include "TileMap.h"
 #include "Collision.h"
 
+
 std::vector<std::pair<float, Entity*>> GameManager::entities;
 
 Entity *GameManager::startEntity(const std::string& name) {
@@ -29,20 +30,30 @@ bool GameManager::validatePos(Entity *ent, sf::Sprite& _sprite, const sf::Vector
     sf::Sprite spriteCopy = _sprite;
     Entity *entityCollided;
     if(TileMap::validatePos(sf::Vector2f(pos.x, pos.y))){
-        int colliding = false;
         spriteCopy.move(movement);
         float _ang;
+        bool colliding;
 
         for (std::pair<float, Entity *> entity : entities) {
             Entity *e = entity.second;
             if (entity.second != ent) {
-                colliding = Collision::PixelPerfectTest(entity.second->getHitBoxSprite(), spriteCopy) | colliding;
+                colliding = Collision::PixelPerfectTest(entity.second->getHitBoxSprite(), spriteCopy);
                 if (colliding){
                     _ang = std::atan2(
                             entity.second->getFeetPosition().y - ent->getFeetPosition().y,
                             entity.second->getFeetPosition().x - ent->getFeetPosition().x) *
                                     (180 / 3.1428f);
                     entityCollided = entity.second;
+
+                    float distanceI = sqrt(pow(ent->getFeetPosition().x - entity.second->getFeetPosition().x, 2) +
+                            pow(ent->getFeetPosition().y - entity.second->getFeetPosition().y, 2) * 1.0);
+
+                    float distanceF = sqrt(pow(spriteCopy.getPosition().x - entity.second->getFeetPosition().x, 2) +
+                            pow(spriteCopy.getPosition().y - entity.second->getFeetPosition().y, 2) * 1.0);
+
+                    if (distanceF > distanceI){
+                        return true;
+                    }
                 }
             }
         }

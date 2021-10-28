@@ -21,6 +21,7 @@ Player::Player() {
 }
 
 void Player::draw(sf::RenderTarget &target, sf::RenderStates states) const {
+    target.draw(_feetSprite, states);
     target.draw(_sprite, states);
 }
 

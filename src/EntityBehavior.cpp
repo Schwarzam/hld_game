@@ -30,7 +30,7 @@ void EntityBehavior::animation() {
 
     _feetSprite.setTextureRect(uvRectFeet);
     _feetSprite.setPosition(_sprite.getPosition());
-    _feetSprite.setOrigin(uvRectFeet.width/2, uvRectFeet.height/2);
+    _feetSprite.setOrigin(uvRectFeet.width/2, uvRectFeet.height);
 }
 
 void EntityBehavior::updateAnimation() {
