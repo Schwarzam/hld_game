@@ -4,7 +4,7 @@
     "x": 3,
     "y": 7
   },
-  "FEET_AREA": 6,
+  "FEET_AREA": 12,
   "life": 100,
   "type": "enemy_aggro",
   "velocity": 100,

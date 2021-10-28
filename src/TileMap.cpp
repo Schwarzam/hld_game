@@ -73,3 +73,7 @@ bool TileMap::load_file(const std::string &name) {
 
     return false;
 }
+
+nlohmann::json TileMap::getObjects() {
+    return j1["layers"][1];
+}

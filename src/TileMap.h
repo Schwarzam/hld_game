@@ -20,6 +20,8 @@ public:
     bool load_file(const std::string& name);
     static bool validatePos(const sf::Vector2f& pos);
 
+    nlohmann::json getObjects();
+
 private:
     void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 

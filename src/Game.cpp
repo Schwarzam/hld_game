@@ -16,6 +16,7 @@ Game::Game() : _window(sf::VideoMode(1200, 720),"Game hld", sf::Style::Resize),
     setZoom(0.4);
     _window.setView(view);
 
+    startMap();
     entities.emplace_back(std::pair(0, &_player));
 }
 
@@ -26,10 +27,6 @@ void Game::runWithMinimumTimeSteps(int minimum_frame_per_seconds)
 
     sf::Time timeSinceLastUpdate;
     sf::Time TimePerFrame = sf::seconds(1.f/minimum_frame_per_seconds);
-
-    Entity *e = Game::startEntity("aranha");
-    e->setPosition(sf::Vector2f(280, 220));
-    e->animation();
 
     while (_window.isOpen())
     {
@@ -124,7 +121,7 @@ void Game::render()
 }
 
 bool Game::startMap() {
-    map.load_file("maps/editor1.json");
+    map.load_file("maps/teste1.json");
     return true;
 }
 
@@ -135,3 +132,19 @@ void Game::setZoom(float z) {
     _window.setView(view);
 }
 
+void Game::startSpawns() {
+    nlohmann::json objects = map.getObjects();
+    std::string x;
+    for (auto [key, value] : objects["objects"].items()) {
+        if (value["name"].get<std::string>() == "spawn"){
+            _player.setPosition(sf::Vector2f(value["x"].get<float>(), value["y"].get<float>()));
+        }else{
+            Entity *e = Game::startEntity(value["name"].get<std::string>());
+            float vx = value["x"].get<float>();
+            float vy = value["y"].get<float>();
+
+            e->setPosition(sf::Vector2f(value["x"].get<float>(), value["y"].get<float>()));
+            e->animation();
+        }
+    }
+}

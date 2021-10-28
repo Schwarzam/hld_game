@@ -36,7 +36,8 @@ const sf::Sprite &Entity::getSprite() {
 void Entity::setPosition(const sf::Vector2f& pos) {
     if (GameManager::validatePos(this, _sprite, pos)){
         _sprite.setPosition(pos);
-    };
+        _feetSprite.setPosition(_sprite.getPosition());
+    }
 }
 
 sf::Vector2f Entity::getPosition() {

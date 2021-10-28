@@ -15,7 +15,6 @@ Player::Player() {
 
     _sprite.setTexture(*_ptexture);
     //_sprite.setOrigin(sf::Vector2f(_ptexture->getSize().x/2, _ptexture->getSize().y));
-    _sprite.setPosition(216, 174);
     _feetSprite.setTexture(*_ptexture);
 
     animation();

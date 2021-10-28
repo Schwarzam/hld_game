@@ -9,6 +9,7 @@ int main(int argc,char* argv[])
 {
     Game game;
     game.startMap();
+    game.startSpawns();
 
     game.runWithMinimumTimeSteps();
 

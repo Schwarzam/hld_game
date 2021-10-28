@@ -27,6 +27,7 @@ bool GameManager::validatePos(Entity *ent, sf::Sprite& _sprite, const sf::Vector
     sf::Vector2f pos = _sprite.getPosition() + movement;
 
     sf::Sprite spriteCopy = _sprite;
+    Entity *entityCollided;
     if(TileMap::validatePos(sf::Vector2f(pos.x, pos.y))){
         int colliding = false;
         spriteCopy.move(movement);
@@ -38,19 +39,28 @@ bool GameManager::validatePos(Entity *ent, sf::Sprite& _sprite, const sf::Vector
                 colliding = Collision::PixelPerfectTest(entity.second->getHitBoxSprite(), spriteCopy) | colliding;
                 if (colliding){
                     _ang = std::atan2(
-                            entity.second->getPosition().y - ent->getPosition().y,
-                            entity.second->getPosition().x - ent->getPosition().x) *
+                            entity.second->getFeetPosition().y - ent->getFeetPosition().y,
+                            entity.second->getFeetPosition().x - ent->getFeetPosition().x) *
                                     (180 / 3.1428f);
+                    entityCollided = entity.second;
                 }
             }
         }
         if (!colliding){
             return true;
         }else{
-            sf::Vector2f correction = sf::Vector2f(0.1f * std::sin(_ang), 0.1f * std::cos(_ang));
-            sf::Vector2f p = _sprite.getPosition() + correction;
-            if (TileMap::validatePos(p))
-                ent->move(correction);
+            //Se o entity esta se afastando do centro do outro, deixar mover livremente.
+
+
+//            sf::Vector2f correction = sf::Vector2f(std::sin(_ang) * 0.1f, std::cos(_ang) * 0.1f);
+//            sf::Vector2f p = _sprite.getPosition() + correction;
+//            if (TileMap::validatePos(p))
+//                ent->move(correction);
+//            else{
+//                correction = sf::Vector2f(std::cos(_ang) * 0.1f, std::sin(_ang) * 0.1f);
+//                ent->move(correction);
+//            }
+
             return false;
         }
         return colliding;
