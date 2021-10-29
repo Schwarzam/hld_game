@@ -50,8 +50,7 @@ void Game::processEvents()
     sf::Event event;
 
     //events loop
-    view.setCenter(_player.get_position().x, _player.get_position().y);
-    _window.setView(view);
+    viewCalculator();
     setZoom(0.4);
 
     while(_window.pollEvent(event))
@@ -110,6 +109,10 @@ void Game::render()
         sf::Vertex point(sf::Vector2f(3, 3), sf::Color::Red);
         point.position = entity.second->getFeetPosition();
         _window.draw(&point, 1, sf::Points);
+
+        sf::Vertex p1(sf::Vector2f(100, 100), sf::Color::Black);
+        p1.position = view.getCenter();
+        _window.draw(&p1, 1, sf::Points);
     }
 
 
@@ -121,7 +124,7 @@ void Game::render()
 }
 
 bool Game::startMap() {
-    map.load_file("maps/teste1.json");
+    map.load_file("maps/map1.json");
     return true;
 }
 
@@ -146,5 +149,16 @@ void Game::startSpawns() {
             e->setPosition(sf::Vector2f(value["x"].get<float>(), value["y"].get<float>()));
             e->animation();
         }
+    }
+}
+
+void Game::viewCalculator() {
+    float distanceF = sqrt(pow(_player.getPosition().x - view.getCenter().x, 2) +
+                           pow(_player.getPosition().y -  - view.getCenter().y, 2) * 1.0);
+
+//    view.setCenter(200, 200);
+    if(distanceF > 10){
+        view.setCenter(_player.get_position().x, _player.get_position().y);
+        _window.setView(view);
     }
 }

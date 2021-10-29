@@ -53,25 +53,14 @@
       "coluna": 0,
       "frames": 3
     },
-    "STOP_UP":{
-      "probabilitie": 15,
-      "duration": 1,
-      "moveBefore": ["all"],
-      "moveAfter": ["all"],
-      "moveX": 0,
-      "moveY": 0,
-      "linha": 3,
-      "coluna": 0,
-      "frames": 1
-    },
     "STOP_DOWN":{
-      "probabilitie": 15,
+      "probabilitie": 25,
       "duration": 1,
       "moveBefore": ["all"],
       "moveAfter": ["all"],
       "moveX": 0,
       "moveY": 0,
-      "linha": 3,
+      "linha": 0,
       "coluna": 0,
       "frames": 1
     },

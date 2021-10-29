@@ -1,0 +1,35 @@
+{
+  "FPS": 2,
+  "GRID": {
+    "x": 4,
+    "y": 1
+  },
+  "FEET_AREA": 12,
+  "life": 100,
+  "type": "object",
+  "velocity": 100,
+  "movements":{
+    "PARADA":{
+      "duration": 0.7,
+      "probabilitie": 10,
+      "moveBefore": ["all"],
+      "moveAfter": ["all"],
+      "moveX": 0,
+      "moveY": 0,
+      "linha": 0,
+      "coluna": 0,
+      "frames": 1
+    },
+    "MOVIMENTO":{
+      "duration": 1,
+      "probabilitie": 20,
+      "moveBefore": ["all"],
+      "moveAfter": ["all"],
+      "moveX": 0,
+      "moveY": 0,
+      "linha": 0,
+      "coluna": 0,
+      "frames": 4
+    }
+  }
+}

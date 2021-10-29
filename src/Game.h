@@ -25,6 +25,8 @@ public:
 
     Game(); //< constructor
 
+    void viewCalculator();
+
     void runWithMinimumTimeSteps(int minimum_frame_per_seconds=30);
     bool startMap();
     void startSpawns();

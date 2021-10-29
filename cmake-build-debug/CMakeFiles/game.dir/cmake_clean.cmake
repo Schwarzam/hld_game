@@ -1,17 +1,15 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/game.dir/main.cpp.obj"
-  "CMakeFiles/game.dir/src/Assets.cpp.obj"
-  "CMakeFiles/game.dir/src/Collision.cpp.obj"
-  "CMakeFiles/game.dir/src/Entity.cpp.obj"
-  "CMakeFiles/game.dir/src/EntityBehavior.cpp.obj"
-  "CMakeFiles/game.dir/src/Game.cpp.obj"
-  "CMakeFiles/game.dir/src/GameManager.cpp.obj"
-  "CMakeFiles/game.dir/src/Player.cpp.obj"
-  "CMakeFiles/game.dir/src/TileMap.cpp.obj"
-  "game.exe"
-  "game.exe.manifest"
+  "CMakeFiles/game.dir/main.cpp.o"
+  "CMakeFiles/game.dir/src/Assets.cpp.o"
+  "CMakeFiles/game.dir/src/Collision.cpp.o"
+  "CMakeFiles/game.dir/src/Entity.cpp.o"
+  "CMakeFiles/game.dir/src/EntityBehavior.cpp.o"
+  "CMakeFiles/game.dir/src/Game.cpp.o"
+  "CMakeFiles/game.dir/src/GameManager.cpp.o"
+  "CMakeFiles/game.dir/src/Player.cpp.o"
+  "CMakeFiles/game.dir/src/TileMap.cpp.o"
+  "game"
   "game.pdb"
-  "libgame.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.
