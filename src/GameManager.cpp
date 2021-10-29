@@ -37,7 +37,10 @@ bool GameManager::validatePos(Entity *ent, sf::Sprite& _sprite, const sf::Vector
         for (std::pair<float, Entity *> entity : entities) {
             Entity *e = entity.second;
             if (entity.second != ent) {
-                colliding = Collision::PixelPerfectTest(entity.second->getHitBoxSprite(), spriteCopy);
+                colliding = !Collision::PixelPerfectTest(entity.second->getHitBoxSprite(), spriteCopy);
+                colliding = Collision::CircleTest(entity.second->getHitBoxSprite(), spriteCopy);
+                colliding = Collision::BoundingBoxTest(entity.second->getHitBoxSprite(), spriteCopy);
+
                 if (colliding){
                     _ang = std::atan2(
                             entity.second->getFeetPosition().y - ent->getFeetPosition().y,
@@ -52,8 +55,9 @@ bool GameManager::validatePos(Entity *ent, sf::Sprite& _sprite, const sf::Vector
                             pow(spriteCopy.getPosition().y - entity.second->getFeetPosition().y, 2) * 1.0);
 
                     if (distanceF > distanceI){
-                        return true;
+
                     }
+                    return false;
                 }
             }
         }
